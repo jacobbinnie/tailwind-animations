@@ -29,17 +29,17 @@ export const Login: React.FC<LoginProps> = () => {
             <div className="mx-auto text-center">
               <div>
                 <p className="text-3xl font-semibold tracking-tight text-white clash md:text-7xl">
-                  Beautiful AI app designs
+                  Beautiful tailwind animations
                   <span className="md:block">
                     {" "}
                     for your app in{" "}
                     <span className="font-extrabold animate-pulse">
-                      minutes
+                      seconds
                     </span>
                   </span>
                 </p>
                 <p className="mt-6 text-xl tracking-tight text-white/70">
-                  No design experience necessary
+                  Just copy and paste into your project
                 </p>
               </div>
             </div>

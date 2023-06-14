@@ -13,7 +13,7 @@ service cloud.firestore {
     // all client requests to your Firestore database will be denied until you Update
     // your rules
     match /{document=**} {
-      allow read, write: if request.time < timestamp.date(2023, 7, 13);
+      allow read, write: if request.time < timestamp.date(2023, 7, 15);
     }
   }
 }
