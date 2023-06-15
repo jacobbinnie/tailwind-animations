@@ -11,12 +11,17 @@ module.exports = {
     },
     extend: {
       animation: {
-        "gradient-xy": "gradient-xy 5s ease infinite",
-        "gradient-green": "gradient-green 2s ease infinite",
-        "background-gradient": "background-gradient 10s ease infinite",
+        // GRADIENTS
+        "rainbow-river": "rainbow-river 5s ease infinite",
+        "green-swoosh": "green-swoosh 2s ease infinite",
+        "black-swoosh": "black-swoosh 2s ease infinite",
+
+        // GRADIENT BACKDROP SPACES
+        "blue-galaxy": "blue-galaxy 10s ease infinite",
       },
       keyframes: {
-        "gradient-xy": {
+        // GRADIENT
+        "rainbow-river": {
           "0%": {
             "background-size": "600% 100%",
             "background-position": "left center",
@@ -36,7 +41,9 @@ module.exports = {
               "linear-gradient(to right, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))",
           },
         },
-        "gradient-green": {
+
+        // GRADIENT
+        "green-swoosh": {
           "0%": {
             "background-size": "600% 100%",
             "background-position": "left center",
@@ -56,7 +63,31 @@ module.exports = {
               "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))",
           },
         },
-        "background-gradient": {
+
+        // GRADIENT
+        "black-swoosh": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+        },
+
+        // GRADIENT BACKDROP SPACE
+        "blue-galaxy": {
           "0%": {
             background:
               "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",

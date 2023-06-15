@@ -23,7 +23,7 @@ export const Login: React.FC<LoginProps> = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
-      <section className="flex w-full items-center justify-center h-full md:h-screen space animate-background-gradient">
+      <section className="flex w-full items-center justify-center h-full md:h-screen space animate-blue-galaxy">
         <section>
           <div className="relative items-center w-full px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
             <div className="mx-auto text-center">
