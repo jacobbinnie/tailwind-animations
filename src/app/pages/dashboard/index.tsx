@@ -1,7 +1,9 @@
-import DefaultComponent from "@/app/components/DefaultComponent";
+import DefaultComponent from "@/app/components/DisplayComponent";
+import GridSection from "@/app/components/GridSection";
 import SortTabs from "@/app/components/SortTabs";
 import TabButton from "@/app/components/TabButton";
 import { useState } from "react";
+import designs from "./../../util/designs.json";
 
 interface DashboardProps {}
 
@@ -20,27 +22,13 @@ function Dashboard({}: DashboardProps) {
           <SortTabs tab={tab} handleSetTab={handleSetTab} />
         </div>
 
-        {/* Grid Layout */}
-        <div className="grid gap-y-20 gap-x-6 py-18 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
-          <DefaultComponent />
+        <div className="flex flex-col w-full gap-20">
+          {/* Gradients Layout */}
+          <GridSection
+            designs={designs.animations.gradients}
+            type={"gradients"}
+            largeDisplay={false}
+          />
         </div>
       </div>
     </div>
