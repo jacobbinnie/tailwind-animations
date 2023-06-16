@@ -45,6 +45,11 @@ function GridSection({ designs, type }: GridSectionProps) {
         )}
       >
         {renderDesigns()}
+        <div className="flex justify-top items-end w-full rounded flex-col h-full">
+          <p className="text-sm text-right font-semibold uppercase text-gray-300">
+            + More {type + "s"} Coming Soon!
+          </p>
+        </div>
       </div>
     </div>
   );
