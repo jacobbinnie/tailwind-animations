@@ -32,7 +32,7 @@ function Dashboard({}: DashboardProps) {
           {/* Backdrop Spaces Layout */}
           <GridSection
             designs={designs.animations.backdropSpaces}
-            type={"backdrop space"}
+            type={"space"}
           />
 
           {/* Backdrop Spaces Layout */}
