@@ -14,7 +14,7 @@ function TabButton({ name, selected, tab, callback }: TabButtonProps) {
       className={clsx(
         selected
           ? "animate-black-swoosh cursor-default ease-out"
-          : "bg-gray-400 hover:px-6",
+          : "bg-gray-300 hover:px-6",
         "flex gap-2 bg-black text-sm font-semibold px-4 py-2 rounded-3xl transition-all cursor-pointer"
       )}
     >
