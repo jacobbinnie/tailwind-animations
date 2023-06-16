@@ -16,7 +16,7 @@ function Dashboard({}: DashboardProps) {
 
   return (
     <div className="w-full min-w-screen h-full min-h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-white to-white">
-      <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-8xl">
+      <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
         {/* Filter Bar */}
         <div className="flex gap-4 mb-12 flex-col">
           <SortTabs tab={tab} handleSetTab={handleSetTab} />
@@ -26,9 +26,17 @@ function Dashboard({}: DashboardProps) {
           {/* Gradients Layout */}
           <GridSection
             designs={designs.animations.gradients}
-            type={"gradients"}
-            largeDisplay={false}
+            type={"gradient"}
           />
+
+          {/* Backdrop Spaces Layout */}
+          <GridSection
+            designs={designs.animations.backdropSpaces}
+            type={"backdrop space"}
+          />
+
+          {/* Backdrop Spaces Layout */}
+          <GridSection designs={designs.animations.classics} type={"classic"} />
         </div>
       </div>
     </div>

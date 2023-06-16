@@ -1,9 +1,62 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  safelist: [
+    // CLASSICS
+    "hover:animate-wobble 1s infinite",
+    "hover:animate-melt 1s infinite",
+    "hover:animate-float 1s infinite",
+    "hover:animate-breathe 1s infinite",
+    "hover:animate-squiggle 1s infinite",
+    "hover:animate-flip-and-spin 4s infinite",
+    "hover:animate-twist 4s infinite",
+    "hover:animate-pop 1s infinite",
+    "hover:animate-scatter 1s",
+
+    // GRADIENTS
+    "hover:animate-rainbow-river 5s ease infinite",
+    "hover:animate-green-swoosh 2s ease infinite",
+    "hover:animate-serene-sunset 2s ease infinite",
+    "hover:animate-black-swoosh 2s ease infinite",
+    "hover:animate-tranquil-waters 5s ease infinite",
+    "hover:animate-mellow-embers 2s ease infinite",
+    "hover:animate-vertical-bliss 2s ease infinite",
+    "hover:animate-vertical-raindance 2s ease infinite",
+    "hover:animate-vertical-azure-wave 2s ease infinite",
+    "hover:animate-vertical-sunset-tide 2s ease infinite",
+    "hover:animate-vertical-golden-dream 2s ease infinite",
+    "hover:animate-diagonal-blaze 2s ease infinite",
+    "hover:animate-diagonal-ocean-wave 2s ease infinite",
+    "hover:animate-diagonal-purple-dream 2s ease infinite",
+    "hover:animate-diagonal-galaxy 2s ease infinite",
+    "hover:animate-diagonal-rotating-sun 2s ease infinite",
+    "hover:animate-blurred-swoosh 2s ease infinite",
+    "hover:animate-fuzzy-dream 2s ease infinite",
+    "hover:animate-misty-fade 2s ease infinite",
+    "hover:animate-hazy-twist 2s ease infinite",
+    "hover:animate-mystic-aura 2s ease infinite",
+    "hover:animate-vibrant-sun 2s ease infinite",
+    "hover:animate-shifting-triangles 2s ease infinite",
+
+    // MOVEMENTS
+    "animate-morphing-rectangle 2s ease infinite",
+
+    // BACKDROP SPACES
+    "animate-blue-galaxy 10s ease infinite",
+    "animate-gray-fluff 5s ease infinite",
+    "animate-pastel-dream 5s ease infinite",
+    "animate-golden-horizon 5s ease infinite",
+    "animate-rose-blush 10s ease infinite",
+    "animate-lavender-dream 5s ease infinite",
+    "animate-amethyst-midnight 10s ease infinite",
+    "animate-pink-blossom 5s ease infinite",
+    "animate-cosmic-wave 5s ease infinite",
+    "animate-glow-next-door 5s ease infinite",
+    "animate-ski-haze 5s ease infinite",
+  ],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx,json}",
   ],
   theme: {
     fontFamily: {
@@ -17,8 +70,8 @@ module.exports = {
         float: "float 1s infinite",
         breathe: "breathe 1s infinite",
         squiggle: "squiggle 1s infinite",
-        "flip-and-spin": "flip-and-spin 2s infinite",
-        twist: "twist 2s infinite",
+        "flip-and-spin": "flip-and-spin 4s infinite",
+        twist: "twist 4s infinite",
         pop: "pop 1s infinite",
         scatter: "scatter 1s",
 
@@ -44,7 +97,6 @@ module.exports = {
         "misty-fade": "misty-fade 2s ease infinite",
         "hazy-twist": "hazy-twist 2s ease infinite",
         "mystic-aura": "mystic-aura 2s ease infinite",
-        "sunset-spin": "sunset-spin 2s ease infinite",
         "vibrant-sun": "vibrant-sun 2s ease infinite",
         "shifting-triangles": "shifting-triangles 2s ease infinite",
 
@@ -56,15 +108,15 @@ module.exports = {
         "gray-fluff": "gray-fluff 5s ease infinite",
         "earth-light": "earth-light 5s ease infinite",
         "pastel-dream": "pastel-dream 5s ease infinite",
-        "vibrant-splash": "vibrant-splash 5s ease infinite",
         "golden-horizon": "golden-horizon 5s ease infinite",
         "rose-blush": "rose-blush 10s ease infinite",
         "lavender-dream": "lavender-dream 5s ease infinite",
-        "twilight-mist": "twilight-mist 10s ease infinite",
-        "orbiting-nebula": "orbiting-nebula 10s ease infinite",
         "violet-dusk": "violet-dusk 10s ease infinite",
-        "starlight-cosmos": "starlight-cosmos 10s ease infinite",
         "amethyst-midnight": "amethyst-midnight 10s ease infinite",
+        "pink-blossom": "pink-blossom 5s ease infinite",
+        "cosmic-wave": "cosmic-wave 5s ease infinite",
+        "glow-next-door": "glow-next-door 5s ease infinite",
+        "ski-haze": "ski-haze 5s ease infinite",
       },
       keyframes: {
         // GRADIENTS
@@ -649,51 +701,6 @@ module.exports = {
           },
         },
 
-        "earth-light": {
-          "0%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "100% 150%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "20%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "105% 105%",
-            backgroundPosition: "100% 100%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "40%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "110% 300%",
-            backgroundPosition: "120% 80%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "60%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "115% 115%",
-            backgroundPosition: "30% 70%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "80%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "250% 120%",
-            backgroundPosition: "40% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "100%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #320656 0, #5f04a8 100%), linear-gradient(100deg, #9b00a4 50%, #ad00c6 100%), linear-gradient(200deg, #95a50c 0, #33da33 100%), linear-gradient(-3deg, #d928ff 0, #320656 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 100%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-        },
-
         "pastel-dream": {
           "0%": {
             background:
@@ -712,30 +719,6 @@ module.exports = {
           "100%": {
             background:
               "linear-gradient(45deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "0% 100%",
-            filter: "blur(10px)",
-          },
-        },
-
-        "vibrant-splash": {
-          "0%": {
-            background:
-              "linear-gradient(0deg, #ff0000, #ff7700, #ffdd00, #00e03c, #00d8ff)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "0% 100%",
-            filter: "blur(10px)",
-          },
-          "50%": {
-            background:
-              "linear-gradient(90deg, #ff0000, #ff7700, #ffdd00, #00e03c, #00d8ff)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "100% 0%",
-            filter: "blur(5px)",
-          },
-          "100%": {
-            background:
-              "linear-gradient(0deg, #ff0000, #ff7700, #ffdd00, #00e03c, #00d8ff)",
             backgroundSize: "200% 200%",
             backgroundPosition: "0% 100%",
             filter: "blur(10px)",
@@ -805,204 +788,226 @@ module.exports = {
           },
         },
 
-        "twilight-mist": {
-          "0%": {
-            background:
-              "linear-gradient(45deg, #5071ff, #3966db, #275db7, #18538e)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "0% 100%",
-          },
-          "50%": {
-            background:
-              "linear-gradient(90deg, #5071ff, #3966db, #275db7, #18538e)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "100% 0%",
-          },
-          "100%": {
-            background:
-              "linear-gradient(45deg, #5071ff, #3966db, #275db7, #18538e)",
-            backgroundSize: "200% 200%",
-            backgroundPosition: "0% 100%",
-          },
-        },
-
-        "orbiting-nebula": {
-          "0%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 100%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "20%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "105% 105%",
-            backgroundPosition: "10% 100%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "40%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "110% 300%",
-            backgroundPosition: "20% 80%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "60%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "115% 115%",
-            backgroundPosition: "30% 70%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "80%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "250% 120%",
-            backgroundPosition: "40% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "100%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #ff00ff 0, #6600cc 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 100%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-        },
-
-        "violet-dusk": {
-          "0%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "20%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "105% 105%",
-            backgroundPosition: "10% 50%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "40%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "110% 300%",
-            backgroundPosition: "20% 40%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "60%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "115% 115%",
-            backgroundPosition: "30% 30%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "80%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "250% 120%",
-            backgroundPosition: "40% 20%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "100%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #260a52 0, #520d97 100%), linear-gradient(100deg, #b108b0 50%, #f804f8 100%), linear-gradient(200deg, #545454 0, #6b02c9 100%), linear-gradient(-3deg, #5806b7 0, #260a52 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-        },
-
-        "starlight-cosmos": {
-          "0%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "20%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "105% 105%",
-            backgroundPosition: "10% 50%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "40%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "110% 300%",
-            backgroundPosition: "20% 40%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "60%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "115% 115%",
-            backgroundPosition: "30% 30%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "80%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "250% 120%",
-            backgroundPosition: "40% 20%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-          "100%": {
-            background:
-              "radial-gradient(100% 225% at 0 100%, #3d0066 0, #7d00c3 100%), linear-gradient(100deg, #c600ff 50%, #9300cc 100%), linear-gradient(200deg, #4c4c4c 0, #8a00ff 100%), linear-gradient(-3deg, #330066 0, #3d0066 50%)",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "0% 60%",
-            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
-          },
-        },
-
         "amethyst-midnight": {
           "0%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "100% 100%",
             backgroundPosition: "0% 60%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
           },
           "20%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "105% 105%",
             backgroundPosition: "10% 50%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
           },
           "40%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "110% 300%",
             backgroundPosition: "20% 40%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
           },
           "60%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "115% 115%",
             backgroundPosition: "30% 30%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
           },
           "80%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "250% 120%",
             backgroundPosition: "40% 20%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
           },
           "100%": {
             background:
-              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(100deg, #9c00ff 50%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+              "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
             backgroundSize: "100% 100%",
             backgroundPosition: "0% 60%",
             backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+        },
+
+        "pink-blossom": {
+          "0%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "20%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "105% 105%",
+            backgroundPosition: "10% 50%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "40%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "110% 300%",
+            backgroundPosition: "20% 40%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "60%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "115% 115%",
+            backgroundPosition: "30% 30%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "80%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "250% 120%",
+            backgroundPosition: "40% 20%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "100%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+        },
+
+        "cosmic-wave": {
+          "0%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "20%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "105% 105%",
+            backgroundPosition: "10% 50%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "40%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "110% 300%",
+            backgroundPosition: "20% 40%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "60%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "115% 115%",
+            backgroundPosition: "30% 30%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "80%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "250% 120%",
+            backgroundPosition: "40% 20%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "100%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+        },
+        "glow-next-door": {
+          "0%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "20%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "105% 105%",
+            backgroundPosition: "10% 50%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "40%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "110% 300%",
+            backgroundPosition: "20% 40%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "60%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "115% 115%",
+            backgroundPosition: "30% 30%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "80%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "250% 120%",
+            backgroundPosition: "40% 20%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+          "100%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, color-burn, color-burn, normal",
+          },
+        },
+        "ski-haze": {
+          "0%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
+          },
+          "20%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "105% 105%",
+            backgroundPosition: "10% 50%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
+          },
+          "40%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "110% 300%",
+            backgroundPosition: "20% 40%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
+          },
+          "60%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "115% 115%",
+            backgroundPosition: "30% 30%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
+          },
+          "80%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "250% 120%",
+            backgroundPosition: "40% 20%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
+          },
+          "100%": {
+            background:
+              "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "0% 60%",
+            backgroundBlendMode: "color-dodge, normal, normal, normal",
           },
         },
 

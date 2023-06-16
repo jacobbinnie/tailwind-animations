@@ -1,37 +1,39 @@
 import clsx from "clsx";
 import DisplayComponent from "../DisplayComponent";
-import JsonDesigns from "./../../util/designs.json";
 
 type Designs = {
   [key: string]: string;
 };
 
 interface GridSectionProps {
-  largeDisplay: boolean;
   designs: Designs;
-  type: string;
+  type: "gradient" | "backdrop space" | "classic";
 }
 
-function GridSection({ largeDisplay, designs, type }: GridSectionProps) {
+function GridSection({ designs, type }: GridSectionProps) {
   const renderDesigns = () => {
-    return Object.keys(designs).map((key) => {
-      const animation = designs[key];
-      if (animation !== undefined) {
-        return (
-          <DisplayComponent
-            key={key}
-            name={key}
-            animation={`animate-${animation}`}
-          />
-        );
-      }
+    return Object.entries(designs).map(([key, value]) => {
+      return (
+        <DisplayComponent
+          key={key}
+          name={key}
+          animation={
+            type === "backdrop space"
+              ? `animate-${value}`
+              : `hover:animate-${value}`
+          }
+          type={type}
+        />
+      );
+
+      return null; // Optional: handle the case when the desired value is not found
     });
   };
 
   return (
     <div
       className={clsx(
-        largeDisplay === false && "md:grid-cols-3 lg:grid-cols-4",
+        type !== "backdrop space" && "md:grid-cols-3 lg:grid-cols-4",
         "grid gap-y-20 gap-x-6 py-18 sm:grid-cols-2"
       )}
     >
