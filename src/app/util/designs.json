@@ -1,4 +1,9 @@
 {
+  "descriptions": {
+    "classic": "Perfect for fun & simple interactivity.",
+    "gradient": "Perfect for buttons, hover effects & improving UX.",
+    "space": "Perfect for full screen immersive experiences and backdrops."
+  },
   "animations": {
     "classics": {
       "wobble": "wobble 1s infinite",

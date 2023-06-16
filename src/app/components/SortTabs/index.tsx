@@ -23,7 +23,7 @@ function SortTabs({ tab, handleSetTab }: SortTabsProps) {
           callback={handleSetTab}
         />
         <TabButton
-          name="Backdrop Spaces"
+          name="Spaces"
           selected={tab === 2 ? true : false}
           tab={2}
           callback={handleSetTab}

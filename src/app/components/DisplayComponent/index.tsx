@@ -7,7 +7,7 @@ import clsx from "clsx";
 interface DisplayComponentProps {
   name: string;
   animation: string;
-  type: "gradient" | "backdrop space" | "classic";
+  type: "gradient" | "space" | "classic";
 }
 
 export const DisplayComponent: React.FC<DisplayComponentProps> = ({
@@ -19,8 +19,12 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
     <div className="flex w-full flex-col h-full">
       <div
         className={clsx(
-          type === "classic" ? "w-48" : "rounded",
-          `bg-black flex justify-center items-center h-48 w-full transition-all duration-1000 ease-in-out hover:scale-90 ${animation}`
+          type === "classic"
+            ? "w-48"
+            : type === "space"
+            ? "hover:none"
+            : "hover:scale-90",
+          `bg-black flex justify-center items-center rounded h-48 w-full transition-all duration-1000 ease-in-out ${animation}`
         )}
       >
         {type === "gradient" && (
