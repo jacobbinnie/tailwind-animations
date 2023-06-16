@@ -9,9 +9,14 @@ type Designs = {
 interface GridSectionProps {
   designs: Designs;
   type: "gradient" | "space" | "classic";
+  handleSetSelectedKey: (key: string) => void;
 }
 
-function GridSection({ designs, type }: GridSectionProps) {
+function GridSection({
+  designs,
+  type,
+  handleSetSelectedKey,
+}: GridSectionProps) {
   const renderDesigns = () => {
     return Object.entries(designs).map(([key, value]) => {
       return (
@@ -22,6 +27,7 @@ function GridSection({ designs, type }: GridSectionProps) {
             type === "space" ? `animate-${value}` : `hover:animate-${value}`
           }
           type={type}
+          handleSetSelectedKey={handleSetSelectedKey}
         />
       );
 
@@ -34,7 +40,7 @@ function GridSection({ designs, type }: GridSectionProps) {
       <p className="text-black capitalize text-3xl font-semibold">
         {type + "s"}
       </p>
-      <p className="mt-3 text-sm text-gray-300 font-medium mb-4">
+      <p className="mt-3 text-sm text-black font-medium mb-4">
         {JSONDesigns.descriptions[type]}
       </p>
       <div className="w-full h-1 opacity-30 rounded bg-gray-300 mb-10" />

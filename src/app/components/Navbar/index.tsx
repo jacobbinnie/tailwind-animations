@@ -2,7 +2,7 @@ interface NavbarProps {}
 
 function Navbar({}: NavbarProps) {
   return (
-    <div className="w-full mx-auto bg-white border-b sticky top-0 z-10">
+    <div className="w-full mx-auto bg-white border-b sticky top-0 z-20">
       <div className="relative flex flex-col w-full p-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div className="flex flex-row items-center justify-between lg:justify-start">
           <a
@@ -40,9 +40,6 @@ function Navbar({}: NavbarProps) {
         <nav className="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
           <a className="px-2 py-2 text-sm text-gray-500 lg:px-6 md:px-3">
             Pricing
-          </a>
-          <a className="px-2 py-2 text-sm text-gray-500 lg:px-6 md:px-3">
-            Installation
           </a>
 
           <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
