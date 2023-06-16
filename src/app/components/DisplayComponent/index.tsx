@@ -8,12 +8,14 @@ interface DisplayComponentProps {
   name: string;
   animation: string;
   type: "gradient" | "space" | "classic";
+  handleSetSelectedKey: (key: string) => void;
 }
 
 export const DisplayComponent: React.FC<DisplayComponentProps> = ({
   name,
   animation,
   type,
+  handleSetSelectedKey,
 }) => {
   return (
     <div className="flex w-full flex-col h-full">
@@ -27,11 +29,12 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
           `bg-black flex justify-center items-center rounded h-48 w-full transition-all duration-1000 ease-in-out ${animation}`
         )}
       >
-        {type === "gradient" && (
-          <div className="w-full flex justify-center h-full hover:opacity-0 overflow-hidden transition-all">
-            <CursorArrowRippleIcon width={20} className="text-gray-300" />
-          </div>
-        )}
+        {type === "gradient" ||
+          (type === "classic" && (
+            <div className="w-full flex justify-center h-full hover:opacity-0 overflow-hidden transition-all">
+              <CursorArrowRippleIcon width={20} className="text-gray-300" />
+            </div>
+          ))}
       </div>
       <p className="mt-3 text-sm text-gray-300 font-medium">
         {type.toUpperCase()}
@@ -42,7 +45,10 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
 
       <div className="flex gap-3 mt-5 justify-left">
         <a className="inline-flex items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
-          <div className="flex gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer">
+          <div
+            onClick={() => handleSetSelectedKey(name)}
+            className="flex gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer"
+          >
             <span className="text-white font-semibold">Show Code</span>
             <ArrowRightIcon width={16} color="white" />
           </div>
