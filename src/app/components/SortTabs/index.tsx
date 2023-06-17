@@ -17,21 +17,27 @@ function SortTabs({ tab, handleSetTab }: SortTabsProps) {
           callback={handleSetTab}
         />
         <TabButton
-          name="Gradients"
+          name="Buttons"
           selected={tab === 1 ? true : false}
           tab={1}
           callback={handleSetTab}
         />
         <TabButton
-          name="Spaces"
+          name="Gradients"
           selected={tab === 2 ? true : false}
           tab={2}
           callback={handleSetTab}
         />
         <TabButton
-          name="Classics"
+          name="Spaces"
           selected={tab === 3 ? true : false}
           tab={3}
+          callback={handleSetTab}
+        />
+        <TabButton
+          name="Classics"
+          selected={tab === 4 ? true : false}
+          tab={4}
           callback={handleSetTab}
         />
       </div>

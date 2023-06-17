@@ -1,37 +1,52 @@
 import clsx from "clsx";
 import DisplayComponent from "../DisplayComponent";
 import JSONDesigns from "../../util/designs.json";
+import ButtonComponent from "../ButtonComponent";
 
 type Designs = {
   [key: string]: string;
 };
 
+type Buttons = {
+  [key: string]: {
+    button: string;
+  };
+};
+
 interface GridSectionProps {
-  designs: Designs;
-  type: "gradient" | "space" | "classic";
+  displays: Designs | Buttons;
+  type: "button" | "gradient" | "space" | "classic";
   handleSetSelectedKey: (key: string) => void;
 }
 
 function GridSection({
-  designs,
+  displays,
   type,
   handleSetSelectedKey,
 }: GridSectionProps) {
-  const renderDesigns = () => {
-    return Object.entries(designs).map(([key, value]) => {
-      return (
-        <DisplayComponent
-          key={key}
-          name={key}
-          animation={
-            type === "space" ? `animate-${value}` : `hover:animate-${value}`
-          }
-          type={type}
-          handleSetSelectedKey={handleSetSelectedKey}
-        />
-      );
+  const renderDisplay = () => {
+    if (!displays) {
+      return null; // or handle the case when `displays` is undefined/null
+    }
 
-      return null; // Optional: handle the case when the desired value is not found
+    return Object.entries(displays).map(([key, value]) => {
+      switch (type) {
+        case "button":
+          return <ButtonComponent key={key} buttonCode={value.button} />;
+
+        default:
+          return (
+            <DisplayComponent
+              key={key}
+              name={key}
+              animation={
+                type === "space" ? `animate-${value}` : `hover:animate-${value}`
+              }
+              type={type}
+              handleSetSelectedKey={handleSetSelectedKey}
+            />
+          );
+      }
     });
   };
 
@@ -50,7 +65,7 @@ function GridSection({
           "grid gap-y-20 gap-x-6 py-18 sm:grid-cols-2"
         )}
       >
-        {renderDesigns()}
+        {renderDisplay()}
         <div className="flex justify-top items-end w-full rounded flex-col h-full">
           <p className="text-sm text-right font-semibold uppercase text-gray-300">
             + More {type + "s"} Coming Soon!
