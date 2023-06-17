@@ -4,6 +4,7 @@ import { useState } from "react";
 import designs from "./../../util/designs.json";
 import CodeReveal from "@/app/components/CodeReveal";
 import clsx from "clsx";
+import ButtonComponent from "@/app/components/ButtonComponent";
 
 interface DashboardProps {}
 
@@ -43,6 +44,7 @@ function Dashboard({}: DashboardProps) {
           animationKey={selectedKey.toLowerCase()}
           handleCloseCodeReveal={handleCloseCodeReveal}
         />
+
         <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
           {/* Filter Bar */}
           <div className="flex gap-4 mb-12 flex-col">
@@ -50,23 +52,30 @@ function Dashboard({}: DashboardProps) {
           </div>
 
           <div className="flex flex-col w-full gap-20">
+            {/* Buttons Layout */}
+            <GridSection
+              displays={designs.animations.buttons}
+              type={"button"}
+              handleSetSelectedKey={handleSetSelectedKey}
+            />
+
             {/* Gradients Layout */}
             <GridSection
-              designs={designs.animations.gradients}
+              displays={designs.animations.gradients}
               type={"gradient"}
               handleSetSelectedKey={handleSetSelectedKey}
             />
 
             {/* Spaces Layout */}
             <GridSection
-              designs={designs.animations.backdropSpaces}
+              displays={designs.animations.backdropSpaces}
               type={"space"}
               handleSetSelectedKey={handleSetSelectedKey}
             />
 
             {/* Classics Layout */}
             <GridSection
-              designs={designs.animations.classics}
+              displays={designs.animations.classics}
               type={"classic"}
               handleSetSelectedKey={handleSetSelectedKey}
             />

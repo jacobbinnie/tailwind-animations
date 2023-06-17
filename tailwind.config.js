@@ -1,22 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   safelist: [
-    // CLASSICS
-    "hover:animate-wobble 1s infinite",
-    "hover:animate-melt 1s infinite",
-    "hover:animate-float 1s infinite",
-    "hover:animate-breathe 1s infinite",
-    "hover:animate-squiggle 1s infinite",
-    "hover:animate-flip-and-spin 4s infinite",
-    "hover:animate-twist 4s infinite",
-    "hover:animate-pop 1s infinite",
-    "hover:animate-scatter 1s",
-
     // GRADIENTS
     "hover:animate-rainbow-river 5s ease infinite",
     "hover:animate-green-swoosh 2s ease infinite",
     "hover:animate-serene-sunset 2s ease infinite",
     "hover:animate-black-swoosh 2s ease infinite",
+    "hover:animate-purple-swoosh 2s ease infinite",
     "hover:animate-tranquil-waters 5s ease infinite",
     "hover:animate-mellow-embers 2s ease infinite",
     "hover:animate-vertical-bliss 2s ease infinite",
@@ -52,6 +42,17 @@ module.exports = {
     "animate-cosmic-wave 5s ease infinite",
     "animate-glow-next-door 5s ease infinite",
     "animate-ski-haze 5s ease infinite",
+
+    // CLASSICS
+    "hover:animate-wobble 1s infinite",
+    "hover:animate-melt 1s infinite",
+    "hover:animate-float 1s infinite",
+    "hover:animate-breathe 1s infinite",
+    "hover:animate-squiggle 1s infinite",
+    "hover:animate-flip-and-spin 4s infinite",
+    "hover:animate-twist 4s infinite",
+    "hover:animate-pop 1s infinite",
+    "hover:animate-scatter 1s",
   ],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -64,22 +65,12 @@ module.exports = {
     },
     extend: {
       animation: {
-        // CLASSICS
-        wobble: "wobble 1s infinite",
-        melt: "melt 1s infinite",
-        float: "float 1s infinite",
-        breathe: "breathe 1s infinite",
-        squiggle: "squiggle 1s infinite",
-        "flip-and-spin": "flip-and-spin 4s infinite",
-        twist: "twist 4s infinite",
-        pop: "pop 1s infinite",
-        scatter: "scatter 1s",
-
         // GRADIENTS
         "rainbow-river": "rainbow-river 5s ease infinite",
         "green-swoosh": "green-swoosh 2s ease infinite",
         "serene-sunset": "serene-sunset 2s ease infinite",
         "black-swoosh": "black-swoosh 2s ease infinite",
+        "purple-swoosh": "purple-swoosh 2s ease infinite",
         "tranquil-waters": "tranquil-waters 5s ease infinite",
         "mellow-embers": "mellow-embers 2s ease infinite",
         "vertical-bliss": "vertical-bliss 2s ease infinite",
@@ -117,8 +108,26 @@ module.exports = {
         "cosmic-wave": "cosmic-wave 5s ease infinite",
         "glow-next-door": "glow-next-door 5s ease infinite",
         "ski-haze": "ski-haze 5s ease infinite",
+
+        // CLASSICS
+        wobble: "wobble 1s infinite",
+        melt: "melt 1s infinite",
+        float: "float 1s infinite",
+        breathe: "breathe 1s infinite",
+        squiggle: "squiggle 1s infinite",
+        "flip-and-spin": "flip-and-spin 4s infinite",
+        twist: "twist 4s infinite",
+        pop: "pop 1s infinite",
+        scatter: "scatter 1s",
       },
       keyframes: {
+        // BUTTONS
+        glowing: {
+          "0%": { backgroundPosition: "0 0" },
+          "50%": { backgroundPosition: "400% 0" },
+          "100%": { backgroundPosition: "0 0" },
+        },
+
         // GRADIENTS
         "rainbow-river": {
           "0%": {
@@ -201,6 +210,27 @@ module.exports = {
             "background-position": "left center",
             "background-image":
               "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+        },
+
+        "purple-swoosh": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))",
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image":
+              "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))",
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))",
           },
         },
 
