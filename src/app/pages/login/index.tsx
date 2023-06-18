@@ -1,93 +1,154 @@
-import {
-  ArrowLongRightIcon,
-  BellIcon,
-  HeartIcon,
-} from "@heroicons/react/24/solid";
-import clsx from "clsx";
-import { useState } from "react";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
+
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const isEmail = () => {
-    return /\S+@\S+\.\S+/.test(email);
-  };
-
-  const handleSubmitEmail = () => {
-    if (isEmail()) {
-      setSubmitted(true);
-    }
-  };
-
   return (
-    <div className="flex justify-center items-center h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
-      <section className="flex w-full items-center justify-center h-full md:h-screen space animate-blue-galaxy">
-        <section>
-          <div className="relative items-center w-full px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
-            <div className="mx-auto text-center">
-              <div>
-                <p className="text-3xl font-semibold tracking-tight text-white clash md:text-7xl">
-                  Beautiful tailwind animations
-                  <span className="md:block">
-                    {" "}
-                    for your app in{" "}
-                    <span className="font-extrabold animate-pulse">
-                      seconds
-                    </span>
+    <div className="flex justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+      <section className="flex flex-col w-full justify-center h-full animate-blue-galaxy">
+        <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
+          <div className="mx-auto text-center">
+            <div>
+              <p className="text-3xl font-semibold tracking-tight text-white clash xs:text-2xl sm:text-5xl md:text-7xl">
+                Beautiful tailwind animations
+                <span className="md:block">
+                  {" "}
+                  for your app in{" "}
+                  <span className="font-extrabold animate-pulse">seconds</span>
+                </span>
+              </p>
+              <p className="mt-6 text-xl tracking-tight text-white/70">
+                Simply copy and paste into your project
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full flex flex-col justify-center items-center">
+            <div className="w-full max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10 sm:flex-row">
+              <div className="w-full gap-2 p-1 md:flex md:items-center">
+                <a
+                  href="https://buy.stripe.com/4gw4jo3voewLexG5kl"
+                  target="_blank"
+                  className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
+                >
+                  <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full animate-green-swoosh group-hover:cursor-pointer md:group-hover:translate-x-0 ease">
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
                   </span>
-                </p>
-                <p className="mt-6 text-xl tracking-tight text-white/70">
-                  Just copy and paste into your project
-                </p>
+                  <span className="absolute flex items-center justify-center text-lg w-full h-full text-white transition-all duration-300 transform md:group-hover:translate-x-full ease">
+                    $17 Lifetime Access
+                  </span>
+                </a>
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center max-w-sm gap-3 mx-auto">
-              <>
-                <div className="flex flex-col justify-center gap-3 mt-10 sm:flex-row w-full">
-                  <form className="w-full bg-white/20 p-1.5 rounded-2xl">
-                    <div className="w-full md:flex md:items-center">
-                      <div className="w-full">
-                        <input
-                          aria-label="Enter your email..."
-                          onChange={(e) => setEmail(e.target.value)}
-                          className="block w-full p-3 text-gray-200 bg-transparent border border-transparent appearance-none rounded-xl focus:border-slate-500 focus:outline-none focus:ring-slate-500 placeholder:text-slate-300 sm:text-sm"
-                          placeholder="Enter your email..."
-                          type="email"
-                        />
-                      </div>
-                      <button
-                        className={clsx(
-                          "transition-all",
-                          isEmail()
-                            ? "w-full md:w-auto 0 active:bg-transparent active:text-white/80 before:transition-colors transition-all"
-                            : "animate-gradient-xy w-full md:w-auto 0 active:bg-transparent active:text-white/80 before:transition-colors transition-all",
-                          "animate-gradient-green flex-none font-medium hover:bg-indigo-900 hover:text-white inline-flex justify-center lg:ml-4 outline-2 outline-offset-2 px-6 py-2.5 relative rounded-xl text-primary-dark"
-                        )}
-                        type="button"
-                        onClick={() => handleSubmitEmail()}
-                      >
-                        <div className="flex justify-center items-center gap-2 transition-all">
-                          {isEmail()
-                            ? "Looks good! Notify me"
-                            : "Join the waitlist"}
-                          <BellIcon width={16} />
-                        </div>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div className="mt-3">
-                  <p className="text-white text-center text-sm">
-                    Get notifed on launch. We won&apos;t sell your data (ever).
-                  </p>
-                </div>
-              </>
+            <div className="w-full flex justify-center text-white/70">
+              <p>Pre-release earlybird offer</p>
+            </div>
+
+            <div className="mt-16 flex flex-col justify-center items-center gap-3 w-full max-w-lg">
+              <p className="text-lg">Quick Video Walkthrough</p>
+              <ArrowDownIcon width={20} className="animate-bounce" />
+            </div>
+
+            <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-0">
+              <svg
+                fill="none"
+                viewBox="0 0 400 400"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute -mt-24 blur-3xl"
+              >
+                <g clip-path="url(#clip0_10_20)">
+                  <g filter="url(#filter0_f_10_20)">
+                    <path
+                      d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
+                      fill="#ff237d"
+                    ></path>
+                    <path
+                      d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
+                      fill="#7C87F8"
+                    ></path>
+                    <path
+                      d="M320 400H400V78.75L106.2 134.75L320 400Z"
+                      fill="#4C65E4"
+                    ></path>
+                    <path
+                      d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
+                      fill="#043AFF"
+                    ></path>
+                  </g>
+                </g>
+                <defs>
+                  <filter
+                    color-interpolation-filters="sRGB"
+                    filterUnits="userSpaceOnUse"
+                    height="720.666"
+                    id="filter0_f_10_20"
+                    width="720.666"
+                    x="-160.333"
+                    y="-160.333"
+                  >
+                    <feFlood
+                      flood-opacity="0"
+                      result="BackgroundImageFix"
+                    ></feFlood>
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      mode="normal"
+                      result="shape"
+                    ></feBlend>
+                    <feGaussianBlur
+                      result="effect1_foregroundBlur_10_20"
+                      stdDeviation="80.1666"
+                    ></feGaussianBlur>
+                  </filter>
+                </defs>
+              </svg>
+              <video
+                className="relative object-cover w-full rounded shadow-2xl lg:rounded-2xl"
+                controls={true}
+                muted={false}
+              >
+                <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations.appspot.com/o/tailwindanimationsdemo.mp4?alt=media&token=4a394239-4172-45bd-9665-d33896a93cf8" />
+              </video>
             </div>
           </div>
-        </section>
+          <p className="w-full flex justify-center">
+            by&nbsp;
+            <a
+              className="text-[#00acee] font-black"
+              href="https://twitter.com/jacobbinnie"
+              target="_blank"
+            >
+              @jacobbinnie
+            </a>
+          </p>
+        </div>
+        <div className="w-screen flex justify-center items-center p-10">
+          <p className="text-center max-w-lg text-xs text-gray-50 text-opacity-50">
+            Disclaimer: Lifetime access valid for the duration of the product
+            being available online. All animations are subject to copyright and
+            may not be redistributed without the written consent of{" "}
+            <a href="https://twitter.com/jacobbinnie" target="_blank">
+              @jacobbinnie
+            </a>
+          </p>
+        </div>
       </section>
     </div>
   );

@@ -7,8 +7,8 @@ function RouteProvider() {
   const { user } = useAuth();
 
   switch (user) {
-    // case null:
-    //   return <Login />;
+    case null:
+      return <Login />;
 
     default:
       return <Dashboard />;

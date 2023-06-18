@@ -4,7 +4,7 @@ import { useState } from "react";
 import designs from "./../../util/designs.json";
 import CodeReveal from "@/app/components/CodeReveal";
 import clsx from "clsx";
-import ButtonComponent from "@/app/components/ButtonComponent";
+import Navbar from "@/app/components/Navbar";
 
 interface DashboardProps {}
 
@@ -29,6 +29,7 @@ function Dashboard({}: DashboardProps) {
 
   return (
     <>
+      <Navbar />
       <div
         onClick={() => handleCloseCodeReveal()}
         className={clsx(
