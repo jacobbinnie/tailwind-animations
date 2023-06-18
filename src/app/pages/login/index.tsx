@@ -123,6 +123,7 @@ export const Login: React.FC<LoginProps> = () => {
                 className="relative object-cover w-full rounded shadow-2xl lg:rounded-2xl"
                 controls={true}
                 muted={false}
+                poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations.appspot.com/o/Screenshot%202023-06-18%20at%203.10.54%20PM.png?alt=media&token=d0f0acc4-71a6-4f2d-a885-7e3c2d198310"
               >
                 <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations.appspot.com/o/tailwindanimationsdemo.mp4?alt=media&token=4a394239-4172-45bd-9665-d33896a93cf8" />
               </video>
