@@ -5,7 +5,7 @@ interface LoginProps {}
 export const Login: React.FC<LoginProps> = () => {
   return (
     <div className="flex justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
-      <section className="flex flex-col w-full justify-center h-full md:animate-blue-galaxy">
+      <section className="flex flex-col w-full justify-center h-full">
         <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
           <div className="mx-auto text-center">
             <div>
