@@ -58,7 +58,7 @@ export const Login: React.FC<LoginProps> = () => {
               <p>Pre-release earlybird offer</p>
             </div>
 
-            <div className="mt-16 flex flex-col justify-center items-center gap-3 w-full max-w-lg">
+            <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
               <p className="text-lg">Quick Video Walkthrough</p>
               <ArrowDownIcon width={20} className="animate-bounce" />
             </div>
