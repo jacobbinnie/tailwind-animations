@@ -9,7 +9,7 @@ export const Login: React.FC<LoginProps> = () => {
         <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
           <div className="mx-auto text-center">
             <div>
-              <p className="text-3xl font-semibold tracking-tight text-white clash xs:text-2xl sm:text-5xl md:text-7xl">
+              <p className="text-4xl font-semibold tracking-tight text-white clash sm:text-5xl md:text-7xl">
                 Beautiful tailwind animations
                 <span className="md:block">
                   {" "}
