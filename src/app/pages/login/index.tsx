@@ -5,7 +5,7 @@ interface LoginProps {}
 export const Login: React.FC<LoginProps> = () => {
   return (
     <div className="flex justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
-      <section className="flex flex-col w-full justify-center h-full animate-blue-galaxy">
+      <section className="flex flex-col w-full justify-center h-full md:animate-blue-galaxy">
         <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
           <div className="mx-auto text-center">
             <div>
@@ -24,7 +24,7 @@ export const Login: React.FC<LoginProps> = () => {
           </div>
 
           <div className="w-full flex flex-col justify-center items-center">
-            <div className="w-full max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10 sm:flex-row">
+            <div className="w-full items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10">
               <div className="w-full gap-2 p-1 md:flex md:items-center">
                 <a
                   href="https://buy.stripe.com/4gw4jo3voewLexG5kl"
