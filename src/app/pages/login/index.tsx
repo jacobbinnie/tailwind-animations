@@ -123,9 +123,9 @@ export const Login: React.FC<LoginProps> = () => {
                 className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl"
                 controls={true}
                 muted={false}
-                poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations.appspot.com/o/Screenshot%202023-06-18%20at%203.10.54%20PM.png?alt=media&token=d0f0acc4-71a6-4f2d-a885-7e3c2d198310"
+                poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-06-18%20at%206.14.58%20PM.png?alt=media&token=2d9165c5-9bde-419c-b98f-b571bf1684a4"
               >
-                <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations.appspot.com/o/tailwindanimationsdemo1.mp4?alt=media&token=2ef8e596-42ef-415f-b9fc-8cd4dadb0369" />
+                <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/tailwindanimationsdemo1.mp4?alt=media&token=fca3be1b-6f69-4ae6-8268-059e425f54e8" />
               </video>
             </div>
           </div>
