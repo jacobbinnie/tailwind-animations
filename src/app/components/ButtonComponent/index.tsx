@@ -3,13 +3,25 @@ import {
   ClipboardDocumentIcon,
 } from "@heroicons/react/24/solid";
 import parse from "html-react-parser";
+import { useState } from "react";
 
 interface ButtonComponentProps {
   buttonCode: string;
 }
 
 function ButtonComponent({ buttonCode }: ButtonComponentProps) {
+  const [copied, setCopied] = useState(false);
+
   const button = parse(buttonCode);
+
+  const handleCopying = () => {
+    navigator.clipboard.writeText(buttonCode);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  };
+
   return (
     <div className="flex flex-col">
       {button}
@@ -19,7 +31,12 @@ function ButtonComponent({ buttonCode }: ButtonComponentProps) {
             onClick={() => null}
             className="flex gap-2 shadow-lg bg-[#5046e5] px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-rainbow-river cursor-pointer"
           >
-            <span className="text-white font-semibold">Copy Code</span>
+            <span
+              onClick={() => handleCopying()}
+              className="text-white font-semibold"
+            >
+              {copied ? "Copied!" : "Copy Code"}
+            </span>
             <ClipboardDocumentIcon width={16} color="white" />
           </div>
         </a>

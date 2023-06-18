@@ -38,9 +38,9 @@ function Navbar({}: NavbarProps) {
           </button>
         </div>
         <nav className="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
-          <a className="px-2 py-2 text-sm text-gray-500 lg:px-6 md:px-3">
+          {/* <a className="px-2 py-2 text-sm text-gray-500 lg:px-6 md:px-3">
             Pricing
-          </a>
+          </a> */}
 
           <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
             <button className="block px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 focus:outline-none focus:shadow-outline">
