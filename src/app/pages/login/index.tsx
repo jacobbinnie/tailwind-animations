@@ -1,37 +1,74 @@
+import Navbar from "@/app/components/Navbar";
 import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import clsx from "clsx";
+import Image from "next/image";
+import { useState } from "react";
 
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = () => {
-  return (
-    <div className="flex justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
-      <section className="flex flex-col w-full justify-center h-full">
-        <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
-          <div className="mx-auto text-center">
-            <div>
-              <p className="text-4xl font-semibold tracking-tight text-white clash sm:text-5xl md:text-7xl">
-                Beautiful tailwind animations
-                <span className="md:block">
-                  {" "}
-                  for your app in{" "}
-                  <span className="font-extrabold animate-pulse">seconds</span>
-                </span>
-              </p>
-              <p className="mt-6 text-xl tracking-tight text-white/70">
-                Simply copy and paste into your project
-              </p>
-            </div>
-          </div>
+  const [view, setView] = useState<"signin" | "signup">("signin");
+  const [email, setEmail] = useState<string>("");
 
-          <div className="w-full flex flex-col justify-center items-center">
-            <div className="w-full items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10">
-              <div className="w-full gap-2 p-1 md:flex md:items-center">
-                <a
-                  href="https://buy.stripe.com/4gw4jo3voewLexG5kl"
-                  target="_blank"
+  function isEmail(): boolean {
+    // Regular expression pattern for validating email addresses
+    const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return emailRegex.test(email);
+  }
+
+  function handleSendMagicLink() {
+    alert("Magic link sent!");
+  }
+
+  return (
+    <>
+      <div className="flex h-screen flex-col items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+        <Navbar />
+        <div className="w-full h-full max-w-lg flex flex-col justify-center px-5">
+          <span className="inline-flex items-center">
+            <span className="px-6 py-2 text-base font-bold text-white uppercase rounded-lg bg-white/10">
+              Tailwind Animations
+            </span>
+          </span>
+          <p className="mt-8 text-5xl font-extrabold tracking-tight text-white">
+            {view === "signin" ? "Sign in" : "Sign up"}
+          </p>
+          <p className="max-w-xl mt-4 text-lg lg:text-xl text-slate-200">
+            {view === "signin"
+              ? "Enter your email and we'll send you a magic link"
+              : "Welcome to Tailwind Animations - a beautiful library of tailwind animations for your app"}
+          </p>
+
+          <div className="flex flex-col justify-center gap-3 mt-10">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSendMagicLink();
+              }}
+              className="w-full  border-2 border-white/30 lg:mx-auto p-1.5 rounded-2xl"
+            >
+              <div className="w-full flex flex-col lg:items-center p-2 gap-4">
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  aria-label="Email address"
+                  autoComplete="email"
+                  className="block w-full p-3 font-semibold text-lg text-white bg-transparent border border-transparent appearance-none focus:border-slate-500 rounded-xl focus:outline-none focus:ring-slate-500 placeholder:text-slate-400rounded-xl"
+                  placeholder="Enter your email..."
+                  required={true}
+                  type="email"
+                />
+
+                <button
+                  disabled={!isEmail()}
                   className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
                 >
-                  <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full animate-green-swoosh group-hover:cursor-pointer md:group-hover:translate-x-0 ease">
+                  <span
+                    className={clsx(
+                      isEmail() && "mr-0 translate-x-0 animate-green-swoosh",
+                      "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full mr-2 ease"
+                    )}
+                  >
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -47,111 +84,36 @@ export const Login: React.FC<LoginProps> = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span className="absolute flex items-center justify-center text-lg w-full h-full text-white transition-all duration-300 transform md:group-hover:translate-x-full ease">
-                    $17 Lifetime Access
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            <div className="w-full text-lg flex justify-center text-white/70">
-              <p>Pre-release earlybird offer</p>
-            </div>
-
-            <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
-              <p className="text-lg">Quick Video Walkthrough</p>
-              <ArrowDownIcon width={20} className="animate-bounce" />
-            </div>
-
-            <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-0">
-              <svg
-                fill="none"
-                viewBox="0 0 400 400"
-                height="100%"
-                width="100%"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute -mt-24 blur-3xl"
-              >
-                <g clip-path="url(#clip0_10_20)">
-                  <g filter="url(#filter0_f_10_20)">
-                    <path
-                      d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
-                      fill="#ff237d"
-                    ></path>
-                    <path
-                      d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
-                      fill="#7C87F8"
-                    ></path>
-                    <path
-                      d="M320 400H400V78.75L106.2 134.75L320 400Z"
-                      fill="#4C65E4"
-                    ></path>
-                    <path
-                      d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
-                      fill="#043AFF"
-                    ></path>
-                  </g>
-                </g>
-                <defs>
-                  <filter
-                    color-interpolation-filters="sRGB"
-                    filterUnits="userSpaceOnUse"
-                    height="720.666"
-                    id="filter0_f_10_20"
-                    width="720.666"
-                    x="-160.333"
-                    y="-160.333"
+                  <span
+                    className={clsx(
+                      isEmail() && "translate-x-full",
+                      "absolute flex items-center justify-center text-lg w-full h-full text-white transition-all duration-300 transform ease"
+                    )}
                   >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
-                    <feBlend
-                      in="SourceGraphic"
-                      in2="BackgroundImageFix"
-                      mode="normal"
-                      result="shape"
-                    ></feBlend>
-                    <feGaussianBlur
-                      result="effect1_foregroundBlur_10_20"
-                      stdDeviation="80.1666"
-                    ></feGaussianBlur>
-                  </filter>
-                </defs>
-              </svg>
-              <video
-                className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl"
-                controls={true}
-                muted={false}
-                poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-06-18%20at%206.14.58%20PM.png?alt=media&token=2d9165c5-9bde-419c-b98f-b571bf1684a4"
-              >
-                <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/tailwindanimationsdemo1.mp4?alt=media&token=fca3be1b-6f69-4ae6-8268-059e425f54e8" />
-              </video>
+                    {view === "signin" ? "Send magic link" : "Sign up"}
+                  </span>
+                </button>
+              </div>
+            </form>
+            <div className="mt-1 w-full flex">
+              <p className="text-sm font-semibold">
+                {view === "signin"
+                  ? "Don't have an account?"
+                  : "Already have an account?"}
+                <span
+                  onClick={() =>
+                    setView(view === "signup" ? "signin" : "signup")
+                  }
+                  className="font-black cursor-pointer text-blue-700"
+                >
+                  {view === "signin" ? " Sign up" : " Sign in"}
+                </span>
+              </p>
             </div>
           </div>
-          <p className="text-white/70 w-full flex justify-center">
-            by&nbsp;
-            <a
-              className="text-[#00acee] font-black"
-              href="https://twitter.com/jacobbinnie"
-              target="_blank"
-            >
-              @jacobbinnie
-            </a>
-          </p>
         </div>
-        <div className="w-screen flex justify-center items-center p-10">
-          <p className="text-center max-w-lg text-xs text-gray-50 text-opacity-50">
-            Disclaimer: Lifetime access valid for the duration of the product
-            being available online. All animations are subject to copyright and
-            may not be redistributed without the written consent of{" "}
-            <a href="https://twitter.com/jacobbinnie" target="_blank">
-              @jacobbinnie
-            </a>
-          </p>
-        </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 
