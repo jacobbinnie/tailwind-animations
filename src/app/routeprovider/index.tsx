@@ -6,13 +6,13 @@ import Login from "../pages/login";
 function RouteProvider() {
   const { user } = useAuth();
 
-  switch (user) {
-    case null:
-      return <Login />;
+  // switch (user) {
+  // case null:
+  return <Login />;
 
-    default:
-      return <Dashboard />;
-  }
+  //   default:
+  //     return <Dashboard />;
+  // }
 }
 
 export default RouteProvider;
