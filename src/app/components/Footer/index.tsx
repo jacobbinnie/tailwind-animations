@@ -13,7 +13,7 @@ function Footer({}: FooterProps) {
           @jacobbinnie
         </a>
       </p>
-      <div className="w-screen flex justify-center items-center p-10">
+      <div className="w-full flex justify-center items-center p-10">
         <p className="text-center max-w-lg text-xs text-gray-50 text-opacity-50">
           Disclaimer: Lifetime access valid for the duration of the product
           being available online. All animations are subject to copyright and
