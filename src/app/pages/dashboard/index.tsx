@@ -6,7 +6,7 @@ import designs from "./../../util/designs.json";
 import CodeReveal from "@/app/components/CodeReveal";
 import clsx from "clsx";
 import Navbar from "@/app/components/Navbar";
-import Header from "@/app/components/Header.tsx";
+import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 interface DashboardProps {}
