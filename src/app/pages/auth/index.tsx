@@ -30,14 +30,14 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
 
   return (
     <>
-      <div className="flex h-screen flex-col items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-200 to-gray-300">
+      <div className="flex h-screen flex-col items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
         <Navbar />
         <div className="flex h-full w-full items-center justify-center p-5">
-          <div className="w-full h-min max-w-xl px-5 sm:p-10 py-10 flex flex-col rounded-xl gap-4 overflow-hidden bg-white shadow-lg">
-            <p className="mt-8 text-4xl sm:text-5xl font-extrabold tracking-tight text-black">
+          <div className="w-full border-2 h-min max-w-xl px-5 sm:p-10 py-10 flex flex-col rounded-xl gap-4 overflow-hidden bg-transparent shadow-lg">
+            <p className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
               {view === "signin" ? "Sign in" : "Sign up"}
             </p>
-            <p className="max-w-xl mt-4 font-medium text-sm sm:text-lg text-black">
+            <p className="max-w-xl mt-4 font-medium text-sm sm:text-lg text-gray-300">
               {view === "signin"
                 ? "Enter your email and we'll send you a magic sign in link"
                 : "Unlock a beautiful library of tailwind animations for your next project. Enter your email to get started"}
@@ -55,7 +55,7 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
                   onChange={(e) => setEmail(e.target.value)}
                   aria-label="Email address"
                   autoComplete="email"
-                  className="block w-full p-4 font-semibold text-sm sm:text-lg text-black bg-transparent border border-gray-300 appearance-none focus:border-gray-300 rounded-xl focus:outline-none focus:ring-transparent placeholder:text-slate-400rounded-xl"
+                  className="block w-full p-4 font-semibold text-sm sm:text-lg text-gray-300 bg-transparent border border-gray-300 appearance-none focus:border-gray-300 rounded-xl focus:outline-none focus:ring-transparent placeholder:text-slate-400rounded-xl"
                   placeholder="Enter your email..."
                   required={true}
                   type="email"
@@ -63,14 +63,14 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
 
                 <button
                   disabled={!isEmail()}
-                  className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
+                  className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
                 >
                   <span
                     className={clsx(
                       isEmail()
                         ? "mr-0 translate-x-0 animate-green-swoosh"
                         : "mr-2",
-                      "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full ease"
+                      "absolute flex items-center justify-center w-full h-full text-gray-300 duration-300 -translate-x-full ease"
                     )}
                   >
                     <svg
@@ -99,8 +99,8 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
                 </button>
               </div>
             </form>
-            <div className="mt-5 w-full flex">
-              <p className="text-sm sm:text-lg font-medium text-black">
+            <div className="w-full flex">
+              <p className="text-sm font-medium text-gray-300">
                 {view === "signin"
                   ? "Don't have an account?"
                   : "Already have an account?"}
