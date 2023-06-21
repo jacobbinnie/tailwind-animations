@@ -26,11 +26,7 @@ function Header({}: HeaderProps) {
           <div className="w-full flex flex-col justify-center items-center">
             <div className="w-full items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10">
               <div className="w-full gap-2 p-1 md:flex md:items-center">
-                <a
-                  href="https://buy.stripe.com/4gw4jo3voewLexG5kl"
-                  target="_blank"
-                  className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
-                >
+                <a className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group">
                   <span className="absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full animate-green-swoosh group-hover:cursor-pointer group-hover:mr-0 mr-2 md:group-hover:translate-x-0 ease">
                     <svg
                       className="w-6 h-6"
@@ -48,7 +44,7 @@ function Header({}: HeaderProps) {
                     </svg>
                   </span>
                   <span className="absolute flex items-center justify-center text-lg w-full h-full text-white transition-all duration-300 transform md:group-hover:translate-x-full ease">
-                    $29 Lifetime Access
+                    $49 Lifetime Access
                   </span>
                 </a>
               </div>

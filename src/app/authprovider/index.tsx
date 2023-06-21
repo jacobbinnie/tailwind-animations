@@ -32,10 +32,12 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   const [user, setUser] = useState<User | null>(null);
 
   const sendMagicLink = async (email: string) => {
+    const redirectUrl = process.env.NEXT_PUBLIC_REDIRECT_URL;
+
     const actionCodeSettings = {
       // URL you want to redirect back to. The domain (www.example.com) for this
       // URL must be in the authorized domains list in the Firebase Console.
-      url: "http://localhost:3000",
+      url: redirectUrl || "https://tailwindanimations.co",
       handleCodeInApp: true,
     };
 
