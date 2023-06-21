@@ -1,3 +1,4 @@
+"use client";
 import GridSection from "@/app/components/GridSection";
 import SortTabs from "@/app/components/SortTabs";
 import { useState } from "react";

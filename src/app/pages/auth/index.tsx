@@ -1,11 +1,14 @@
+"use client";
 import { useAuth } from "@/app/authprovider";
 import Navbar from "@/app/components/Navbar";
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-interface LoginProps {}
+interface AuthProps {
+  tab: "signin" | "signup";
+}
 
-export const Login: React.FC<LoginProps> = () => {
+export const Auth: React.FC<AuthProps> = ({ tab }) => {
   const [view, setView] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState<string>("");
 
@@ -17,17 +20,20 @@ export const Login: React.FC<LoginProps> = () => {
     return emailRegex.test(email);
   }
 
+  useEffect(() => {
+    if (tab === "signin") {
+      setView("signin");
+    } else {
+      setView("signup");
+    }
+  }, [tab]);
+
   return (
     <>
       <div className="flex h-screen flex-col items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-200 to-gray-300">
         <Navbar />
         <div className="flex h-full w-full items-center justify-center p-5">
           <div className="w-full h-min max-w-xl px-5 sm:p-10 py-10 flex flex-col rounded-xl gap-4 overflow-hidden bg-white shadow-lg">
-            <span className="inline-flex items-center">
-              <span className="px-4 py-2 text-sm sm:text-lg font-bold shadow-lg text-white uppercase rounded-lg bg-gray-300">
-                Tailwind Animations
-              </span>
-            </span>
             <p className="mt-8 text-4xl sm:text-5xl font-extrabold tracking-tight text-black">
               {view === "signin" ? "Sign in" : "Sign up"}
             </p>
@@ -115,4 +121,4 @@ export const Login: React.FC<LoginProps> = () => {
   );
 };
 
-export default Login;
+export default Auth;
