@@ -1,5 +1,11 @@
 "use client";
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import {
   getAuth,
   sendSignInLinkToEmail,
@@ -9,19 +15,23 @@ import {
   setPersistence,
   browserSessionPersistence,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import firebase_app from "../firebase/config";
+import { useRoute } from "../routeprovider";
 
 interface AuthContextValues {
   user: User | null;
   sendMagicLink: (email: string) => Promise<void | null>;
   signInVerify: () => Promise<void | null>;
+  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValues>({
   user: null,
   sendMagicLink: async (email: string) => null,
   signInVerify: async () => null,
+  signOut: async () => {},
 });
 
 interface AuthProviderOptions {
@@ -30,6 +40,8 @@ interface AuthProviderOptions {
 
 export const AuthProvider = ({ children }: AuthProviderOptions) => {
   const [user, setUser] = useState<User | null>(null);
+
+  const { handleSetPage } = useRoute();
 
   const sendMagicLink = async (email: string) => {
     const redirectUrl = process.env.NEXT_PUBLIC_REDIRECT_URL;
@@ -58,7 +70,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
       });
   };
 
-  const signInVerify = async () => {
+  const signInVerify = useCallback(async () => {
     const auth = getAuth(firebase_app);
     const email = window.localStorage.getItem("emailForSignIn");
 
@@ -69,6 +81,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
           window.localStorage.removeItem("emailForSignIn");
           // Update the user state with the signed-in user.
           setUser(result.user);
+          handleSetPage(2);
           // You can access the new user via result.user
           // Additional user info profile not available via:
           // result.additionalUserInfo.profile == null
@@ -79,6 +92,17 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
           // Some error occurred, you can inspect the code: error.code
           // Common errors could be invalid email and invalid or expired OTPs.
         });
+    }
+  }, [handleSetPage]);
+
+  const signOutUser = async () => {
+    const auth = getAuth(firebase_app);
+
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (error) {
+      // Handle sign out error
     }
   };
 
@@ -102,12 +126,13 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [signInVerify]);
 
   const value = {
     user,
     sendMagicLink,
     signInVerify,
+    signOut: signOutUser,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

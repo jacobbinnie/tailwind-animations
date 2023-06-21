@@ -8,6 +8,7 @@ import clsx from "clsx";
 import Navbar from "@/app/components/Navbar";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import { useAuth } from "@/app/authprovider";
 
 interface DashboardProps {}
 
@@ -30,6 +31,8 @@ function Dashboard({}: DashboardProps) {
     setRevealingCode(true);
   };
 
+  const { user } = useAuth();
+
   return (
     <>
       <Navbar />
@@ -51,7 +54,7 @@ function Dashboard({}: DashboardProps) {
 
         {/* Header */}
 
-        <Header />
+        {!user && <Header />}
 
         <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
           {/* Filter Bar */}
