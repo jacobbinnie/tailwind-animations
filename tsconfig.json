@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "firebase.js"
+    "firebase.js",
+    "src/app/components/Header"
   ],
   "exclude": ["node_modules"]
 }

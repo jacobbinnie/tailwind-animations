@@ -68,7 +68,7 @@ function Header({}: HeaderProps) {
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute -mt-24 blur-3xl"
               >
-                <g clip-path="url(#clip0_10_20)">
+                <g clipPath="url(#clip0_10_20)">
                   <g filter="url(#filter0_f_10_20)">
                     <path
                       d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
@@ -90,7 +90,7 @@ function Header({}: HeaderProps) {
                 </g>
                 <defs>
                   <filter
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                     filterUnits="userSpaceOnUse"
                     height="720.666"
                     id="filter0_f_10_20"
@@ -99,7 +99,7 @@ function Header({}: HeaderProps) {
                     y="-160.333"
                   >
                     <feFlood
-                      flood-opacity="0"
+                      floodOpacity="0"
                       result="BackgroundImageFix"
                     ></feFlood>
                     <feBlend
