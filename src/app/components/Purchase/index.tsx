@@ -1,19 +1,26 @@
+import { LockClosedIcon } from "@heroicons/react/24/solid";
+
 interface PurchaseProps {}
 
 function Purchase({}: PurchaseProps) {
   return (
-    <div className="flex bg-gray-300 min-h-screen w-full fixed top-0 left-0 z-20">
+    <div className="flex bg-transparent min-h-screen w-full fixed top-0 left-0 z-20 px-5">
       <div className="m-auto w-full max-w-lg">
-        <div className="w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700">
+        <div className="w-full mx-auto rounded-lg bg-white shadow-lg px-5 py-10 text-gray-700">
           <div className="w-full pt-1 pb-5">
-            <div className="bg-indigo-500 text-white overflow-hidden rounded-full w-20 h-20 -mt-16 mx-auto shadow-lg flex justify-center items-center">
+            <div className="animate-rainbow-river text-white overflow-hidden rounded-full w-20 h-20 -mt-20 mx-auto shadow-lg flex justify-center items-center">
               <i className="mdi mdi-credit-card-outline text-3xl"></i>
             </div>
           </div>
           <div className="mb-10">
-            <h1 className="text-center font-bold text-xl uppercase">
-              Secure payment info
+            <h1 className="text-center font-bold text-2xl uppercase">
+              US$49.00
             </h1>
+            <p className="text-sm text-center px-10 mt-5">
+              Lifetime access to Tailwind Animations. Includes 50+ hand-crafted
+              animations, with more coming soon. Will receieve all future
+              updates at no extra cost.
+            </p>
           </div>
 
           <div className="mb-3">
@@ -84,9 +91,15 @@ function Purchase({}: PurchaseProps) {
             </div>
           </div>
           <div>
-            <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">
+            <button className="block w-full bg-black hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">
               <i className="mdi mdi-lock-outline mr-1"></i> PAY NOW
             </button>
+            <div className="flex justify-center items-center h-10 gap-1">
+              <LockClosedIcon width={10} />
+              <p className="text-sm text-center">
+                Secure checkout powered by Stripe
+              </p>
+            </div>
           </div>
         </div>
       </div>

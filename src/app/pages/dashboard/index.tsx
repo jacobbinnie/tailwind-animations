@@ -17,7 +17,7 @@ function Dashboard({}: DashboardProps) {
   const [tab, setTab] = useState(0);
   const [revealingCode, setRevealingCode] = useState(false);
   const [selectedKey, setSelectedKey] = useState("");
-  const [showPurchase, setShowPurchase] = useState(false);
+  const [showPurchase, setShowPurchase] = useState(true);
 
   const handleSetTab = (tab: number) => {
     setTab(tab);
@@ -38,7 +38,12 @@ function Dashboard({}: DashboardProps) {
   return (
     <>
       <Navbar />
-      {showPurchase && <Purchase />}
+      {showPurchase && (
+        <>
+          <div className="min-h-screen fixed top-0 left-0 bg-black z-20 w-full opacity-70" />
+          <Purchase />
+        </>
+      )}
       <div
         onClick={() => handleCloseCodeReveal()}
         className={clsx(

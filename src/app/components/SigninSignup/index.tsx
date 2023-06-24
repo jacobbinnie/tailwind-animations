@@ -19,12 +19,12 @@ function SigninSignup({
   return (
     <div className="w-full border-2 h-min max-w-xl px-5 sm:p-10 py-10 flex flex-col rounded-xl gap-4 overflow-hidden bg-transparent shadow-lg">
       <p className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-        {view === "signin" ? "Sign in" : "Sign up"}
+        {view === "signin" ? "Sign in" : "Lifetime access for only $49"}
       </p>
       <p className="max-w-xl mt-4 font-medium text-sm sm:text-lg text-gray-300">
         {view === "signin"
           ? "Enter your email and we'll send you a sign in link"
-          : "Unlock a beautiful library of tailwind animations for your next project. Enter your email to get started"}
+          : "A gorgeous library of tailwind animations for your next project. Includes 50+ hand-crafted animations, with more coming soon."}
       </p>
 
       <form
@@ -76,7 +76,7 @@ function SigninSignup({
                 "absolute flex items-center justify-center text-sm sm:text-lg w-full h-full text-white transition-all duration-300 transform ease"
               )}
             >
-              {view === "signin" ? "Send sign in link" : "Sign up"}
+              {view === "signin" ? "Send sign in link" : "Get started"}
             </span>
           </button>
         </div>
