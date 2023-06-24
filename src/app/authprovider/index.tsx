@@ -19,6 +19,8 @@ import {
 } from "firebase/auth";
 import firebase_app from "../firebase/config";
 import { useRoute } from "../routeprovider";
+import { db } from "../firebase/config";
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 
 interface AuthContextValues {
   user: User | null;
@@ -81,16 +83,18 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
           window.localStorage.removeItem("emailForSignIn");
           // Update the user state with the signed-in user.
           setUser(result.user);
-          handleSetPage(2);
-          // You can access the new user via result.user
-          // Additional user info profile not available via:
-          // result.additionalUserInfo.profile == null
-          // You can check if the user is new or existing:
-          // result.additionalUserInfo.isNewUser
+
+          // Add user to Firestore Users
+          const userRef = doc(db, "users", result.user.uid);
+
+          setDoc(userRef, { uid: result.user.uid, email: result.user.email })
+            .then(() => handleSetPage(2))
+            .catch((error) => {
+              throw new Error(error);
+            });
         })
         .catch((error) => {
-          // Some error occurred, you can inspect the code: error.code
-          // Common errors could be invalid email and invalid or expired OTPs.
+          alert(error.message);
         });
     }
   }, [handleSetPage]);

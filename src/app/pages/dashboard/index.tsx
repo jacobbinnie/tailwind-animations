@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { useAuth } from "@/app/authprovider";
+import Purchase from "@/app/components/Purchase";
 
 interface DashboardProps {}
 
@@ -16,6 +17,7 @@ function Dashboard({}: DashboardProps) {
   const [tab, setTab] = useState(0);
   const [revealingCode, setRevealingCode] = useState(false);
   const [selectedKey, setSelectedKey] = useState("");
+  const [showPurchase, setShowPurchase] = useState(false);
 
   const handleSetTab = (tab: number) => {
     setTab(tab);
@@ -36,6 +38,7 @@ function Dashboard({}: DashboardProps) {
   return (
     <>
       <Navbar />
+      {showPurchase && <Purchase />}
       <div
         onClick={() => handleCloseCodeReveal()}
         className={clsx(
@@ -65,32 +68,81 @@ function Dashboard({}: DashboardProps) {
 
           <div className="flex flex-col w-full gap-20">
             {/* Buttons Layout */}
-            <GridSection
-              displays={designs.animations.buttons}
-              type={"button"}
-              handleSetSelectedKey={handleSetSelectedKey}
-            />
+            {tab === 0 && (
+              <GridSection
+                displays={designs.animations.buttons}
+                type={"button"}
+                handleSetSelectedKey={handleSetSelectedKey}
+              />
+            )}
 
             {/* Gradients Layout */}
-            <GridSection
-              displays={designs.animations.gradients}
-              type={"gradient"}
-              handleSetSelectedKey={handleSetSelectedKey}
-            />
+            {tab === 0 && (
+              <GridSection
+                displays={designs.animations.gradients}
+                type={"gradient"}
+                handleSetSelectedKey={handleSetSelectedKey}
+              />
+            )}
 
             {/* Spaces Layout */}
-            <GridSection
-              displays={designs.animations.backdropSpaces}
-              type={"space"}
-              handleSetSelectedKey={handleSetSelectedKey}
-            />
+            {tab === 0 && (
+              <GridSection
+                displays={designs.animations.backdropSpaces}
+                type={"space"}
+                handleSetSelectedKey={handleSetSelectedKey}
+              />
+            )}
 
             {/* Classics Layout */}
-            <GridSection
-              displays={designs.animations.classics}
-              type={"classic"}
-              handleSetSelectedKey={handleSetSelectedKey}
-            />
+            {tab === 0 && (
+              <GridSection
+                displays={designs.animations.classics}
+                type={"classic"}
+                handleSetSelectedKey={handleSetSelectedKey}
+              />
+            )}
+
+            {/* Show only if the number isn't 0 */}
+            {tab !== 0 && (
+              <>
+                {/* Individual section 1 */}
+                {tab === 1 && (
+                  <GridSection
+                    displays={designs.animations.buttons}
+                    type={"button"}
+                    handleSetSelectedKey={handleSetSelectedKey}
+                  />
+                )}
+
+                {/* Individual section 2 */}
+                {tab === 2 && (
+                  <GridSection
+                    displays={designs.animations.gradients}
+                    type={"gradient"}
+                    handleSetSelectedKey={handleSetSelectedKey}
+                  />
+                )}
+
+                {/* Individual section 3 */}
+                {tab === 3 && (
+                  <GridSection
+                    displays={designs.animations.backdropSpaces}
+                    type={"space"}
+                    handleSetSelectedKey={handleSetSelectedKey}
+                  />
+                )}
+
+                {/* Individual section 4 */}
+                {tab === 4 && (
+                  <GridSection
+                    displays={designs.animations.classics}
+                    type={"classic"}
+                    handleSetSelectedKey={handleSetSelectedKey}
+                  />
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>
