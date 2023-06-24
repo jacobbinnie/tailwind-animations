@@ -88,7 +88,7 @@ function Navbar({}: NavbarProps) {
                 onClick={() => handleSetPage(1)}
                 className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
               >
-                Get Access
+                $49 Lifetime Access
               </button>
             </div>
           </nav>
