@@ -2,6 +2,7 @@
 import { useRoute } from "./index";
 import Dashboard from "../pages/dashboard";
 import Auth from "../pages/auth";
+import { useAuth } from "../authprovider";
 
 interface RouteDictatorProps {}
 

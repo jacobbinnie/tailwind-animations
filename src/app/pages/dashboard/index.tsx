@@ -10,6 +10,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { useAuth } from "@/app/authprovider";
 import Purchase from "@/app/components/Purchase";
+import { isUserPremium } from "@/app/hooks/isUserPremium";
 
 interface DashboardProps {}
 
@@ -17,7 +18,9 @@ function Dashboard({}: DashboardProps) {
   const [tab, setTab] = useState(0);
   const [revealingCode, setRevealingCode] = useState(false);
   const [selectedKey, setSelectedKey] = useState("");
-  const [showPurchase, setShowPurchase] = useState(true);
+  const [showPurchase, setShowPurchase] = useState(false);
+
+  const { user } = useAuth();
 
   const handleSetTab = (tab: number) => {
     setTab(tab);
@@ -33,7 +36,7 @@ function Dashboard({}: DashboardProps) {
     setRevealingCode(true);
   };
 
-  const { user } = useAuth();
+  isUserPremium();
 
   return (
     <>
