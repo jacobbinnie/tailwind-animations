@@ -17,7 +17,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import firebase_app from "../firebase/config";
+import firebaseApp from "../firebase/config";
 import { useRoute } from "../routeprovider";
 import { db } from "../firebase/config";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
       handleCodeInApp: true,
     };
 
-    const auth = getAuth(firebase_app);
+    const auth = getAuth(firebaseApp);
 
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
       .then(() => {
@@ -73,7 +73,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   };
 
   const signInVerify = useCallback(async () => {
-    const auth = getAuth(firebase_app);
+    const auth = getAuth(firebaseApp);
     const email = window.localStorage.getItem("emailForSignIn");
 
     if (email) {
@@ -82,7 +82,9 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
           // Clear email from storage.
           window.localStorage.removeItem("emailForSignIn");
           // Update the user state with the signed-in user.
-          setUser(result.user);
+          if (result.user !== null) {
+            setUser(result.user);
+          }
 
           // Add user to Firestore Users
           const userRef = doc(db, "users", result.user.uid);
@@ -100,7 +102,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   }, [handleSetPage]);
 
   const signOutUser = async () => {
-    const auth = getAuth(firebase_app);
+    const auth = getAuth(firebaseApp);
 
     try {
       await signOut(auth);
@@ -111,7 +113,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   };
 
   useEffect(() => {
-    const auth = getAuth(firebase_app);
+    const auth = getAuth(firebaseApp);
 
     setPersistence(auth, browserSessionPersistence)
       .then(() => {
