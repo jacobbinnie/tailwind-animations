@@ -7,19 +7,26 @@ import { useState } from "react";
 
 interface ButtonComponentProps {
   buttonCode: string;
+  handleAssignAction: (type?: "copy") => boolean;
 }
 
-function ButtonComponent({ buttonCode }: ButtonComponentProps) {
+function ButtonComponent({
+  buttonCode,
+  handleAssignAction,
+}: ButtonComponentProps) {
   const [copied, setCopied] = useState(false);
 
   const button = parse(buttonCode);
 
   const handleCopying = () => {
-    navigator.clipboard.writeText(buttonCode);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
+    const res = handleAssignAction("copy");
+    if (res) {
+      navigator.clipboard.writeText(buttonCode);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    }
   };
 
   return (

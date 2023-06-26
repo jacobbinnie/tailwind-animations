@@ -1,7 +1,7 @@
 "use client";
 import GridSection from "@/app/components/GridSection";
 import SortTabs from "@/app/components/SortTabs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import designs from "./../../util/designs.json";
 import CodeReveal from "@/app/components/CodeReveal";
 import clsx from "clsx";
@@ -22,7 +22,13 @@ function Dashboard({}: DashboardProps) {
 
   const { user } = useAuth();
 
-  const { isPremium, loading } = useUserPremium(user?.uid);
+  const { isPremium, loading } = useUserPremium(user?.uid ?? "");
+
+  useEffect(() => {
+    if (user && !isPremium) {
+      setShowPurchase(true);
+    }
+  }, [isPremium, user]);
 
   const handleSetTab = (tab: number) => {
     setTab(tab);
@@ -38,36 +44,68 @@ function Dashboard({}: DashboardProps) {
     setRevealingCode(true);
   };
 
+  const handleAssignAction = (type?: "copy") => {
+    if (!user) {
+      setShowPurchase(true);
+    }
+
+    switch (type) {
+      case "copy":
+        if (isPremium) {
+          return true;
+        } else {
+          setShowPurchase(true);
+          return false;
+        }
+
+      default:
+        if (isPremium) {
+          return true;
+        } else {
+          setShowPurchase(true);
+          return false;
+        }
+    }
+  };
+
+  const commonProps = {
+    handleAssignAction,
+    handleSetSelectedKey,
+  };
+
   if (loading) {
     return (
-      <div className="min-h-screen w-full flex justify-center items-center">
-        <div className="w-20 animate-spin">
-          <svg
-            version="1.1"
-            id="L9"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            viewBox="0 0 100 100"
-            enableBackground="new 0 0 0 0"
-          >
-            <path
-              fill="#fff"
-              d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+      <>
+        <Navbar />
+        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+          <div className="w-20 animate-spin">
+            <svg
+              version="1.1"
+              id="L9"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 100 100"
+              enableBackground="new 0 0 0 0"
             >
-              <animateTransform
-                attributeName="transform"
-                attributeType="XML"
-                type="rotate"
-                dur="1s"
-                from="0 50 50"
-                to="360 50 50"
-                repeatCount="indefinite"
-              />
-            </path>
-          </svg>
+              <path
+                className="fill-current text-gray-300"
+                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="rotate"
+                  dur="1s"
+                  from="0 50 50"
+                  to="360 50 50"
+                  repeatCount="indefinite"
+                />
+              </path>
+            </svg>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -77,7 +115,7 @@ function Dashboard({}: DashboardProps) {
       {showPurchase && (
         <>
           <div className="min-h-screen fixed top-0 left-0 bg-black z-20 w-full opacity-70" />
-          <Purchase />
+          <Purchase setShowPurchase={setShowPurchase} />
         </>
       )}
       <div
@@ -96,9 +134,7 @@ function Dashboard({}: DashboardProps) {
           handleCloseCodeReveal={handleCloseCodeReveal}
         />
 
-        {/* Header */}
-
-        {!isPremium && <Header />}
+        {!isPremium && <Header setShowPurchase={setShowPurchase} />}
 
         <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
           {/* Filter Bar */}
@@ -113,7 +149,7 @@ function Dashboard({}: DashboardProps) {
               <GridSection
                 displays={designs.animations.buttons}
                 type={"button"}
-                handleSetSelectedKey={handleSetSelectedKey}
+                commonProps={commonProps}
               />
             )}
 
@@ -122,7 +158,7 @@ function Dashboard({}: DashboardProps) {
               <GridSection
                 displays={designs.animations.gradients}
                 type={"gradient"}
-                handleSetSelectedKey={handleSetSelectedKey}
+                commonProps={commonProps}
               />
             )}
 
@@ -131,7 +167,7 @@ function Dashboard({}: DashboardProps) {
               <GridSection
                 displays={designs.animations.backdropSpaces}
                 type={"space"}
-                handleSetSelectedKey={handleSetSelectedKey}
+                commonProps={commonProps}
               />
             )}
 
@@ -140,7 +176,7 @@ function Dashboard({}: DashboardProps) {
               <GridSection
                 displays={designs.animations.classics}
                 type={"classic"}
-                handleSetSelectedKey={handleSetSelectedKey}
+                commonProps={commonProps}
               />
             )}
 
@@ -152,7 +188,7 @@ function Dashboard({}: DashboardProps) {
                   <GridSection
                     displays={designs.animations.buttons}
                     type={"button"}
-                    handleSetSelectedKey={handleSetSelectedKey}
+                    commonProps={commonProps}
                   />
                 )}
 
@@ -161,7 +197,7 @@ function Dashboard({}: DashboardProps) {
                   <GridSection
                     displays={designs.animations.gradients}
                     type={"gradient"}
-                    handleSetSelectedKey={handleSetSelectedKey}
+                    commonProps={commonProps}
                   />
                 )}
 
@@ -170,7 +206,7 @@ function Dashboard({}: DashboardProps) {
                   <GridSection
                     displays={designs.animations.backdropSpaces}
                     type={"space"}
-                    handleSetSelectedKey={handleSetSelectedKey}
+                    commonProps={commonProps}
                   />
                 )}
 
@@ -179,7 +215,7 @@ function Dashboard({}: DashboardProps) {
                   <GridSection
                     displays={designs.animations.classics}
                     type={"classic"}
-                    handleSetSelectedKey={handleSetSelectedKey}
+                    commonProps={commonProps}
                   />
                 )}
               </>

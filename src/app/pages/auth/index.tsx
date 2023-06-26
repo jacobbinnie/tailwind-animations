@@ -44,17 +44,15 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
       <div className="flex h-screen flex-col items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
         <Navbar />
         <div className="flex h-full w-full items-center justify-center p-5">
-          {emailSent ? (
-            <EmailSent email={email} />
-          ) : (
-            <SigninSignup
-              handleSendMagicLink={handleSendMagicLink}
-              setView={setView}
-              view={view}
-              setEmail={setEmail}
-              isEmail={isEmail}
-            />
-          )}
+          <SigninSignup
+            handleSendMagicLink={handleSendMagicLink}
+            setView={setView}
+            view={view}
+            email={email}
+            setEmail={setEmail}
+            isEmail={isEmail}
+            emailSent={emailSent}
+          />
         </div>
       </div>
     </>

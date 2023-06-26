@@ -1,8 +1,11 @@
 import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { Dispatch, SetStateAction } from "react";
 
-interface HeaderProps {}
+interface HeaderProps {
+  setShowPurchase: Dispatch<SetStateAction<boolean>>;
+}
 
-function Header({}: HeaderProps) {
+function Header({ setShowPurchase }: HeaderProps) {
   return (
     <div className="flex justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
       <section className="flex flex-col w-full justify-center h-full">
@@ -24,7 +27,10 @@ function Header({}: HeaderProps) {
           </div>
 
           <div className="w-full flex flex-col justify-center items-center">
-            <div className="w-full items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10">
+            <div
+              onClick={() => setShowPurchase(true)}
+              className="w-full cursor-pointer items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10"
+            >
               <div className="w-full gap-2 p-1 md:flex md:items-center">
                 <a className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group">
                   <span className="absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full animate-green-swoosh group-hover:cursor-pointer group-hover:mr-0 mr-2 md:group-hover:translate-x-0 ease">
