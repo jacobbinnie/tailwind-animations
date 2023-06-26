@@ -16,21 +16,27 @@ import {
   browserSessionPersistence,
   onAuthStateChanged,
   signOut,
+  Auth,
 } from "firebase/auth";
 import firebaseApp from "../firebase/config";
 import { useRoute } from "../routeprovider";
 import { db } from "../firebase/config";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 interface AuthContextValues {
-  user: User | null;
+  auth: {
+    user: User | null | undefined;
+    loading: boolean;
+    error: Error | undefined;
+  };
   sendMagicLink: (email: string) => Promise<void | null>;
   signInVerify: () => Promise<void | null>;
   signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValues>({
-  user: null,
+  auth: { user: null, loading: false, error: undefined },
   sendMagicLink: async (email: string) => null,
   signInVerify: async () => null,
   signOut: async () => {},
@@ -41,9 +47,11 @@ interface AuthProviderOptions {
 }
 
 export const AuthProvider = ({ children }: AuthProviderOptions) => {
-  const [user, setUser] = useState<User | null>(null);
-
   const { handleSetPage } = useRoute();
+
+  const auth = getAuth(firebaseApp);
+
+  const [user, loading, error] = useAuthState(auth);
 
   const sendMagicLink = async (email: string) => {
     const redirectUrl = process.env.NEXT_PUBLIC_REDIRECT_URL;
@@ -54,8 +62,6 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
       url: redirectUrl || "https://tailwindanimations.co",
       handleCodeInApp: true,
     };
-
-    const auth = getAuth(firebaseApp);
 
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
       .then(() => {
@@ -81,10 +87,6 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
         .then((result) => {
           // Clear email from storage.
           window.localStorage.removeItem("emailForSignIn");
-          // Update the user state with the signed-in user.
-          if (result.user !== null) {
-            setUser(result.user);
-          }
 
           // Add user to Firestore Users
           const userRef = doc(db, "users", result.user.uid);
@@ -106,7 +108,6 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
 
     try {
       await signOut(auth);
-      setUser(null);
     } catch (error) {
       // Handle sign out error
     }
@@ -126,16 +127,14 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
         const errorCode = error.code;
         const errorMessage = error.message;
       });
-
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-
-    return () => unsubscribe();
   }, [signInVerify]);
 
   const value = {
-    user,
+    auth: {
+      user,
+      loading,
+      error,
+    },
     sendMagicLink,
     signInVerify,
     signOut: signOutUser,

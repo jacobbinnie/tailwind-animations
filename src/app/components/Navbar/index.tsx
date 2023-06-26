@@ -5,7 +5,7 @@ interface NavbarProps {}
 
 function Navbar({}: NavbarProps) {
   const { handleSetPage } = useRoute();
-  const { user, signOut } = useAuth();
+  const { auth, signOut } = useAuth();
 
   return (
     <div className="w-full mx-auto bg-white border-b sticky top-0 z-20">
@@ -43,7 +43,7 @@ function Navbar({}: NavbarProps) {
             </svg>
           </button>
         </div>
-        {user ? (
+        {auth.user ? (
           <nav className="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
             <div className="inline-flex items-center gap-4 list-none lg:ml-auto">
               <p className="text-sm text-gray-300">My Account</p>
