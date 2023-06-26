@@ -15,7 +15,7 @@ interface PurchaseProps {
 function Purchase({ setShowPurchase }: PurchaseProps) {
   const [loading, setLoading] = useState(false);
 
-  const { user } = useAuth();
+  const { auth } = useAuth();
   const { handleSetPage } = useRoute();
 
   const initiateCheckout = () => {
@@ -24,7 +24,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
   };
 
   const handleAction = () => {
-    if (user) {
+    if (auth.user) {
       initiateCheckout();
     } else {
       handleSetPage(1);
@@ -60,7 +60,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
             >
               <i className="mdi mdi-lock-outline mr-1"></i>{" "}
               <div className="w-full max-h-16 items-center flex justify-center">
-                {!user ? (
+                {!auth.user ? (
                   "Get Started"
                 ) : loading ? (
                   <div className="w-10 h-10">

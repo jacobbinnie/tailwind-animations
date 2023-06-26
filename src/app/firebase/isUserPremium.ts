@@ -1,4 +1,3 @@
-import { User, getAuth } from "firebase/auth";
 import {
   getFirestore,
   collection,

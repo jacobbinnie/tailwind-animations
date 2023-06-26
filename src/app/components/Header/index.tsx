@@ -62,10 +62,10 @@ function Header({ setShowPurchase }: HeaderProps) {
 
             <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
               <p className="text-lg">Quick Video Walkthrough</p>
-              <ArrowDownIcon width={20} className="animate-bounce" />
+              <ArrowDownIcon width={20} />
             </div>
 
-            <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-0">
+            <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-10">
               <svg
                 fill="none"
                 viewBox="0 0 400 400"

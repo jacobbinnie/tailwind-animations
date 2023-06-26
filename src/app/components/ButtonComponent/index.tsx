@@ -1,7 +1,4 @@
-import {
-  ArrowRightIcon,
-  ClipboardDocumentIcon,
-} from "@heroicons/react/24/solid";
+import { ClipboardDocumentIcon } from "@heroicons/react/24/solid";
 import parse from "html-react-parser";
 import { useState } from "react";
 

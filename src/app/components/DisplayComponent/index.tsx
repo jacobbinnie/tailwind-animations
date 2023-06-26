@@ -55,7 +55,7 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
         <a className="inline-flex items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
           <div
             onClick={() => handleCopying()}
-            className="flex gap-2 bg-[#5046e5] shadow-lg px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-rainbow-river cursor-pointer"
+            className="flex gap-2 w-full bg-[#5046e5] shadow-lg px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-rainbow-river cursor-pointer"
           >
             <span className="text-white font-semibold">Show Code</span>
             <ArrowRightIcon width={16} color="white" />
