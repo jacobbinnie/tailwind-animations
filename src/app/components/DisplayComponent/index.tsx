@@ -9,6 +9,7 @@ interface DisplayComponentProps {
   animation: string;
   type: "button" | "gradient" | "space" | "classic";
   handleSetSelectedKey: (key: string) => void;
+  handleAssignAction: (type?: "copy") => boolean;
 }
 
 export const DisplayComponent: React.FC<DisplayComponentProps> = ({
@@ -16,7 +17,15 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
   animation,
   type,
   handleSetSelectedKey,
+  handleAssignAction,
 }) => {
+  const handleCopying = () => {
+    const res = handleAssignAction();
+    if (res) {
+      handleSetSelectedKey(name);
+    }
+  };
+
   return (
     <div className="flex w-full flex-col h-full">
       <div
@@ -45,7 +54,7 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
       <div className="flex gap-3 mt-5 justify-left">
         <a className="inline-flex items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
           <div
-            onClick={() => handleSetSelectedKey(name)}
+            onClick={() => handleCopying()}
             className="flex gap-2 bg-[#5046e5] shadow-lg px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-rainbow-river cursor-pointer"
           >
             <span className="text-white font-semibold">Show Code</span>

@@ -3,7 +3,7 @@ import { isUserPremium } from "../firebase/isUserPremium";
 
 export const useUserPremium = (userId: string | undefined) => {
   const [isPremium, setIsPremium] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchUserPremium = async () => {
@@ -11,6 +11,7 @@ export const useUserPremium = (userId: string | undefined) => {
 
       try {
         if (userId) {
+          setLoading(true);
           const premium = await isUserPremium(userId); // Replace with your actual function call
           setIsPremium(premium);
           setLoading(false);

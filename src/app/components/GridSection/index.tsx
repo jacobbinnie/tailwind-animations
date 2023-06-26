@@ -16,14 +16,15 @@ type Buttons = {
 interface GridSectionProps {
   displays: Designs | Buttons;
   type: "button" | "gradient" | "space" | "classic";
-  handleSetSelectedKey: (key: string) => void;
+  commonProps: {
+    handleAssignAction: (type?: "copy") => boolean;
+    handleSetSelectedKey: (key: string) => void;
+  };
 }
 
-function GridSection({
-  displays,
-  type,
-  handleSetSelectedKey,
-}: GridSectionProps) {
+function GridSection({ displays, type, commonProps }: GridSectionProps) {
+  const { handleAssignAction, handleSetSelectedKey } = commonProps;
+
   const renderDisplay = () => {
     if (!displays) {
       return null; // or handle the case when `displays` is undefined/null
@@ -32,7 +33,13 @@ function GridSection({
     return Object.entries(displays).map(([key, value]) => {
       switch (type) {
         case "button":
-          return <ButtonComponent key={key} buttonCode={value.button} />;
+          return (
+            <ButtonComponent
+              key={key}
+              buttonCode={value.button}
+              handleAssignAction={handleAssignAction}
+            />
+          );
 
         default:
           return (
@@ -44,6 +51,7 @@ function GridSection({
               }
               type={type}
               handleSetSelectedKey={handleSetSelectedKey}
+              handleAssignAction={handleAssignAction}
             />
           );
       }
