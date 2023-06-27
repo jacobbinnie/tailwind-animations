@@ -102,7 +102,11 @@ function Dashboard({}: DashboardProps) {
           />
         )}
 
-        <Header setShowPurchase={setShowPurchase} />
+        <Header
+          setShowPurchase={setShowPurchase}
+          isPremium={isPremium}
+          loading={loading}
+        />
 
         <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
           {/* Filter Bar */}
