@@ -8,7 +8,7 @@ function Navbar({}: NavbarProps) {
   const { auth, signOut } = useAuth();
 
   return (
-    <div className="w-full mx-auto bg-white border-b sticky top-0 z-20">
+    <div className="w-full mx-auto bg-white border-b sticky top-0 z-30">
       <div className="relative flex flex-col w-full p-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div className="flex flex-row items-center justify-between lg:justify-start">
           <a

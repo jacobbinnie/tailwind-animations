@@ -53,9 +53,9 @@ function CodeReveal({
     <div
       className={`${
         revealingCode ? "translate-y-0" : "translate-y-full"
-      } fixed bottom-0 left-0 w-full h-full bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-white to-gray-300 z-10 p-10 flex justify-center transition-transform ease-in-out duration-300 overflow-y-auto`}
+      } fixed bottom-0 left-0 w-full h-full bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-white to-gray-300 z-20 p-5 flex justify-center transition-transform ease-in-out duration-300 overflow-y-auto`}
     >
-      <div className="rounded">
+      <div className="rounded w-full flex justify-center">
         <div className="flex w-full bg-white p-10 shadow-lg rounded-lg mt-20 flex-col max-w-2xl overflow-auto">
           <p className="mt-3 text-sm text-gray-300 font-medium mb-2">
             TAILWIND ANIMATIONS
@@ -88,10 +88,10 @@ function CodeReveal({
                 2. Copy the following code definitions
               </p>
 
-              <a className="inline-flex gap-2 items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
+              <a className="sm:inline-flex block gap-2 items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
                 <div
                   onClick={() => handleCopyAnimation()}
-                  className="flex gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer"
+                  className="flex sm:mb-0 mb-2 gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer"
                 >
                   <span className="text-white font-semibold">
                     {copiedAnimation ? "Copied" : "Copy Animation"}
@@ -135,7 +135,7 @@ function CodeReveal({
             tailwind.config.js
           </p>
 
-          <pre className="bg-black p-5 rounded-xl">
+          <pre className="bg-black p-5 rounded-xl overflow-clip">
             <code className="text-gray-300 text-sm">{tailwindConfig}</code>
           </pre>
 
@@ -143,7 +143,7 @@ function CodeReveal({
             4. Add your animation to any element using{" "}
             <span className="font-black"> animate-{animationKey}</span>
           </p>
-          <pre className="bg-black p-5 rounded-xl mt-2">
+          <pre className="bg-black px-5 py-10 rounded-xl mt-2 overflow-clip">
             <code className="text-gray-300 text-sm">{`<div className="w-full h-24 animate-${animationKey}/>`}</code>
           </pre>
 

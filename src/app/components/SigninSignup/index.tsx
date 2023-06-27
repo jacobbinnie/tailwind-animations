@@ -116,7 +116,7 @@ function SigninSignup({
                         isEmail()
                           ? "mr-0 translate-x-0 animate-green-swoosh"
                           : "mr-2",
-                        "absolute flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full ease"
+                        "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full ease"
                       )}
                     >
                       <svg

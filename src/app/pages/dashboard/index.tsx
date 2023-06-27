@@ -88,7 +88,7 @@ function Dashboard({}: DashboardProps) {
         onClick={() => handleCloseCodeReveal()}
         className={clsx(
           revealingCode ? "opacity-100" : "hidden",
-          "bg-black fixed bottom-10 hover:opacity-50 transition-all right-10 rounded animate-black-swoosh px-8 py-4 z-20 cursor-pointer"
+          "bg-black fixed bottom-10 hover:opacity-50 transition-all right-10 rounded animate-black-swoosh px-8 py-4 z-30 cursor-pointer"
         )}
       >
         Close
