@@ -4,7 +4,10 @@ import JSONDesigns from "../../util/designs.json";
 import ButtonComponent from "../ButtonComponent";
 
 type Designs = {
-  [key: string]: string;
+  [key: string]: {
+    animation: string;
+    keyframes: string;
+  };
 };
 
 type Buttons = {
@@ -47,7 +50,9 @@ function GridSection({ displays, type, commonProps }: GridSectionProps) {
               key={key}
               name={key}
               animation={
-                type === "space" ? `animate-${value}` : `hover:animate-${value}`
+                type === "space"
+                  ? `animate-${value.animation}`
+                  : `hover:animate-${value.animation}`
               }
               type={type}
               handleSetSelectedKey={handleSetSelectedKey}
