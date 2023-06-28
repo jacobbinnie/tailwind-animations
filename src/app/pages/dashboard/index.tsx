@@ -137,7 +137,7 @@ function Dashboard({}: DashboardProps) {
             {/* Spaces Layout */}
             {tab === 0 && (
               <GridSection
-                displays={designs.animations.backdropSpaces}
+                displays={designs.animations.spaces}
                 type={"space"}
                 commonProps={commonProps}
               />
@@ -176,7 +176,7 @@ function Dashboard({}: DashboardProps) {
                 {/* Individual section 3 */}
                 {tab === 3 && (
                   <GridSection
-                    displays={designs.animations.backdropSpaces}
+                    displays={designs.animations.spaces}
                     type={"space"}
                     commonProps={commonProps}
                   />
