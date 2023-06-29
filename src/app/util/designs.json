@@ -1,7 +1,7 @@
 {
   "descriptions": {
     "button": "Perfect buttons with animations for sharper & rounder environments. Simply copy and paste the button directly into your component.",
-    "gradient": "Perfect for buttons, hover effects & adding a little magic.",
+    "gradient": "Perfect for buttons, hover effects & adding a little magic. All gradients have a duration between 2s - 5s and can be customized to taste.",
     "space": "Perfect for full screen immersive experiences and backdrops (we recommend viewing this on desktop)",
     "classic": "Perfect for fun & simple interactivity."
   },
