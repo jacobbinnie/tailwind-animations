@@ -11,20 +11,23 @@ import Footer from "@/app/components/Footer";
 import { useAuth } from "@/app/authprovider";
 import Purchase from "@/app/components/Purchase";
 import { useUserPremium } from "@/app/hooks/useUserPremium";
-import { getAuth } from "firebase/auth";
-import firebaseApp from "@/app/firebase/config";
+import { types } from "@/app/interfaces";
 
-interface DashboardProps {}
+interface DashboardProps {
+  isPremium: boolean;
+  loading: boolean;
+}
 
-function Dashboard({}: DashboardProps) {
+function Dashboard({ isPremium, loading }: DashboardProps) {
   const [tab, setTab] = useState(0);
   const [revealingCode, setRevealingCode] = useState(false);
-  const [selectedKey, setSelectedKey] = useState("");
+  const [selectedKey, setSelectedKey] = useState<{
+    key: string;
+    type: types;
+  }>();
   const [showPurchase, setShowPurchase] = useState(false);
 
   const { auth } = useAuth();
-
-  const { isPremium, loading } = useUserPremium(auth.user?.uid);
 
   useEffect(() => {
     if (auth.user && !auth.loading && !isPremium && !loading) {
@@ -38,11 +41,11 @@ function Dashboard({}: DashboardProps) {
 
   const handleCloseCodeReveal = () => {
     setRevealingCode(false);
-    setSelectedKey("");
+    setSelectedKey(undefined);
   };
 
-  const handleSetSelectedKey = (key: string) => {
-    setSelectedKey(key);
+  const handleSetSelectedKey = (key: string, type: types) => {
+    setSelectedKey({ key, type });
     setRevealingCode(true);
   };
 
@@ -51,22 +54,11 @@ function Dashboard({}: DashboardProps) {
       setShowPurchase(true);
     }
 
-    switch (type) {
-      case "copy":
-        if (isPremium) {
-          return true;
-        } else {
-          setShowPurchase(true);
-          return false;
-        }
-
-      default:
-        if (isPremium) {
-          return true;
-        } else {
-          setShowPurchase(true);
-          return false;
-        }
+    if (isPremium) {
+      return true;
+    } else {
+      setShowPurchase(true);
+      return false;
     }
   };
 
@@ -88,17 +80,17 @@ function Dashboard({}: DashboardProps) {
         onClick={() => handleCloseCodeReveal()}
         className={clsx(
           revealingCode ? "opacity-100" : "hidden",
-          "bg-black fixed bottom-10 hover:opacity-50 transition-all right-10 rounded animate-black-swoosh px-8 py-4 z-30 cursor-pointer"
+          "bg-black fixed bottom-10 hover:opacity-50 transition-all right-10 opacity-50 rounded px-8 py-2 z-30 cursor-pointer"
         )}
       >
         Close
       </div>
       <div className="w-full min-w-screen h-full min-h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-white to-white">
-        {isPremium && (
+        {isPremium && selectedKey && (
           <CodeReveal
             revealingCode={revealingCode}
-            animationKey={selectedKey.toLowerCase()}
-            handleCloseCodeReveal={handleCloseCodeReveal}
+            animationKey={{ ...selectedKey }}
+            handleAssignAction={handleAssignAction}
           />
         )}
 
@@ -119,7 +111,7 @@ function Dashboard({}: DashboardProps) {
             {/* Buttons Layout */}
             {tab === 0 && (
               <GridSection
-                displays={designs.animations.buttons}
+                displays={designs.animations.button}
                 type={"button"}
                 commonProps={commonProps}
               />
@@ -128,7 +120,7 @@ function Dashboard({}: DashboardProps) {
             {/* Gradients Layout */}
             {tab === 0 && (
               <GridSection
-                displays={designs.animations.gradients}
+                displays={designs.animations.gradient}
                 type={"gradient"}
                 commonProps={commonProps}
               />
@@ -137,7 +129,7 @@ function Dashboard({}: DashboardProps) {
             {/* Spaces Layout */}
             {tab === 0 && (
               <GridSection
-                displays={designs.animations.spaces}
+                displays={designs.animations.space}
                 type={"space"}
                 commonProps={commonProps}
               />
@@ -146,7 +138,7 @@ function Dashboard({}: DashboardProps) {
             {/* Classics Layout */}
             {tab === 0 && (
               <GridSection
-                displays={designs.animations.classics}
+                displays={designs.animations.classic}
                 type={"classic"}
                 commonProps={commonProps}
               />
@@ -158,7 +150,7 @@ function Dashboard({}: DashboardProps) {
                 {/* Individual section 1 */}
                 {tab === 1 && (
                   <GridSection
-                    displays={designs.animations.buttons}
+                    displays={designs.animations.button}
                     type={"button"}
                     commonProps={commonProps}
                   />
@@ -167,7 +159,7 @@ function Dashboard({}: DashboardProps) {
                 {/* Individual section 2 */}
                 {tab === 2 && (
                   <GridSection
-                    displays={designs.animations.gradients}
+                    displays={designs.animations.gradient}
                     type={"gradient"}
                     commonProps={commonProps}
                   />
@@ -176,7 +168,7 @@ function Dashboard({}: DashboardProps) {
                 {/* Individual section 3 */}
                 {tab === 3 && (
                   <GridSection
-                    displays={designs.animations.spaces}
+                    displays={designs.animations.space}
                     type={"space"}
                     commonProps={commonProps}
                   />
@@ -185,7 +177,7 @@ function Dashboard({}: DashboardProps) {
                 {/* Individual section 4 */}
                 {tab === 4 && (
                   <GridSection
-                    displays={designs.animations.classics}
+                    displays={designs.animations.classic}
                     type={"classic"}
                     commonProps={commonProps}
                   />

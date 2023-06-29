@@ -42,7 +42,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
           </div>
           <div className="my-10">
             <h1 className="text-center font-bold text-2xl uppercase">
-              US$49.00
+              US$37.00
             </h1>
             <p className="text-sm text-center">One time payment</p>
             <p className="text-sm text-center px-10 mt-5">

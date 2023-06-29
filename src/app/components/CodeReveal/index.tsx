@@ -2,35 +2,49 @@ import {
   CheckBadgeIcon,
   ClipboardDocumentIcon,
 } from "@heroicons/react/24/solid";
-import clsx from "clsx";
 import { useState } from "react";
+import parse from "html-react-parser";
+import { types } from "@/app/interfaces";
+import { getCode } from "@/app/util";
 
 interface CodeRevealProps {
-  animationKey: string;
+  animationKey: { key: string; type: types };
   revealingCode: boolean;
-  handleCloseCodeReveal: () => void;
+  handleAssignAction: (type?: "copy") => boolean;
 }
 
 function CodeReveal({
   animationKey,
   revealingCode,
-  handleCloseCodeReveal,
+  handleAssignAction,
 }: CodeRevealProps) {
   const [copiedAnimation, setCopiedAnimation] = useState(false);
   const [copiedKeyframes, setCopiedKeyframes] = useState(false);
 
-  const handleCopyAnimation = () => {
-    setCopiedAnimation(true);
-    setTimeout(() => {
-      setCopiedAnimation(false);
-    }, 2000);
-  };
+  const handleCopy = (intent: "animation" | "keyframes") => {
+    const res = handleAssignAction();
+    if (res) {
+      const code = getCode(animationKey.key, animationKey.type);
+      if (code) {
+        if (intent === "keyframes") {
+          const stringifiedObject = JSON.stringify(code.keyframes);
+          const finalString =
+            `\"${animationKey.key}\":` + stringifiedObject + ",";
 
-  const handleCopyKeyframes = () => {
-    setCopiedKeyframes(true);
-    setTimeout(() => {
-      setCopiedKeyframes(false);
-    }, 2000);
+          navigator.clipboard.writeText(finalString);
+          setCopiedKeyframes(true);
+          setTimeout(() => {
+            setCopiedKeyframes(false);
+          }, 2000);
+        } else {
+          navigator.clipboard.writeText(code.animation);
+          setCopiedAnimation(true);
+          setTimeout(() => {
+            setCopiedAnimation(false);
+          }, 2000);
+        }
+      }
+    }
   };
 
   const tailwindConfig = `module.exports = {
@@ -61,7 +75,7 @@ function CodeReveal({
             TAILWIND ANIMATIONS
           </p>
           <p className="text-black capitalize text-lg font-semibold mb-4">
-            &quot;{animationKey.toUpperCase()}&quot; INSTALL GUIDE
+            &quot;{animationKey.key.toUpperCase()}&quot; INSTALL GUIDE
           </p>
           <div className="w-full h-1 opacity-30 rounded bg-gray-300 mb-10" />
           <p className="font-medium text-xs text-black">
@@ -90,7 +104,7 @@ function CodeReveal({
 
               <a className="sm:inline-flex block gap-2 items-center justify-center text-sm duration-200 focus:outline-none focus-visible:outline-gray-600">
                 <div
-                  onClick={() => handleCopyAnimation()}
+                  onClick={() => handleCopy("animation")}
                   className="flex sm:mb-0 mb-2 gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer"
                 >
                   <span className="text-white font-semibold">
@@ -103,7 +117,7 @@ function CodeReveal({
                   )}
                 </div>
                 <div
-                  onClick={() => handleCopyKeyframes()}
+                  onClick={() => handleCopy("keyframes")}
                   className="flex gap-2 bg-black px-4 py-2 rounded-3xl transition-all hover:px-6 hover:animate-green-swoosh cursor-pointer"
                 >
                   <span className="text-white font-semibold">
@@ -141,10 +155,10 @@ function CodeReveal({
 
           <p className="font-medium text-black mt-10">
             4. Add your animation to any element using{" "}
-            <span className="font-black"> animate-{animationKey}</span>
+            <span className="font-black"> animate-{animationKey.key}</span>
           </p>
           <pre className="bg-black px-5 py-10 rounded-xl mt-2 overflow-clip">
-            <code className="text-gray-300 text-sm">{`<div className="w-full h-24 animate-${animationKey}/>`}</code>
+            <code className="text-gray-300 text-sm">{`<div className="w-full h-24 animate-${animationKey.key}/>`}</code>
           </pre>
 
           <p className="font-medium text-black mt-10 mb-10">

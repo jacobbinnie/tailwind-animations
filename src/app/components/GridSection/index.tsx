@@ -2,26 +2,14 @@ import clsx from "clsx";
 import DisplayComponent from "../DisplayComponent";
 import JSONDesigns from "../../util/designs.json";
 import ButtonComponent from "../ButtonComponent";
-
-type Designs = {
-  [key: string]: {
-    animation: string;
-    keyframes: string;
-  };
-};
-
-type Buttons = {
-  [key: string]: {
-    button: string;
-  };
-};
+import { Buttons, Designs, types } from "@/app/interfaces";
 
 interface GridSectionProps {
   displays: Designs | Buttons;
   type: "button" | "gradient" | "space" | "classic";
   commonProps: {
     handleAssignAction: (type?: "copy") => boolean;
-    handleSetSelectedKey: (key: string) => void;
+    handleSetSelectedKey: (key: string, type: types) => void;
   };
 }
 
