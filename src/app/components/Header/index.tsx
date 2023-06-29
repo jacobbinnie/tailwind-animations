@@ -49,6 +49,28 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                   />
                   <span
                     className={clsx(
+                      !isPremium &&
+                        "group-hover:cursor-pointer md:group-hover:translate-x-0",
+                      "absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full animate-green-swoosh ease"
+                    )}
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span
+                    className={clsx(
                       !isPremium && "md:group-hover:translate-x-full",
                       "absolute flex items-center justify-center text-lg w-full h-full text-white transition-all duration-300 transform ease"
                     )}
