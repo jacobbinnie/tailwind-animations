@@ -8,8 +8,7 @@ export const createCheckoutSession = async () => {
   if (auth.currentUser) {
     addDoc(collection(db, "users", auth.currentUser.uid, "checkout_sessions"), {
       mode: "payment",
-      // price: "price_1NMi8LCllZndS8koscbFv22H",  // Production
-      price: "price_1NMkbZCllZndS8kox4CzrIPo", // $1 price for testing
+      price: "price_1NOHi5CllZndS8ko2ZApmvAU", // Production
       success_url: window.location.origin,
       cancel_url: window.location.origin,
     })

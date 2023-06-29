@@ -1,3 +1,4 @@
+import { types } from "@/app/interfaces";
 import {
   ArrowRightIcon,
   CursorArrowRippleIcon,
@@ -8,7 +9,7 @@ interface DisplayComponentProps {
   name: string;
   animation: string;
   type: "button" | "gradient" | "space" | "classic";
-  handleSetSelectedKey: (key: string) => void;
+  handleSetSelectedKey: (key: string, type: types) => void;
   handleAssignAction: (type?: "copy") => boolean;
 }
 
@@ -22,7 +23,7 @@ export const DisplayComponent: React.FC<DisplayComponentProps> = ({
   const handleCopying = () => {
     const res = handleAssignAction();
     if (res) {
-      handleSetSelectedKey(name);
+      handleSetSelectedKey(name, type);
     }
   };
 

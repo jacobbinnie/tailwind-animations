@@ -1,19 +1,17 @@
 "use client";
-import { useRoute } from "./index";
-import Dashboard from "../pages/dashboard";
-import Auth from "../pages/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { getAuth } from "firebase/auth";
-import firebaseApp from "../firebase/config";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../authprovider";
+import { useUserPremium } from "../hooks/useUserPremium";
+import { useRoute } from ".";
+import Auth from "../pages/auth";
+import Dashboard from "../pages/dashboard";
 
 interface RouteDictatorProps {}
 
 export function RouteDictator({}: RouteDictatorProps) {
   const { page } = useRoute();
-
   const { auth } = useAuth();
+  const { isPremium, loading, fetchingData } = useUserPremium(auth.user?.uid);
 
   let componentToRender;
 
@@ -27,11 +25,11 @@ export function RouteDictator({}: RouteDictatorProps) {
       break;
 
     default:
-      componentToRender = <Dashboard />;
+      componentToRender = <Dashboard isPremium={isPremium} loading={loading} />;
       break;
   }
 
-  if (auth.loading) {
+  if (auth.loading || fetchingData) {
     return (
       <>
         <Navbar />
