@@ -37,7 +37,7 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                 "w-full items-center max-w-sm mb-5 bg-white/20 p-1.5 rounded-2xl flex flex-col justify-center gap-3 mt-10"
               )}
             >
-              <div className="w-full gap-2 p-1 md:flex md:items-center">
+              <div className="w-full gap-2 p-1 flex items-center">
                 <a className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-medium text-white transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group">
                   <span
                     className={clsx(
@@ -62,9 +62,9 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M14 5l7 7m0 0l-7 7m7-7H3"
                       ></path>
                     </svg>
