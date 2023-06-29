@@ -154,7 +154,7 @@ function SigninSignup({
                     onClick={() =>
                       setView(view === "signup" ? "signin" : "signup")
                     }
-                    className="font-black cursor-pointer text-blue-700"
+                    className="font-black cursor-pointer text-indigo-700"
                   >
                     {view === "signin" ? " Sign up" : " Sign in"}
                   </span>
