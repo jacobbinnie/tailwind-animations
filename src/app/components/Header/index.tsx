@@ -90,73 +90,14 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
 
             {!isPremium && !loading && (
               <>
-                <div className="w-full text-lg flex justify-center text-white/70">
-                  <p>One time payment</p>
-                </div>
-
                 <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
                   <p className="text-lg">Quick Video Walkthrough</p>
                   <ArrowDownIcon width={20} />
                 </div>
 
                 <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-10">
-                  <svg
-                    fill="none"
-                    viewBox="0 0 400 400"
-                    height="100%"
-                    width="100%"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute -mt-24 blur-3xl"
-                  >
-                    <g clipPath="url(#clip0_10_20)">
-                      <g filter="url(#filter0_f_10_20)">
-                        <path
-                          d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
-                          fill="#ff237d"
-                        ></path>
-                        <path
-                          d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
-                          fill="#7C87F8"
-                        ></path>
-                        <path
-                          d="M320 400H400V78.75L106.2 134.75L320 400Z"
-                          fill="#4C65E4"
-                        ></path>
-                        <path
-                          d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
-                          fill="#043AFF"
-                        ></path>
-                      </g>
-                    </g>
-                    <defs>
-                      <filter
-                        colorInterpolationFilters="sRGB"
-                        filterUnits="userSpaceOnUse"
-                        height="720.666"
-                        id="filter0_f_10_20"
-                        width="720.666"
-                        x="-160.333"
-                        y="-160.333"
-                      >
-                        <feFlood
-                          floodOpacity="0"
-                          result="BackgroundImageFix"
-                        ></feFlood>
-                        <feBlend
-                          in="SourceGraphic"
-                          in2="BackgroundImageFix"
-                          mode="normal"
-                          result="shape"
-                        ></feBlend>
-                        <feGaussianBlur
-                          result="effect1_foregroundBlur_10_20"
-                          stdDeviation="80.1666"
-                        ></feGaussianBlur>
-                      </filter>
-                    </defs>
-                  </svg>
                   <video
-                    className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl"
+                    className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl z-20"
                     controls={true}
                     muted={false}
                     poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-06-18%20at%206.14.58%20PM.png?alt=media&token=2d9165c5-9bde-419c-b98f-b571bf1684a4"
