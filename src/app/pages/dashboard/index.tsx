@@ -12,6 +12,7 @@ import { useAuth } from "@/app/authprovider";
 import Purchase from "@/app/components/Purchase";
 import { useUserPremium } from "@/app/hooks/useUserPremium";
 import { types } from "@/app/interfaces";
+import Feedback from "@/app/components/Feedback";
 
 interface DashboardProps {
   isPremium: boolean;
@@ -69,6 +70,7 @@ function Dashboard({ isPremium, loading }: DashboardProps) {
 
   return (
     <>
+      {auth.user && <Feedback />}
       <Navbar />
       {showPurchase && !loading && !isPremium && (
         <>
