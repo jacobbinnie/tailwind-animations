@@ -22,7 +22,7 @@ function SigninSignup({
 }: SigninSignupProps) {
   return (
     <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-0">
-      <svg
+      {/* <svg
         fill="none"
         viewBox="0 0 400 400"
         height="100%"
@@ -73,7 +73,7 @@ function SigninSignup({
             ></feGaussianBlur>
           </filter>
         </defs>
-      </svg>
+      </svg> */}
       <div className="w-full flex justify-center">
         <div className="w-full relative bg-white h-min max-w-xl px-5 sm:p-10 py-12 flex flex-col rounded-xl gap-4 overflow-hidden bg-transparent shadow-lg">
           <p className="text-4xl font-extrabold tracking-tight text-black">
