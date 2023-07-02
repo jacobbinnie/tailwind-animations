@@ -33,7 +33,7 @@ export function RouteDictator({}: RouteDictatorProps) {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-r from-indigo-300 to-purple-400">
           <div className="w-20 animate-spin">
             <svg
               version="1.1"
