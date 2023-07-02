@@ -7,8 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Tailwind Animations | Beautiful Buttons, Gradients & More Built With Tailwind CSS",
-  description: "by @jacobbinnie",
+    "Tailwind Animations | 50+ Handcrafted Tailwind Animations For Your Next Project",
+  description:
+    "Beautiful gradients, buttons, backgrounds and more. Simply copy & paste. ",
 };
 
 export default function RootLayout({
