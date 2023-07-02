@@ -151,7 +151,7 @@ function CodeReveal({
             tailwind.config.js
           </p>
 
-          <pre className="bg-black p-5 rounded-xl overflow-clip">
+          <pre className="bg-black p-5 rounded-xl">
             <code className="text-gray-300 text-sm">{tailwindConfig}</code>
           </pre>
 
@@ -159,7 +159,7 @@ function CodeReveal({
             4. Add your animation to any element using{" "}
             <span className="font-black"> animate-{animationKey.key}</span>
           </p>
-          <pre className="bg-black px-5 py-10 rounded-xl mt-2 overflow-clip">
+          <pre className="bg-black px-5 py-10 rounded-xl mt-2">
             <code className="text-gray-300 text-sm">{`<div className="w-full h-24 animate-${animationKey.key}/>`}</code>
           </pre>
 
