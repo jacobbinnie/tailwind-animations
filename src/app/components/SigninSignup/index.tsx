@@ -114,7 +114,7 @@ function SigninSignup({
                     <span
                       className={clsx(
                         isEmail()
-                          ? "mr-0 translate-x-0 animate-green-swoosh"
+                          ? "mr-0 translate-x-0 sm:animate-green-swoosh"
                           : "mr-2",
                         "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full ease"
                       )}
