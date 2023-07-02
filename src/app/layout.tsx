@@ -8,6 +8,11 @@ export const metadata = {
   title:
     "Tailwind Animations | Beautiful Buttons, Gradients & More Built With Tailwind CSS",
   description: "by @jacobbinnie",
+  openGraph: {
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/App%20Screenshot-min.png?alt=media&token=578c1500-694d-4578-9d07-20d8c0e03e24",
+    ],
+  },
 };
 
 export default function RootLayout({
