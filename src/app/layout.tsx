@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <meta
         property="og:image"
-        content="https://media.licdn.com/dms/image/D5622AQGfX0DVU_v7LQ/feedshare-shrink_2048_1536/0/1688274807107?e=1691020800&v=beta&t=sEEonYlyuBguwxUJDfit31XT40MOH2Lp23-x7kLlfz8"
+        content="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-07-03%20at%209.55.13%20AM.png?alt=media&token=b7a5e13e-38bd-4e22-a890-228e90692442"
       />
       <head>
         <Script
