@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import screenshot from "../../public/screenshot.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +10,7 @@ export const metadata = {
     "Tailwind Animations | Beautiful Buttons, Gradients & More Built With Tailwind CSS",
   description: "by @jacobbinnie",
   openGraph: {
-    images: [
-      "https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/App%20Screenshot-min.png?alt=media&token=578c1500-694d-4578-9d07-20d8c0e03e24",
-    ],
+    images: [screenshot],
   },
 };
 
