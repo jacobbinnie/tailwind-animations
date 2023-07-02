@@ -109,12 +109,12 @@ function SigninSignup({
 
                   <button
                     disabled={!isEmail()}
-                    className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-black transition duration-300 ease-out bg-black sm:animate-rainbow-river rounded-xl shadow-md group"
+                    className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-black transition duration-300 ease-out bg-black animate-rainbow-river rounded-xl shadow-md group"
                   >
                     <span
                       className={clsx(
                         isEmail()
-                          ? "mr-0 translate-x-0 sm:animate-green-swoosh"
+                          ? "mr-0 translate-x-0 animate-green-swoosh"
                           : "mr-2",
                         "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full ease"
                       )}
