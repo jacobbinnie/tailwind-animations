@@ -9,6 +9,8 @@ interface SigninSignupProps {
   setEmail: Dispatch<SetStateAction<string>>;
   isEmail(): boolean;
   emailSent: boolean;
+  handleSetLoading(value: boolean): void;
+  loading: boolean;
 }
 
 function SigninSignup({
@@ -19,61 +21,11 @@ function SigninSignup({
   setEmail,
   isEmail,
   emailSent,
+  handleSetLoading,
+  loading,
 }: SigninSignupProps) {
   return (
     <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-0">
-      {/* <svg
-        fill="none"
-        viewBox="0 0 400 400"
-        height="100%"
-        width="100%"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute -mt-24 blur-3xl"
-      >
-        <g clipPath="url(#clip0_10_20)">
-          <g filter="url(#filter0_f_10_20)">
-            <path
-              d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
-              fill="#ff237d"
-            ></path>
-            <path
-              d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
-              fill="#7C87F8"
-            ></path>
-            <path
-              d="M320 400H400V78.75L106.2 134.75L320 400Z"
-              fill="#4C65E4"
-            ></path>
-            <path
-              d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
-              fill="#043AFF"
-            ></path>
-          </g>
-        </g>
-        <defs>
-          <filter
-            colorInterpolationFilters="sRGB"
-            filterUnits="userSpaceOnUse"
-            height="720.666"
-            id="filter0_f_10_20"
-            width="720.666"
-            x="-160.333"
-            y="-160.333"
-          >
-            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-            <feBlend
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              mode="normal"
-              result="shape"
-            ></feBlend>
-            <feGaussianBlur
-              result="effect1_foregroundBlur_10_20"
-              stdDeviation="80.1666"
-            ></feGaussianBlur>
-          </filter>
-        </defs>
-      </svg> */}
       <div className="w-full flex justify-center">
         <div className="w-full relative bg-white h-min max-w-xl px-5 sm:p-10 py-12 flex flex-col rounded-xl gap-4 overflow-hidden bg-transparent shadow-lg">
           <p className="text-4xl font-extrabold tracking-tight text-black">
@@ -108,7 +60,7 @@ function SigninSignup({
                   />
 
                   <button
-                    disabled={!isEmail()}
+                    disabled={loading || !isEmail()}
                     className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-black transition duration-300 ease-out bg-black animate-rainbow-river rounded-xl shadow-md group"
                   >
                     <span
@@ -119,20 +71,25 @@ function SigninSignup({
                         "absolute flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full ease"
                       )}
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
+                      {" "}
+                      {loading ? (
+                        "Loading..."
+                      ) : (
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          ></path>
+                        </svg>
+                      )}
                     </span>
                     <span
                       className={clsx(
