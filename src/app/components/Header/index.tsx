@@ -100,9 +100,9 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                     className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl z-20"
                     controls={true}
                     muted={false}
-                    poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-07-02%20at%201.59.59%20PM-min.png?alt=media&token=7ad80295-c823-4db4-af11-a9eff6cba93b"
+                    poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/1.jpeg?alt=media&token=aadfc96b-e121-4fc6-bd47-c64bf1408607"
                   >
-                    <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Untitled(1).mp4?alt=media&token=d324b019-bca6-4611-94d1-bc2a71092d49" />
+                    <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Untitled(2).mp4?alt=media&token=62e41ade-4b98-42e3-aa3b-3e37f540be04" />
                   </video>
                 </div>
               </>
