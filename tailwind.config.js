@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   safelist: [
     // GRADIENTS
@@ -52,7 +53,7 @@ module.exports = {
     "hover:animate-flip-and-spin 4s infinite",
     "hover:animate-twist 4s infinite",
     "hover:animate-pop 1s infinite",
-    "hover:animate-scatter 1s",
+    "hover:animate-scatter 1s infinite",
   ],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

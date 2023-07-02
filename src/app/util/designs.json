@@ -1,116 +1,990 @@
 {
   "descriptions": {
-    "button": "Perfect buttons with animations for sharper & rounder environments",
-    "gradient": "Perfect for buttons, hover effects & adding a little magic.",
+    "button": "Perfect buttons with animations for sharper & rounder environments. Simply copy and paste the button directly into your project.",
+    "gradient": "Perfect for buttons, hover effects & adding a little magic. All gradients have a duration between 2s - 5s and can be customized to taste.",
     "space": "Perfect for full screen immersive experiences and backdrops (we recommend viewing this on desktop)",
     "classic": "Perfect for fun & simple interactivity."
   },
   "animations": {
-    "buttons": {
+    "button": {
       "hammer": {
-        "button": "<a className=\"cursor-pointer relative inline-block text-lg group\"><span className=\"relative z-10 block px-5 py-5 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white\"><span className=\"absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50\"></span><span className=\"absolute left-0 w-full h-48 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-16 bg-gray-900 group-hover:-rotate-180 ease\"></span><span className=\"relative\">Hammer</span></span><span className=\"absolute bottom-0 right-0 w-full h-12 -mb-1.5 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0\" data-rounded=\"rounded-lg\"></span></a>"
+        "button": "<a className=\"cursor-pointer w-full relative inline-block text-lg group\"><span className=\"relative z-10 block px-5 py-5 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white\"><span className=\"absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50\"></span><span className=\"absolute left-0 w-full h-48 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-16 bg-gray-900 group-hover:-rotate-180 ease\"></span><span className=\"relative\">Hammer</span></span><span className=\"absolute bottom-0 right-0 w-full h-12 -mb-1.5 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0\" data-rounded=\"rounded-lg\"></span></a>"
       },
       "road-sign": {
-        "button": "<a className=\"rounded-md px-3.5 text-lg py-4 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-white\">\n  <span className=\"absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease\"></span>\n  <span className=\"relative text-black text-lg transition duration-300 group-hover:text-white ease\">\n    Road Sign\n  </span>\n</a>"
+        "button": "<a className=\"rounded-md flex w-full px-3.5 text-lg py-4 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-white\">\n  <span className=\"absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease\"></span>\n  <span className=\"relative text-black text-lg transition duration-300 group-hover:text-white ease\">\n    Road Sign\n  </span>\n</a>"
       },
       "pull-the-blinds": {
         "button": "<a className=\"px-5 py-4 w-full relative rounded-lg group overflow-hidden text-lg font-medium border-2 cursor-pointer border-black text-black inline-block\">\n  <span className=\"absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90\"></span>\n  <span className=\"relative group-hover:text-white\">Pull The Blinds</span>\n</a>"
       },
       "fade-to-black": {
-        "button": "<a className=\"relative px-6 py-4 font-medium text-lg cursor-pointer text-black hover:text-white group\">\n  <span className=\"absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-2 translate-y-2 border-2 border-black group-hover:bg-black group-hover:translate-x-0 group-hover:translate-y-0\"></span>\n  <span className=\"absolute inset-0 w-full h-full border-2 border-black\"></span>\n  <span className=\"relative\">Fade To Black</span>\n</a>"
+        "button": "<a className=\"relative flex w-full px-6 py-4 font-medium text-lg cursor-pointer text-black hover:text-white group\">\n  <span className=\"absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-2 translate-y-2 border-2 border-black group-hover:bg-black group-hover:translate-x-0 group-hover:translate-y-0\"></span>\n  <span className=\"absolute inset-0 w-full h-full border-2 border-black\"></span>\n  <span className=\"relative\">Fade To Black</span>\n</a>"
       },
       "loop-arrow": {
-        "button": "<a className=\"relative cursor-pointer w-full inline-flex items-center border-2 border-black justify-start py-4 pl-4 pr-12 overflow-hidden font-medium text-lg text-black transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 group\">\n  <span className=\"absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full\"></span>\n  <span className=\"absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200\">\n    <svg className=\"w-5 h-5 text-white\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white\">\n    Loop Arrow\n  </span>\n</a>"
+        "button": "<a className=\"relative cursor-pointer w-full inline-flex items-center border-2 border-black justify-start py-4 pl-4 pr-12 overflow-hidden font-medium text-lg text-black transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 group\">\n  <span className=\"absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full\"></span>\n  <span className=\"absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200\">\n    <svg className=\"w-5 h-5 text-white\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white\">\n    Loop Arrow\n  </span>\n</a>"
       },
       "moon-beam": {
-        "button": "<a className=\"rounded relative inline-flex group items-center justify-left hover:justify-center px-3.5 py-4 cursor-pointer bg-white hover:bg-white border-2 border-black text-lg font-medium transition-all ease-out overflow-hidden text-black hover:text-white\">\n  <span className=\"absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded-full group-hover:w-36 group-hover:h-32\"></span>\n  <span className=\"relative\">Moon Beam</span>\n</a>"
+        "button": "<a className=\"rounded w-full relative inline-flex group items-center justify-left hover:justify-center px-3.5 py-4 cursor-pointer border-2 border-black text-lg font-medium transition-all ease-out overflow-hidden text-black hover:text-white\">\n  <span className=\"absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded-full group-hover:w-36 group-hover:h-32\"></span>\n  <span className=\"relative\">Moon Beam</span>\n</a>"
       },
       "midnight": {
-        "button": "<a className=\"rounded-md px-3.5 py-4 text-lg overflow-hidden relative group cursor-pointer border-2 border-black font-medium\">\n  <span className=\"absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-5 ease\"></span>\n  <span className=\"relative ml-1 text-black transition duration-300 ease\">\n    Midnight\n  </span>\n  <span className=\"absolute right-0 mt-1 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n</a>"
+        "button": "<a className=\"rounded-md w-full flex px-3.5 py-4 text-lg overflow-hidden relative group cursor-pointer border-2 border-black font-medium\">\n  <span className=\"absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-5 ease\"></span>\n  <span className=\"relative ml-1 text-black transition duration-300 ease\">\n    Midnight\n  </span>\n  <span className=\"absolute right-0 mt-1 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n</a>"
       },
       "unlock": {
-        "button": "<a href=\"#_\" className=\"relative inline-flex items-center justify-center p-4 px-6 py-4 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-b-4 border-black rounded shadow-md group\">\n  <span className=\"absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease\">\n    <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute flex items-center justify-left text-lg ml-10 w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease\">\n    Unlock\n  </span>\n  <span className=\"relative invisible\">Button Text</span>\n</a>"
+        "button": "<a href=\"#_\" className=\"relative w-full inline-flex items-center justify-center px-6 py-8 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-b-4 border-black rounded shadow-md group\">\n  <span className=\"absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease\">\n    <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute flex items-center justify-left text-lg ml-10 w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease\">\n    Unlock\n  </span>\n  <span className=\"relative invisible\"/>\n</a>"
       },
       "hammer-rounded": {
-        "button": "<a className=\"cursor-pointer relative inline-block text-lg group\"><span className=\"relative z-10 block px-5 py-5 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-full group-hover:text-white\"><span className=\"absolute inset-0 w-full h-full px-5 py-3 rounded-full bg-gray-50\"></span><span className=\"absolute left-0 w-full h-48 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-16 bg-gray-900 group-hover:-rotate-180 ease\"></span><span className=\"relative\">Hammer (r)</span></span><span className=\"absolute bottom-0 right-0 w-full h-12 -mb-1.5 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-full group-hover:mb-2 group-hover:mr-0\" data-rounded=\"rounded-full\"></span></a>"
+        "button": "<a className=\"cursor-pointer w-full relative inline-block text-lg group\"><span className=\"relative z-10 block px-5 py-5 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-full group-hover:text-white\"><span className=\"absolute inset-0 w-full h-full px-5 py-3 rounded-full bg-gray-50\"></span><span className=\"absolute left-0 w-full h-48 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-16 bg-gray-900 group-hover:-rotate-180 ease\"></span><span className=\"relative\">Hammer (r)</span></span><span className=\"absolute bottom-0 right-0 w-full h-12 -mb-1.5 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-full group-hover:mb-2 group-hover:mr-0\" data-rounded=\"rounded-full\"></span></a>"
       },
       "road-sign-rounded": {
-        "button": "<a className=\"rounded-full px-3.5 text-lg py-4 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-white\">\n  <span className=\"absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-hover:rounded-full ease\"></span>\n  <span className=\"relative text-black text-lg transition duration-300 group-hover:text-white ease\">\n    Road Sign (r)\n  </span>\n</a>"
+        "button": "<a className=\"rounded-full w-full flex px-3.5 text-lg py-4 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-white\">\n  <span className=\"absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-hover:rounded-full ease\"></span>\n  <span className=\"relative text-black text-lg transition duration-300 group-hover:text-white ease\">\n    Road Sign (r)\n  </span>\n</a>"
       },
       "pull-the-blinds-rounded": {
-        "button": "<a className=\"px-5 py-4 relative rounded-full group overflow-hidden text-lg font-medium border-2 cursor-pointer border-black text-black inline-block\">\n  <span className=\"absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90\"></span>\n  <span className=\"relative group-hover:text-white\">Pull The Blinds (r)</span>\n</a>"
+        "button": "<a className=\"px-5 py-4 w-full relative rounded-full group overflow-hidden text-lg font-medium border-2 cursor-pointer border-black text-black inline-block\">\n  <span className=\"absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-black group-hover:h-full opacity-90\"></span>\n  <span className=\"relative group-hover:text-white\">Pull The Blinds (r)</span>\n</a>"
       },
       "fade-to-black-rounded": {
-        "button": "<a className=\"relative px-6 py-4 font-medium text-lg cursor-pointer text-black hover:text-white group\">\n  <span className=\"absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-2 translate-y-2 border-2 border-black group-hover:bg-black rounded-full group-hover:translate-x-0 group-hover:translate-y-0\"></span>\n  <span className=\"absolute inset-0 w-full h-full border-2 rounded-full border-black\"></span>\n  <span className=\"relative\">Fade To Black (r)</span>\n</a>"
+        "button": "<a className=\"relative flex px-6 py-4 font-medium text-lg cursor-pointer text-black hover:text-white group\">\n  <span className=\"absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-2 translate-y-2 border-2 border-black group-hover:bg-black rounded-full group-hover:translate-x-0 group-hover:translate-y-0\"></span>\n  <span className=\"absolute inset-0 w-full h-full border-2 rounded-full border-black\"></span>\n  <span className=\"relative\">Fade To Black (r)</span>\n</a>"
       },
       "loop-arrow-rounded": {
-        "button": "<a className=\"relative cursor-pointer inline-flex items-center border-2 border-black justify-start py-4 pl-4 pr-12 overflow-hidden font-medium text-lg text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 group\">\n  <span className=\"absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full\"></span>\n  <span className=\"absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200\">\n    <svg className=\"w-5 h-5 text-white\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white\">\n    Loop Arrow (r)\n  </span>\n</a>"
+        "button": "<a className=\"relative w-full cursor-pointer inline-flex items-center border-2 border-black justify-start py-4 pl-4 pr-12 overflow-hidden font-medium text-lg text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 group\">\n  <span className=\"absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full\"></span>\n  <span className=\"absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200\">\n    <svg className=\"w-5 h-5 text-white\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white\">\n    Loop Arrow (r)\n  </span>\n</a>"
       },
       "moon-beam-rounded": {
-        "button": "<a className=\"rounded-full relative inline-flex group items-center justify-left hover:justify-center px-3.5 py-4 cursor-pointer bg-white hover:bg-white border-2 border-black text-lg font-medium transition-all ease-out overflow-hidden text-black hover:text-white\">\n  <span className=\"absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded-full group-hover:w-36 group-hover:h-32\"></span>\n  <span className=\"relative\">Moon Beam (r)</span>\n</a>"
+        "button": "<a className=\"rounded-full w-full relative inline-flex group items-center justify-left hover:justify-center px-3.5 py-4 cursor-pointer border-2 border-black text-lg font-medium transition-all ease-out overflow-hidden text-black hover:text-white\">\n  <span className=\"absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded-full group-hover:w-36 group-hover:h-32\"></span>\n  <span className=\"relative\">Moon Beam (r)</span>\n</a>"
       },
       "midnight-rounded": {
-        "button": "<a className=\"rounded-full px-3.5 py-4 text-lg overflow-hidden relative group cursor-pointer border-2 border-black font-medium\">\n  <span className=\"absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 translate-x-20 bg-black rounded-md top-1/2 group-hover:h-64 group-hover:-translate-y-5 ease\"></span>\n  <span className=\"relative ml-1 text-black transition duration-300 ease\">\n    Midnight (r)\n  </span>\n  <span className=\"absolute right-0 mt-1 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n</a>"
+        "button": "<a className=\"rounded-full w-full flex px-3.5 py-4 text-lg overflow-hidden relative group cursor-pointer border-2 border-black font-medium\">\n  <span className=\"absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 translate-x-20 bg-black rounded-md top-1/2 group-hover:h-64 group-hover:-translate-y-5 ease\"></span>\n  <span className=\"relative ml-1 text-black transition duration-300 ease\">\n    Midnight (r)\n  </span>\n  <span className=\"absolute right-0 mt-1 pr-4 duration-200 ease-out group-hover:translate-x-12\">\n    <svg className=\"w-5 h-5 text-black\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n</a>"
       },
       "unlock-rounded": {
-        "button": "<a href=\"#_\" className=\"relative inline-flex items-center justify-center p-4 px-6 py-4 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-b-4 border-black rounded-full shadow-md group\">\n  <span className=\"absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease\">\n    <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute flex items-center justify-left text-lg ml-10 w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease\">\n    Unlock (r)\n  </span>\n  <span className=\"relative invisible\">Button Text</span>\n</a>"
+        "button": "<a href=\"#_\" className=\"relative w-full inline-flex items-center justify-center px-6 py-8 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-b-4 border-black rounded-full shadow-md group\">\n  <span className=\"absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease\">\n    <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n    </svg>\n  </span>\n  <span className=\"absolute flex items-center justify-left text-lg ml-10 w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease\">\n    Unlock (r)\n  </span>\n  <span className=\"relative invisible\"/>\n</a>"
       }
     },
 
-    "gradients": {
-      "rainbow-river": "rainbow-river 5s ease infinite",
-      "green-swoosh": "green-swoosh 2s ease infinite",
-      "fuzzy-dream": "fuzzy-dream 2s ease infinite",
-      "misty-fade": "misty-fade 2s ease infinite",
-      "hazy-twist": "hazy-twist 2s ease infinite",
-      "mystic-aura": "mystic-aura 2s ease infinite",
-      "black-swoosh": "black-swoosh 2s ease infinite",
-      "tranquil-waters": "tranquil-waters 5s ease infinite",
-      "diagonal-blaze": "diagonal-blaze 2s ease infinite",
-      "diagonal-ocean-wave": "diagonal-ocean-wave 2s ease infinite",
-      "diagonal-purple-dream": "diagonal-purple-dream 2s ease infinite",
-      "diagonal-galaxy": "diagonal-galaxy 2s ease infinite",
-      "purple-swoosh": "purple-swoosh 2s ease infinite",
-      "blurred-swoosh": "blurred-swoosh 2s ease infinite",
-      "serene-sunset": "serene-sunset 2s ease infinite",
-      "vibrant-sun": "vibrant-sun 2s ease infinite",
-      "shifting-triangles": "shifting-triangles 2s ease infinite",
-      "mellow-embers": "mellow-embers 2s ease infinite",
-      "vertical-bliss": "vertical-bliss 2s ease infinite",
-      "vertical-raindance": "vertical-raindance 2s ease infinite",
-      "vertical-azure-wave": "vertical-azure-wave 2s ease infinite",
-      "vertical-sunset-tide": "vertical-sunset-tide 2s ease infinite",
-      "vertical-golden-dream": "vertical-golden-dream 2s ease infinite"
+    "gradient": {
+      "rainbow-river": {
+        "animation": "rainbow-river 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))"
+          }
+        }
+      },
+      "green-swoosh": {
+        "animation": "green-swoosh 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))"
+          }
+        }
+      },
+      "fuzzy-dream": {
+        "animation": "fuzzy-dream 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))",
+            "filter": "blur(0)"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))",
+            "filter": "blur(10px)"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8))",
+            "filter": "blur(0)"
+          }
+        }
+      },
+      "misty-fade": {
+        "animation": "misty-fade 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8))",
+            "filter": "blur(0)"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8))",
+            "filter": "blur(7px)"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.8), rgba(224, 224, 224, 0.8), rgba(128, 128, 128, 0.8))",
+            "filter": "blur(0)"
+          }
+        }
+      },
+      "hazy-twist": {
+        "animation": "hazy-twist 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8))",
+            "filter": "blur(0)"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8))",
+            "filter": "blur(9px)"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(238, 130, 238, 0.8), rgba(0, 0, 255, 0.8))",
+            "filter": "blur(0)"
+          }
+        }
+      },
+      "mystic-aura": {
+        "animation": "mystic-aura 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8))",
+            "filter": "blur(0)"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8))",
+            "filter": "blur(8px)"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 0, 255, 0.8), rgba(128, 0, 128, 0.8))",
+            "filter": "blur(0)"
+          }
+        }
+      },
+      "black-swoosh": {
+        "animation": "black-swoosh 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))"
+          }
+        }
+      },
+      "tranquil-waters": {
+        "animation": "tranquil-waters 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "500% 90%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(97, 174, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(164, 209, 255, 0.8))"
+          },
+          "50%": {
+            "background-size": "500% 90%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(164, 209, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(97, 174, 255, 0.8))"
+          },
+          "100%": {
+            "background-size": "500% 90%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(97, 174, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(164, 209, 255, 0.8))"
+          }
+        }
+      },
+      "diagonal-blaze": {
+        "animation": "diagonal-blaze 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "bottom right",
+            "background-image": "linear-gradient(to bottom right, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8))"
+          }
+        }
+      },
+      "diagonal-ocean-wave": {
+        "animation": "diagonal-ocean-wave 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(0, 128, 128, 0.8), rgba(32, 178, 170, 0.8))"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "bottom right",
+            "background-image": "linear-gradient(to bottom right, rgba(32, 178, 170, 0.8), rgba(0, 128, 128, 0.8))"
+          },
+          "100%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(0, 128, 128, 0.8), rgba(32, 178, 170, 0.8))"
+          }
+        }
+      },
+      "diagonal-purple-dream": {
+        "animation": "diagonal-purple-dream 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(128, 0, 128, 0.8), rgba(218, 112, 214, 0.8))"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "bottom right",
+            "background-image": "linear-gradient(to bottom right, rgba(218, 112, 214, 0.8), rgba(128, 0, 128, 0.8))"
+          },
+          "100%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(128, 0, 128, 0.8), rgba(218, 112, 214, 0.8))"
+          }
+        }
+      },
+      "diagonal-galaxy": {
+        "animation": "diagonal-galaxy 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(135, 206, 250, 0.8))"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "bottom right",
+            "background-image": "linear-gradient(to bottom right, rgba(135, 206, 250, 0.8), rgba(0, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "background-image": "linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(135, 206, 250, 0.8))"
+          }
+        }
+      },
+      "purple-swoosh": {
+        "animation": "purple-swoosh 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(80, 70, 229, 0.8), #5046e5, #5046e5, #5046e5, #5046e5, #5046e5, rgba(0, 0, 0, 0.8))"
+          }
+        }
+      },
+      "blurred-swoosh": {
+        "animation": "blurred-swoosh 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))",
+            "filter": "blur(0)"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))",
+            "filter": "blur(5px)"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.8))",
+            "filter": "blur(0)"
+          }
+        }
+      },
+      "serene-sunset": {
+        "animation": "serene-sunset 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(255, 111, 97, 0.8), rgba(255, 156, 131, 0.8), rgba(255, 200, 164, 0.8))"
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(255, 200, 164, 0.8), rgba(255, 156, 131, 0.8), rgba(255, 111, 97, 0.8))"
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(255, 111, 97, 0.8), rgba(255, 156, 131, 0.8), rgba(255, 200, 164, 0.8))"
+          }
+        }
+      },
+      "vibrant-sun": {
+        "animation": "vibrant-sun 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-image": "radial-gradient(circle at 50% 50%, #FF5252, #FFAB40)",
+            "background-size": "100% 100%"
+          },
+          "50%": {
+            "background-image": "radial-gradient(circle at 60% 40%, #FFAB40, #FF5252)",
+            "background-size": "110% 110%"
+          },
+          "100%": {
+            "background-image": "radial-gradient(circle at 50% 50%, #FF5252, #FFAB40)",
+            "background-size": "100% 100%"
+          }
+        }
+      },
+      "shifting-triangles": {
+        "animation": "shifting-triangles 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-image": "linear-gradient(60deg, rgba(255, 0, 0, 0.8) 25%, rgba(0, 255, 0, 0.8) 50%, rgba(0, 0, 255, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "top left"
+          },
+          "50%": {
+            "background-image": "linear-gradient(60deg, rgba(0, 0, 255, 0.8) 25%, rgba(255, 0, 0, 0.8) 50%, rgba(0, 255, 0, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "bottom right"
+          },
+          "100%": {
+            "background-image": "linear-gradient(60deg, rgba(255, 0, 0, 0.8) 25%, rgba(0, 255, 0, 0.8) 50%, rgba(0, 0, 255, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "top left"
+          }
+        }
+      },
+      "mellow-embers": {
+        "animation": "mellow-embers 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "700% 110%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(226, 97, 97, 0.8), rgba(239, 131, 131, 0.8), rgba(252, 164, 164, 0.8))"
+          },
+          "50%": {
+            "background-size": "700% 110%",
+            "background-position": "right center",
+            "background-image": "linear-gradient(to right, rgba(252, 164, 164, 0.8), rgba(239, 131, 131, 0.8), rgba(226, 97, 97, 0.8))"
+          },
+          "100%": {
+            "background-size": "700% 110%",
+            "background-position": "left center",
+            "background-image": "linear-gradient(to right, rgba(226, 97, 97, 0.8), rgba(239, 131, 131, 0.8), rgba(252, 164, 164, 0.8))"
+          }
+        }
+      },
+      "vertical-bliss": {
+        "animation": "vertical-bliss 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 600%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "100% 600%",
+            "background-position": "center bottom",
+            "background-image": "linear-gradient(to bottom, rgba(255, 255, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(128, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 600%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(128, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8))"
+          }
+        }
+      },
+      "vertical-raindance": {
+        "animation": "vertical-raindance 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 800%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "100% 800%",
+            "background-position": "center bottom",
+            "background-image": "linear-gradient(to bottom, rgba(0, 255, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 128, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 800%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(0, 128, 0, 0.8), rgba(0, 192, 0, 0.8), rgba(0, 255, 0, 0.8))"
+          }
+        }
+      },
+      "vertical-azure-wave": {
+        "animation": "vertical-azure-wave 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 500%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(97, 174, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(164, 209, 255, 0.8))"
+          },
+          "50%": {
+            "background-size": "100% 500%",
+            "background-position": "center bottom",
+            "background-image": "linear-gradient(to bottom, rgba(164, 209, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(97, 174, 255, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 500%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(97, 174, 255, 0.8), rgba(131, 192, 255, 0.8), rgba(164, 209, 255, 0.8))"
+          }
+        }
+      },
+      "vertical-sunset-tide": {
+        "animation": "vertical-sunset-tide 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 700%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(255, 99, 71, 0.8), rgba(255, 140, 71, 0.8), rgba(255, 165, 71, 0.8))"
+          },
+          "50%": {
+            "background-size": "100% 700%",
+            "background-position": "center bottom",
+            "background-image": "linear-gradient(to bottom, rgba(255, 165, 71, 0.8), rgba(255, 140, 71, 0.8), rgba(255, 99, 71, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 700%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(255, 99, 71, 0.8), rgba(255, 140, 71, 0.8), rgba(255, 165, 71, 0.8))"
+          }
+        }
+      },
+      "vertical-golden-dream": {
+        "animation": "vertical-golden-dream 2s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 600%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(218, 165, 32, 0.8), rgba(224, 186, 94, 0.8), rgba(232, 207, 157, 0.8))"
+          },
+          "50%": {
+            "background-size": "100% 600%",
+            "background-position": "center bottom",
+            "background-image": "linear-gradient(to bottom, rgba(232, 207, 157, 0.8), rgba(224, 186, 94, 0.8), rgba(218, 165, 32, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 600%",
+            "background-position": "center top",
+            "background-image": "linear-gradient(to bottom, rgba(218, 165, 32, 0.8), rgba(224, 186, 94, 0.8), rgba(232, 207, 157, 0.8))"
+          }
+        }
+      }
     },
 
     "movements": {
       "morphing-rectangle": "morphing-rectangle 2s ease infinite"
     },
 
-    "backdropSpaces": {
-      "blue-galaxy": "blue-galaxy 10s ease infinite",
-      "gray-fluff": "gray-fluff 5s ease infinite",
-      "pastel-dream": "pastel-dream 5s ease infinite",
-      "amethyst-midnight": "amethyst-midnight 5s ease infinite",
-      "golden-horizon": "golden-horizon 5s ease infinite",
-      "rose-blush": "rose-blush 5s ease infinite",
-      "lavender-dream": "lavender-dream 5s ease infinite",
-      "pink-blossom": "pink-blossom 5s ease infinite",
-      "cosmic-wave": "cosmic-wave 5s ease infinite",
-      "glow-next-door": "glow-next-door 5s ease infinite",
-      "ski-haze": "ski-haze 5s ease infinite"
+    "space": {
+      "blue-galaxy": {
+        "animation": "blue-galaxy 10s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 100%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 100%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 80%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 70%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #50009a 0, #001aff 100%), linear-gradient(100deg, #fb00a5 50%, #6900cb 100%), linear-gradient(200deg, #8dada4 0, #12de81 100%), linear-gradient(-3deg, #1dadfe 0, #50009a 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 100%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          }
+        }
+      },
+      "gray-fluff": {
+        "animation": "gray-fluff 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background-size": "100% 100%",
+            "background-position": "left top",
+            "background-image": "linear-gradient(to bottom right, rgba(96, 96, 96, 0.8), rgba(0, 0, 0, 0.8))"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right bottom",
+            "background-image": "linear-gradient(to bottom right, rgba(96, 96, 96, 0.8), rgba(0, 0, 0, 0.8))"
+          },
+          "100%": {
+            "background-size": "100% 100%",
+            "background-position": "left top",
+            "background-image": "linear-gradient(to bottom right, rgba(96, 96, 96, 0.8), rgba(0, 0, 0, 0.8))"
+          }
+        }
+      },
+      "pastel-dream": {
+        "animation": "pastel-dream 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "linear-gradient(45deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%",
+            "filter": "blur(10px)"
+          },
+          "50%": {
+            "background": "linear-gradient(90deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "100% 0%",
+            "filter": "blur(5px)"
+          },
+          "100%": {
+            "background": "linear-gradient(45deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%",
+            "filter": "blur(10px)"
+          }
+        }
+      },
+      "amethyst-midnight": {
+        "animation": "amethyst-midnight 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          }
+        }
+      },
+      "golden-horizon": {
+        "animation": "golden-horizon 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "linear-gradient(-45deg, #ffd400, #ffad00, #ff6e00, #ff2700)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          },
+          "50%": {
+            "background": "linear-gradient(-90deg, #ffd400, #ffad00, #ff6e00, #ff2700)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "100% 0%"
+          },
+          "100%": {
+            "background": "linear-gradient(-45deg, #ffd400, #ffad00, #ff6e00, #ff2700)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          }
+        }
+      },
+      "rose-blush": {
+        "animation": "rose-blush 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "linear-gradient(45deg, #ff446b, #ff7b6b, #ffad7b, #ffda8a)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          },
+          "50%": {
+            "background": "linear-gradient(90deg, #ff446b, #ff7b6b, #ffad7b, #ffda8a)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "100% 0%"
+          },
+          "100%": {
+            "background": "linear-gradient(45deg, #ff446b, #ff7b6b, #ffad7b, #ffda8a)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          }
+        }
+      },
+      "lavender-dream": {
+        "animation": "lavender-dream 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "linear-gradient(-45deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          },
+          "50%": {
+            "background": "linear-gradient(-90deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "100% 0%"
+          },
+          "100%": {
+            "background": "linear-gradient(-45deg, #a96dc5, #8f7fc7, #7091c8, #49a3c9)",
+            "backgroundSize": "200% 200%",
+            "backgroundPosition": "0% 100%"
+          }
+        }
+      },
+      "pink-blossom": {
+        "animation": "pink-blossom 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #FFB6C1 0, #FF69B4 100%), linear-gradient(-100deg, #FFC0CB 70%, #FF1493 100%), linear-gradient(200deg, #FFC0CB 0, #FF69B4 100%), linear-gradient(-3deg, #FF69B4 0, #FFB6C1 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          }
+        }
+      },
+      "cosmic-wave": {
+        "animation": "cosmic-wave 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #0039A6 0, #005EB8 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004785 0, #0039A6 100%), linear-gradient(60deg, #005EB8 0, #0039A6 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          }
+        }
+      },
+      "glow-next-door": {
+        "animation": "glow-next-door 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #62004F 0, #8C007B 100%), linear-gradient(-135deg, #BF00FF 70%, #9600C9 100%), linear-gradient(45deg, #4C4C4C 0, #BF00FF 100%), linear-gradient(-60deg, #8C007B 0, #62004F 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          }
+        }
+      },
+      "ski-haze": {
+        "animation": "ski-haze 5s ease infinite",
+        "keyframes": {
+          "0%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          },
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          },
+          "100%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #008033 0, #00551a 100%), linear-gradient(-45deg, #007BFF 70%, #005EB8 100%), linear-gradient(135deg, #004D26 0, #003300 100%), linear-gradient(60deg, #00551A 0, #003300 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, normal, normal, normal"
+          }
+        }
+      }
     },
 
-    "classics": {
-      "wobble": "wobble 1s infinite",
-      "melt": "melt 1s infinite",
-      "float": "float 1s infinite",
-      "breathe": "breathe 1s infinite",
-      "squiggle": "squiggle 1s infinite",
-      "flip-and-spin": "flip-and-spin 4s infinite",
-      "twist": "twist 4s infinite",
-      "pop": "pop 1s infinite",
-      "scatter": "scatter 1s"
+    "classic": {
+      "wobble": {
+        "animation": "wobble 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "rotate(-5deg)" },
+          "25%": { "transform": "rotate(5deg)" },
+          "50%": { "transform": "rotate(-5deg)" },
+          "75%": { "transform": "rotate(5deg)" },
+          "100%": { "transform": "rotate(-5deg)" }
+        }
+      },
+      "melt": {
+        "animation": "melt 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "scale(1)" },
+          "20%": { "transform": "scale(0.8)" },
+          "40%": { "transform": "scale(1.2)" },
+          "60%": { "transform": "scale(0.9)" },
+          "80%": { "transform": "scale(1.1)" },
+          "100%": { "transform": "scale(1)" }
+        }
+      },
+      "float": {
+        "animation": "float 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "translateY(0)" },
+          "25%": { "transform": "translateY(-5px)" },
+          "50%": { "transform": "translateY(0)" },
+          "75%": { "transform": "translateY(5px)" },
+          "100%": { "transform": "translateY(0)" }
+        }
+      },
+      "breathe": {
+        "animation": "breathe 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "scale(1)" },
+          "25%": { "transform": "scale(1.1)" },
+          "50%": { "transform": "scale(1)" },
+          "75%": { "transform": "scale(0.9)" },
+          "100%": { "transform": "scale(1)" }
+        }
+      },
+      "squiggle": {
+        "animation": "squiggle 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "translateX(0)" },
+          "20%": { "transform": "translateX(-5px)" },
+          "40%": { "transform": "translateX(5px)" },
+          "60%": { "transform": "translateX(-3px)" },
+          "80%": { "transform": "translateX(3px)" },
+          "100%": { "transform": "translateX(0)" }
+        }
+      },
+      "flip-and-spin": {
+        "animation": "flip-and-spin 4s infinite",
+        "keyframes": {
+          "0%": { "transform": "rotateY(0) rotateZ(0)" },
+          "20%": { "transform": "rotateY(1turn) rotateZ(0.5turn)" },
+          "40%": { "transform": "rotateY(2turn) rotateZ(1turn)" },
+          "60%": { "transform": "rotateY(3turn) rotateZ(1.5turn)" },
+          "80%": { "transform": "rotateY(4turn) rotateZ(2turn)" },
+          "100%": { "transform": "rotateY(5turn) rotateZ(2.5turn)" }
+        }
+      },
+      "twist": {
+        "animation": "twist 4s infinite",
+        "keyframes": {
+          "0%": { "transform": "rotateY(0) skewY(0)" },
+          "20%": { "transform": "rotateY(1turn) skewY(-10deg)" },
+          "40%": { "transform": "rotateY(2turn) skewY(10deg)" },
+          "60%": { "transform": "rotateY(3turn) skewY(-10deg)" },
+          "80%": { "transform": "rotateY(4turn) skewY(10deg)" },
+          "100%": { "transform": "rotateY(5turn) skewY(0)" }
+        }
+      },
+      "pop": {
+        "animation": "pop 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "scale(1)" },
+          "20%": { "transform": "scale(1.2)" },
+          "40%": { "transform": "scale(0.8)" },
+          "60%": { "transform": "scale(1.1)" },
+          "80%": { "transform": "scale(0.9)" },
+          "100%": { "transform": "scale(1)" }
+        }
+      },
+      "scatter": {
+        "animation": "scatter 1s infinite",
+        "keyframes": {
+          "0%": { "transform": "translate(0)" },
+          "20%": { "transform": "translate(-50px, -50px)" },
+          "40%": { "transform": "translate(50px, -50px)" },
+          "60%": { "transform": "translate(-50px, 50px)" },
+          "80%": { "transform": "translate(50px, 50px)" },
+          "100%": { "transform": "translate(0)" }
+        }
+      }
     }
   }
 }
