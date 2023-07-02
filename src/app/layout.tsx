@@ -9,9 +9,6 @@ export const metadata = {
   title:
     "Tailwind Animations | Beautiful Buttons, Gradients & More Built With Tailwind CSS",
   description: "by @jacobbinnie",
-  openGraph: {
-    images: [screenshot],
-  },
 };
 
 export default function RootLayout({
@@ -21,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta
+        property="og:image"
+        content="https://media.licdn.com/dms/image/D5622AQGfX0DVU_v7LQ/feedshare-shrink_2048_1536/0/1688274807107?e=1691020800&v=beta&t=sEEonYlyuBguwxUJDfit31XT40MOH2Lp23-x7kLlfz8"
+      />
       <head>
         <Script
           async
