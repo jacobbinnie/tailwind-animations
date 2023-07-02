@@ -28,11 +28,11 @@ export const isUserPremium = async (userId: string) => {
 
       if (!paymentsQuerySnapshot.empty) {
         // At least one payment with 'payment.status === "succeeded"' exists
-        console.log("User is premium");
+
         return true;
       } else {
         // No payments with 'payment.status === "succeeded"' found
-        console.log("User is not premium");
+
         return false;
       }
     } else {
