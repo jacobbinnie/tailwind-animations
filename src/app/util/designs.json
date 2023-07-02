@@ -625,22 +625,40 @@
         "animation": "amethyst-midnight 5s ease infinite",
         "keyframes": {
           "0%": {
-            "background": "linear-gradient(45deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
-            "backgroundSize": "200% 200%",
-            "backgroundPosition": "0% 100%",
-            "filter": "blur(10px)"
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
           },
-          "50%": {
-            "background": "linear-gradient(90deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
-            "backgroundSize": "200% 200%",
-            "backgroundPosition": "100% 0%",
-            "filter": "blur(5px)"
+          "20%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "105% 105%",
+            "backgroundPosition": "10% 50%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "40%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "110% 300%",
+            "backgroundPosition": "20% 40%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "60%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "115% 115%",
+            "backgroundPosition": "30% 30%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
+          },
+          "80%": {
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "250% 120%",
+            "backgroundPosition": "40% 20%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
           },
           "100%": {
-            "background": "linear-gradient(45deg, #ffadc1, #ff9e80, #fcbf49, #a4e057, #64d2ff)",
-            "backgroundSize": "200% 200%",
-            "backgroundPosition": "0% 100%",
-            "filter": "blur(10px)"
+            "background": "radial-gradient(100% 225% at 0 100%, #3a006b 0, #6c0098 100%), linear-gradient(-100deg, #9c00ff 70%, #7500c4 100%), linear-gradient(200deg, #4c4c4c 0, #9300ff 100%), linear-gradient(-3deg, #6c0098 0, #3a006b 50%)",
+            "backgroundSize": "100% 100%",
+            "backgroundPosition": "0% 60%",
+            "backgroundBlendMode": "color-dodge, color-burn, color-burn, normal"
           }
         }
       },

@@ -81,7 +81,7 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                         <CheckBadgeIcon width={20} />
                       </div>
                     ) : (
-                      "$37 Lifetime Access"
+                      "$29 Lifetime Access"
                     )}
                   </span>
                 </a>
@@ -91,7 +91,7 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
             {!isPremium && !loading && (
               <>
                 <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
-                  <p className="text-lg">Quick Video Walkthrough</p>
+                  <p className="text-lg">See how it works</p>
                   <ArrowDownIcon width={20} />
                 </div>
 
@@ -100,9 +100,9 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                     className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl z-20"
                     controls={true}
                     muted={false}
-                    poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-06-18%20at%206.14.58%20PM.png?alt=media&token=2d9165c5-9bde-419c-b98f-b571bf1684a4"
+                    poster="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-07-02%20at%201.59.59%20PM-min.png?alt=media&token=7ad80295-c823-4db4-af11-a9eff6cba93b"
                   >
-                    <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/tailwindanimationsdemo1.mp4?alt=media&token=fca3be1b-6f69-4ae6-8268-059e425f54e8" />
+                    <source src="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Untitled(1).mp4?alt=media&token=d324b019-bca6-4611-94d1-bc2a71092d49" />
                   </video>
                 </div>
               </>

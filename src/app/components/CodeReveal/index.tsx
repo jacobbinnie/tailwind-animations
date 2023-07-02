@@ -37,7 +37,9 @@ function CodeReveal({
             setCopiedKeyframes(false);
           }, 2000);
         } else {
-          navigator.clipboard.writeText(code.animation);
+          const stringifiedObject =
+            `\"${animationKey.key}\":` + `\"${code.animation}\"`;
+          navigator.clipboard.writeText(stringifiedObject);
           setCopiedAnimation(true);
           setTimeout(() => {
             setCopiedAnimation(false);
