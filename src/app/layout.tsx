@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <meta
         property="og:image"
-        content="https://firebasestorage.googleapis.com/v0/b/tailwind-animations/o/Screenshot%202023-07-03%20at%209.55.13%20AM.png?alt=media&token=b7a5e13e-38bd-4e22-a890-228e90692442"
+        content="https://pbs.twimg.com/media/F0ED1dBacAAXWCO?format=jpg&name=4096x4096"
       />
       <head>
         <Script
