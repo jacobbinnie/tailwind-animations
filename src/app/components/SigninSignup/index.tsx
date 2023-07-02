@@ -109,7 +109,7 @@ function SigninSignup({
 
                   <button
                     disabled={!isEmail()}
-                    className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-black transition duration-300 ease-out animate-rainbow-river rounded-xl shadow-md group"
+                    className="relative inline-flex items-center justify-center h-14 p-4 w-full py-4 overflow-hidden font-semibold text-black transition duration-300 ease-out bg-black sm:animate-rainbow-river rounded-xl shadow-md group"
                   >
                     <span
                       className={clsx(
