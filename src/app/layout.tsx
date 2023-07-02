@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Tailwind Animations | 50+ Handcrafted Tailwind Animations For Your Next Project",
+    "Tailwind Animations | A Gorgeous Library Of 50+ Handcrafted Tailwind Animations For Your Next Project",
   description:
-    "Beautiful gradients, buttons, backgrounds and more. Simply copy & paste the code into your project. Get started today.",
+    "Tailwind gradients, buttons, backgrounds and more. Simply copy & paste the code into your project. Get started today.",
 };
 
 export default function RootLayout({
