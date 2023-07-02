@@ -1,5 +1,7 @@
 import { useAuth } from "@/app/authprovider";
 import { useRoute } from "@/app/routeprovider";
+import Image from "next/image";
+import logo from "../../../../public/logoPng.png";
 
 interface NavbarProps {}
 
@@ -12,9 +14,10 @@ function Navbar({}: NavbarProps) {
       <div className="relative flex w-full p-5 mx-auto bg-white items-center justify-between flex-row px-6 lg:px-8">
         <div className="flex flex-row items-center justify-between lg:justify-start">
           <a
-            className="text-lg tracking-tight text-black uppercase focus:outline-none focus:ring lg:text-2xl"
+            className="text-lg flex gap-2 justify-center items-center tracking-tight text-black uppercase focus:outline-none focus:ring lg:text-2xl"
             href="/"
           >
+            <Image src={logo} alt="logo" width={30} height={30} />
             <span className="lg:text-lg uppercase font-semibold focus:ring-0">
               Tailwind Animations
             </span>
