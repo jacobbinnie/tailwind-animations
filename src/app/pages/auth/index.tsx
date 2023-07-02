@@ -14,6 +14,7 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
   const [view, setView] = useState<"signin" | "signup">("signin");
   const [emailSent, setEmailSent] = useState(false);
   const [email, setEmail] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { sendMagicLink } = useAuth();
 
@@ -25,10 +26,16 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
 
   function handleSendMagicLink() {
     if (!emailSent) {
+      setLoading(true);
       sendMagicLink(email).then(() => {
         setEmailSent(true);
+        setLoading(false);
       });
     }
+  }
+
+  function handleSetLoading(value: boolean) {
+    setLoading(value);
   }
 
   useEffect(() => {
@@ -52,6 +59,8 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
             setEmail={setEmail}
             isEmail={isEmail}
             emailSent={emailSent}
+            handleSetLoading={handleSetLoading}
+            loading={loading}
           />
         </div>
       </div>

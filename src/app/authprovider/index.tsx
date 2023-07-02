@@ -54,36 +54,50 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   const [user, loading, error] = useAuthState(auth);
 
   const sendMagicLink = async (email: string) => {
-    const redirectUrl = process.env.NEXT_PUBLIC_REDIRECT_URL;
+    const redirectUrl = `${
+      process.env.NEXT_PUBLIC_REDIRECT_URL
+    }?email=${encodeURIComponent(email)}`;
 
     const actionCodeSettings = {
       // URL you want to redirect back to. The domain (www.example.com) for this
       // URL must be in the authorized domains list in the Firebase Console.
-      url: redirectUrl || "https://tailwindanimations.co",
+      url: redirectUrl,
       handleCodeInApp: true,
     };
 
-    sendSignInLinkToEmail(auth, email, actionCodeSettings)
-      .then(() => {
-        // The link was successfully sent. Inform the user.
-        // Save the email locally so you don't need to ask the user for it again
-        // if they open the link on the same device.
-        window.localStorage.setItem("emailForSignIn", email);
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ...
-      });
+    try {
+      // Send the magic link to the provided email
+      await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+
+      // Save the email locally so you don't need to ask the user for it again
+      // if they open the link on the same device.
+      window.localStorage.setItem("emailForSignIn", email);
+
+      // Inform the user that the link was successfully sent (optional)
+    } catch (error) {
+      // Handle error
+    }
   };
 
   const signInVerify = useCallback(async () => {
     const auth = getAuth(firebaseApp);
-    const email = window.localStorage.getItem("emailForSignIn");
+    const url = window.location.href;
 
-    if (email) {
-      signInWithEmailLink(auth, email, window.location.href)
+    if (isSignInWithEmailLink(auth, url)) {
+      let email = window.localStorage.getItem("emailForSignIn");
+
+      if (!email) {
+        // Extract the email from the URL
+        const searchParams = new URLSearchParams(window.location.search);
+        email = searchParams.get("email");
+
+        if (!email) {
+          alert("Email is required for sign in");
+          return;
+        }
+      }
+
+      signInWithEmailLink(auth, email, url)
         .then((result) => {
           // Clear email from storage.
           window.localStorage.removeItem("emailForSignIn");
