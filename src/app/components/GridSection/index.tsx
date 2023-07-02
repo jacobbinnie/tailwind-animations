@@ -2,28 +2,20 @@ import clsx from "clsx";
 import DisplayComponent from "../DisplayComponent";
 import JSONDesigns from "../../util/designs.json";
 import ButtonComponent from "../ButtonComponent";
-
-type Designs = {
-  [key: string]: string;
-};
-
-type Buttons = {
-  [key: string]: {
-    button: string;
-  };
-};
+import { Buttons, Designs, types } from "@/app/interfaces";
 
 interface GridSectionProps {
   displays: Designs | Buttons;
   type: "button" | "gradient" | "space" | "classic";
-  handleSetSelectedKey: (key: string) => void;
+  commonProps: {
+    handleAssignAction: (type?: "copy") => boolean;
+    handleSetSelectedKey: (key: string, type: types) => void;
+  };
 }
 
-function GridSection({
-  displays,
-  type,
-  handleSetSelectedKey,
-}: GridSectionProps) {
+function GridSection({ displays, type, commonProps }: GridSectionProps) {
+  const { handleAssignAction, handleSetSelectedKey } = commonProps;
+
   const renderDisplay = () => {
     if (!displays) {
       return null; // or handle the case when `displays` is undefined/null
@@ -32,7 +24,13 @@ function GridSection({
     return Object.entries(displays).map(([key, value]) => {
       switch (type) {
         case "button":
-          return <ButtonComponent key={key} buttonCode={value.button} />;
+          return (
+            <ButtonComponent
+              key={key}
+              buttonCode={value.button}
+              handleAssignAction={handleAssignAction}
+            />
+          );
 
         default:
           return (
@@ -40,10 +38,13 @@ function GridSection({
               key={key}
               name={key}
               animation={
-                type === "space" ? `animate-${value}` : `hover:animate-${value}`
+                type === "space"
+                  ? `animate-${value.animation}`
+                  : `hover:animate-${value.animation}`
               }
               type={type}
               handleSetSelectedKey={handleSetSelectedKey}
+              handleAssignAction={handleAssignAction}
             />
           );
       }
