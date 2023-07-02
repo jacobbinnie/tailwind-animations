@@ -55,17 +55,17 @@ function Navbar({}: NavbarProps) {
             </div>
           </nav>
         ) : (
-          <nav className="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
-            <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
+          <nav className="items-center flex-grow pb-0 flex justify-end flex-row">
+            <div className="inline-flex items-center gap-4 list-none lg:ml-auto">
               <button
                 onClick={() => handleSetPage(0)}
-                className="block px-4 py-2 mt-2 text-sm text-gray-500 md:mt-0 focus:outline-none focus:shadow-outline"
+                className="block px-4 py-2 sm:mt-2 text-sm text-gray-500 md:mt-0 focus:outline-none focus:shadow-outline"
               >
                 Sign in
               </button>
               <button
                 onClick={() => handleSetPage(1)}
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
+                className="iitems-center hidden sm:inline-flex justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
               >
                 $29 Lifetime Access
               </button>
