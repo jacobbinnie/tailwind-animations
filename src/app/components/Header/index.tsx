@@ -77,7 +77,7 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                   >
                     {isPremium ? (
                       <div className="w-full flex justify-center items-center gap-2">
-                        <p>You have lifetime access</p>
+                        <p>You have premium access</p>
                         <CheckBadgeIcon width={20} />
                       </div>
                     ) : (
