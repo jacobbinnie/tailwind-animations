@@ -11,7 +11,9 @@ interface RouteDictatorProps {}
 export function RouteDictator({}: RouteDictatorProps) {
   const { page } = useRoute();
   const { auth } = useAuth();
-  const { isPremium, loading, fetchingData } = useUserPremium(auth.user?.uid);
+  const { isPremium, loading, fetchingData } = useUserPremium(auth.user);
+
+  console.log("isPremium", isPremium);
 
   let componentToRender;
 

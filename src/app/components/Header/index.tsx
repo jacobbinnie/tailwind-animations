@@ -81,7 +81,7 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
                         <CheckBadgeIcon width={20} />
                       </div>
                     ) : (
-                      "$29 Lifetime Access"
+                      "$19 USD / year"
                     )}
                   </span>
                 </a>
