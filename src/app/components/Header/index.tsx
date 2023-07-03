@@ -10,7 +10,7 @@ interface HeaderProps {
 
 function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
   return (
-    <div className="flex justify-center pb-10 items-center bg-gradient-to-r from-[#5046e5] to-[#6a14d1]">
+    <div className="flex justify-center pb-10 items-center bg-gradient-to-r from-[#5046e5] to-[#2f0761]">
       <section className="flex flex-col w-full justify-center h-full">
         <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
           <div className="mx-auto text-center">
