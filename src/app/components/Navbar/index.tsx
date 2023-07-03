@@ -70,7 +70,7 @@ function Navbar({}: NavbarProps) {
                 onClick={() => handleSetPage(1)}
                 className="iitems-center hidden sm:inline-flex justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
               >
-                $29 Lifetime Access
+                $19 USD / year
               </button>
             </div>
           </nav>
