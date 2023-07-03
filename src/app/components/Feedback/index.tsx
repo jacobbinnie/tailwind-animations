@@ -24,7 +24,7 @@ function Feedback({}: FeedbackProps) {
   const { auth } = useAuth();
 
   return (
-    <div className="flex flex-col fixed bottom-10 right-10 z-20 items-end">
+    <div className="flex flex-col fixed bottom-10 right-2 z-20 items-end">
       <div
         className={clsx(
           open ? "h-72 opacity-100" : "h-0 opacity-0",
