@@ -9,7 +9,7 @@ export const metadata = {
   title:
     "Tailwind Animations | A Gorgeous Library Of 50+ Handcrafted Tailwind Animations For Your Next Project",
   description:
-    "Tailwind gradients, buttons, backgrounds and more. Simply copy & paste the code into your project. Get started today.",
+    "Tailwind gradients, tailwind buttons, backgrounds and more. Simply copy & paste the code into your project. Get started with Tailwind Animations today.",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <meta
         property="og:image"
-        content="https://pbs.twimg.com/media/F0ED1dBacAAXWCO?format=jpg&name=4096x4096"
+        content="https://pbs.twimg.com/media/F0FCCaEaUAAAwae?format=jpg&name=large"
       />
       <head>
         <Script
