@@ -90,12 +90,14 @@ function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
 
             {!isPremium && !loading && (
               <>
-                <div className="mt-16 flex text-white/70 flex-col justify-center items-center gap-3 w-full max-w-lg">
-                  <p className="text-lg">See how it works</p>
-                  <ArrowDownIcon width={20} />
+                <div className="mt-16 flex text-white flex-col justify-center items-center gap-3 w-full max-w-lg">
+                  <p className="text-sm font-semibold bg-black px-4 py-1 rounded-full">
+                    ✨ see it in action ✨
+                  </p>
+                  <ArrowDownIcon width={20} className="animate-bounce" />
                 </div>
 
-                <div className="relative items-center w-full py-12 pb-12 mx-auto mt-2 max-w-7xl z-10">
+                <div className="relative items-center w-full py-12 pb-12 mx-auto max-w-7xl z-10">
                   <video
                     className="relative object-cover w-full rounded-lg overflow-hidden shadow-2xl lg:rounded-2xl z-20"
                     controls={true}
