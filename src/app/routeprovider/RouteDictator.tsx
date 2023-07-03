@@ -33,7 +33,7 @@ export function RouteDictator({}: RouteDictatorProps) {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-r from-[#5046e5] to-[#6a14d1]">
+        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-r from-[#5046e5] to-[#2f0761]">
           <div className="w-20 animate-spin">
             <svg
               version="1.1"
