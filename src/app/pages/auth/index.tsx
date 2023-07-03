@@ -48,7 +48,7 @@ export const Auth: React.FC<AuthProps> = ({ tab }) => {
 
   return (
     <>
-      <div className="flex h-screen flex-col items-center bg-gradient-to-r from-indigo-300 to-purple-400">
+      <div className="flex h-screen flex-col items-center bg-gradient-to-r from-[#5046e5] to-[#6a14d1]">
         <Navbar />
         <div className="flex h-full w-full items-center justify-center p-5">
           <SigninSignup
