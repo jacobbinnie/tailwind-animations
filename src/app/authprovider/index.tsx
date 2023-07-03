@@ -17,6 +17,7 @@ import {
   onAuthStateChanged,
   signOut,
   Auth,
+  browserLocalPersistence,
 } from "firebase/auth";
 import firebaseApp from "../firebase/config";
 import { useRoute } from "../routeprovider";
@@ -130,7 +131,7 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
   useEffect(() => {
     const auth = getAuth(firebaseApp);
 
-    setPersistence(auth, browserSessionPersistence)
+    setPersistence(auth, browserLocalPersistence)
       .then(() => {
         // Existing and future Auth states are now persisted in the current session.
         if (isSignInWithEmailLink(auth, window.location.href)) {
