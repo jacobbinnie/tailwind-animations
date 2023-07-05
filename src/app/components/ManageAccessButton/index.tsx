@@ -8,7 +8,7 @@ interface ManageAccessButtonProps {
 
 function ManageAccessButton({ user }: ManageAccessButtonProps) {
   const handleCustomerPortal = async () => {
-    // logic here
+    window.location.href = `https://billing.stripe.com/p/login/dR6cNUdci95c2fm000?prefilled_email=${user.email}`;
   };
 
   return (
