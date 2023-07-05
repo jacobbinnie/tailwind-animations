@@ -24,7 +24,6 @@ export const createCheckoutSession = async () => {
               checkoutSessionRef.id
             ),
             (snapshot) => {
-              console.log(snapshot.data());
               if (snapshot.exists()) {
                 const checkoutSessionData = snapshot.data();
                 // Redirect the user to the checkout URL

@@ -2,12 +2,20 @@ import { useAuth } from "@/app/authprovider";
 import { useRoute } from "@/app/routeprovider";
 import Image from "next/image";
 import logo from "../../../../public/logoPng.png";
+import ManageAccessButton from "../ManageAccessButton";
 
-interface NavbarProps {}
+interface NavbarProps {
+  isSubscribed: {
+    isPremium: boolean;
+    isLifetime: boolean;
+  };
+}
 
-function Navbar({}: NavbarProps) {
+function Navbar({ isSubscribed }: NavbarProps) {
   const { handleSetPage } = useRoute();
   const { auth, signOut } = useAuth();
+
+  const { isPremium, isLifetime } = isSubscribed;
 
   return (
     <div className="w-full mx-auto bg-white border-b sticky top-0 z-30">
@@ -26,9 +34,7 @@ function Navbar({}: NavbarProps) {
         {auth.user ? (
           <nav className="items-center flex-grow pb-0 flex justify-end flex-row">
             <div className="inline-flex items-center gap-4 list-none lg:ml-auto">
-              <p className="text-sm hidden sm:block text-gray-300">
-                {auth.user.email}
-              </p>
+              {isPremium && !isLifetime && <ManageAccessButton />}
 
               <a
                 onClick={() => signOut()}
