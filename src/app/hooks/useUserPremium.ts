@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
-import { useAuth } from "../authprovider";
+import { useState, useEffect, use } from "react";
 import { User } from "firebase/auth";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 export const useUserPremium = (user: User | null | undefined) => {
-  const [isPremium, setIsPremium] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState<{
+    isPremium: boolean;
+    isLifetime: boolean;
+  }>({ isPremium: false, isLifetime: false });
   const [loading, setLoading] = useState(true);
   const [fetchingData, setFetchingData] = useState(false);
 
@@ -23,7 +23,7 @@ export const useUserPremium = (user: User | null | undefined) => {
           const isPremiumUser = stripeRole === "premium";
 
           if (isPremiumUser) {
-            setIsPremium(isPremiumUser);
+            setIsSubscribed({ isPremium: true, isLifetime: false });
             setLoading(false);
           } else {
             // check user for lifetime access here
@@ -31,16 +31,16 @@ export const useUserPremium = (user: User | null | undefined) => {
 
             getDoc(userRef).then((docSnapshot) => {
               if (docSnapshot.exists() && docSnapshot.data().lifetime) {
-                setIsPremium(true);
+                setIsSubscribed({ isPremium: true, isLifetime: true });
                 setLoading(false);
               } else {
-                setIsPremium(false);
+                setIsSubscribed({ isPremium: false, isLifetime: false });
                 setLoading(false);
               }
             });
           }
         } else {
-          setIsPremium(false);
+          setIsSubscribed({ isPremium: false, isLifetime: false });
           setLoading(false);
         }
       } catch (error) {
@@ -53,5 +53,5 @@ export const useUserPremium = (user: User | null | undefined) => {
     fetchUserPremium();
   }, [user]);
 
-  return { isPremium, loading, fetchingData };
+  return { isSubscribed, loading, fetchingData };
 };
