@@ -34,7 +34,9 @@ function Navbar({ isSubscribed }: NavbarProps) {
         {auth.user ? (
           <nav className="items-center flex-grow pb-0 flex justify-end flex-row">
             <div className="inline-flex items-center gap-4 list-none lg:ml-auto">
-              {isPremium && !isLifetime && <ManageAccessButton />}
+              {isPremium && !isLifetime && (
+                <ManageAccessButton user={auth.user} />
+              )}
 
               <a
                 onClick={() => signOut()}
