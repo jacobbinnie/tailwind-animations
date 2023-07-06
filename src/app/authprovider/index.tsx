@@ -22,7 +22,7 @@ import {
 import firebaseApp from "../firebase/config";
 import { useRoute } from "../routeprovider";
 import { db } from "../firebase/config";
-import { collection, addDoc, doc, setDoc } from "firebase/firestore";
+import { collection, addDoc, doc, setDoc, getDoc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 interface AuthContextValues {
@@ -103,11 +103,25 @@ export const AuthProvider = ({ children }: AuthProviderOptions) => {
           // Clear email from storage.
           window.localStorage.removeItem("emailForSignIn");
 
-          // Add user to Firestore Users
           const userRef = doc(db, "users", result.user.uid);
 
-          setDoc(userRef, { uid: result.user.uid, email: result.user.email })
-            .then(() => handleSetPage(2))
+          getDoc(userRef)
+            .then((docSnapshot) => {
+              if (docSnapshot.exists()) {
+                // Document already exists, do not overwrite data.
+                handleSetPage(2);
+              } else {
+                // Document doesn't exist, create new document.
+                setDoc(userRef, {
+                  uid: result.user.uid,
+                  email: result.user.email,
+                })
+                  .then(() => handleSetPage(2))
+                  .catch((error) => {
+                    throw new Error(error);
+                  });
+              }
+            })
             .catch((error) => {
               throw new Error(error);
             });

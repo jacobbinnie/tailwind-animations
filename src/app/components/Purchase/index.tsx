@@ -42,13 +42,13 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
           </div>
           <div className="my-10">
             <h1 className="text-center font-bold text-2xl uppercase">
-              US$29.00
+              $19 USD / year
             </h1>
             <p className="text-sm text-center">One time payment</p>
             <p className="text-sm text-center px-10 mt-5">
-              <span className="font-bold">Lifetime access</span> to Tailwind
+              <span className="font-bold">Instant access</span> to Tailwind
               Animations. Includes 50+ hand-crafted animations, with more coming
-              soon. Will receieve all future updates at no extra cost.
+              soon. Will receieve all future updates automatically.
             </p>
           </div>
 

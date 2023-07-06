@@ -11,28 +11,30 @@ interface RouteDictatorProps {}
 export function RouteDictator({}: RouteDictatorProps) {
   const { page } = useRoute();
   const { auth } = useAuth();
-  const { isPremium, loading, fetchingData } = useUserPremium(auth.user?.uid);
+  const { isSubscribed, loading, fetchingData } = useUserPremium(auth.user);
 
   let componentToRender;
 
   switch (page) {
     case 0:
-      componentToRender = <Auth tab="signin" />;
+      componentToRender = <Auth isSubscribed={isSubscribed} tab="signin" />;
       break;
 
     case 1:
-      componentToRender = <Auth tab="signup" />;
+      componentToRender = <Auth isSubscribed={isSubscribed} tab="signup" />;
       break;
 
     default:
-      componentToRender = <Dashboard isPremium={isPremium} loading={loading} />;
+      componentToRender = (
+        <Dashboard isSubscribed={isSubscribed} loading={loading} />
+      );
       break;
   }
 
   if (auth.loading || fetchingData) {
     return (
       <>
-        <Navbar />
+        <Navbar isSubscribed={isSubscribed} />
         <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-r from-[#5046e5] to-[#2f0761]">
           <div className="w-20 animate-spin">
             <svg

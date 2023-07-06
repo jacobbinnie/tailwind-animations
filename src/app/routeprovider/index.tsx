@@ -1,7 +1,5 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect } from "react";
-import Login from "../pages/auth";
-import Dashboard from "../pages/dashboard";
 
 interface RouteContextValues {
   page: 0 | 1 | 2;
