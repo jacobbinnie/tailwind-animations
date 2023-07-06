@@ -56,7 +56,7 @@ function CodeReveal({
     extend: {
       animation: {
         // Add your animation definition here
-      }
+      },
       keyframes: {
         // Add your keyframe definition here
       },
