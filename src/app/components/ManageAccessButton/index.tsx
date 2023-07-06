@@ -1,6 +1,4 @@
-import firebaseApp from "@/app/firebase/config";
 import { User } from "firebase/auth";
-import { getFunctions, httpsCallable } from "firebase/functions";
 
 interface ManageAccessButtonProps {
   user: User;
