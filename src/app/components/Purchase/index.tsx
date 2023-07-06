@@ -44,7 +44,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
             <h1 className="text-center font-bold text-2xl uppercase">
               $19 USD / year
             </h1>
-            <p className="text-sm text-center">One time payment</p>
+
             <p className="text-sm text-center px-10 mt-5">
               <span className="font-bold">Instant access</span> to Tailwind
               Animations. Includes 50+ hand-crafted animations, with more coming
