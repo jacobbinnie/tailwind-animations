@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <meta
         property="og:image"
-        content="https://pbs.twimg.com/media/F0FCCaEaUAAAwae?format=jpg&name=large"
+        content="https://pbs.twimg.com/media/F0noe7maIAE5D6r?format=jpg&name=large"
       />
       <head>
         <Script
