@@ -5,10 +5,16 @@ import { useUserPremium } from "../hooks/useUserPremium";
 import { useRoute } from ".";
 import Auth from "../pages/auth";
 import Dashboard from "../pages/dashboard";
+import disableDevtool from "disable-devtool";
+import { useEffect } from "react";
 
 interface RouteDictatorProps {}
 
 export function RouteDictator({}: RouteDictatorProps) {
+  useEffect(() => {
+    disableDevtool();
+  }, []);
+
   const { page } = useRoute();
   const { auth } = useAuth();
   const { isSubscribed, loading, fetchingData } = useUserPremium(auth.user);
