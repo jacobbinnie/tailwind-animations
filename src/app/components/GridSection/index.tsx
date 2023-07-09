@@ -28,7 +28,6 @@ function GridSection({ displays, type, commonProps }: GridSectionProps) {
             <ButtonComponent
               key={key}
               buttonCode={value.button}
-              buttonImage={value.image}
               handleAssignAction={handleAssignAction}
             />
           );
