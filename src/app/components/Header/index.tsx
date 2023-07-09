@@ -91,7 +91,7 @@ function Header({
                         <CheckBadgeIcon width={20} />
                       </div>
                     ) : (
-                      "$19 USD / year"
+                      "$17 USD / year"
                     )}
                   </span>
                 </a>
