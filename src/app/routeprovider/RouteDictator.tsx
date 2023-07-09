@@ -5,14 +5,21 @@ import { useUserPremium } from "../hooks/useUserPremium";
 import { useRoute } from ".";
 import Auth from "../pages/auth";
 import Dashboard from "../pages/dashboard";
-import disableDevtool from "disable-devtool";
 import { useEffect } from "react";
 
 interface RouteDictatorProps {}
 
 export function RouteDictator({}: RouteDictatorProps) {
   useEffect(() => {
-    disableDevtool();
+    if (
+      typeof window !== "undefined" &&
+      typeof window.navigator !== "undefined" &&
+      typeof navigator !== "undefined" &&
+      navigator.userAgent
+    ) {
+      const disableDevtool = require("disable-devtool");
+      disableDevtool();
+    }
   }, []);
 
   const { page } = useRoute();
