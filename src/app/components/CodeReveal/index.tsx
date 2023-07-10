@@ -69,7 +69,7 @@ function CodeReveal({
     <div
       className={`${
         revealingCode ? "translate-y-0" : "translate-y-full"
-      } fixed bottom-0 left-0 w-full h-full bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-white to-gray-300 z-20 p-5 flex justify-center transition-transform ease-in-out duration-300 overflow-y-auto`}
+      } fixed bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black z-20 p-5 flex justify-center transition-transform ease-in-out duration-300 overflow-y-auto`}
     >
       <div className="rounded w-full flex justify-center">
         <div className="flex w-full bg-white p-10 shadow-lg rounded-lg mt-20 flex-col max-w-2xl overflow-auto">
