@@ -52,7 +52,7 @@ export const Auth: React.FC<AuthProps> = ({ isSubscribed, tab }) => {
 
   return (
     <>
-      <div className="flex h-screen flex-col items-center bg-gradient-to-r from-[#5046e5] to-[#2f0761]">
+      <div className="flex h-screen flex-col items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black">
         <Navbar isSubscribed={isSubscribed} />
         <div className="flex h-full w-full items-center justify-center p-5">
           <SigninSignup

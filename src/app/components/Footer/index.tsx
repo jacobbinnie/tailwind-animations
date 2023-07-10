@@ -12,7 +12,7 @@ function Footer({}: FooterProps) {
           @jacobbinnie
         </a>
       </div>
-      <div className="flex flex-col p-20 justify-center items-center bg-gradient-to-r from-[#5046e5] to-[#2f0761]">
+      <div className="flex flex-col p-20 justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black">
         <div className="w-full flex justify-center items-center p-10">
           <p className="text-center max-w-lg text-xs text-gray-50 text-opacity-50">
             Disclaimer: Access valid for the duration of the product being
