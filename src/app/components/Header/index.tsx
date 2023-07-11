@@ -18,8 +18,19 @@ function Header({
   return (
     <div className="flex justify-center pb-10 items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black">
       <section className="flex flex-col w-full justify-center h-full">
-        <div className="relative items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
-          <div className="mx-auto text-center">
+        <div className="relative justify-center flex flex-col items-center w-full mt-10 px-5 py-12 pt-24 mx-auto lg:px-32 max-w-7xl md:px-12">
+          <a
+            href="https://www.producthunt.com/posts/tailwind-animations?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tailwind&#0045;animations"
+            target="_blank"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=402632&theme=light"
+              alt="Tailwind&#0032;Animations - Beautiful&#0032;copy&#0032;&#0043;&#0032;paste&#0032;Tailwind&#0032;CSS&#0032;animations&#0032;in&#0032;seconds | Product Hunt"
+              width="250"
+              height="54"
+            />
+          </a>
+          <div className="mx-auto text-center mt-10">
             <div>
               <p className="text-4xl font-semibold tracking-tight text-white clash sm:text-5xl md:text-7xl">
                 Beautiful tailwind animations
