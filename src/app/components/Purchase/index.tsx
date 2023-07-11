@@ -42,7 +42,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
           </div>
           <div className="my-10">
             <h1 className="text-center font-bold text-2xl uppercase">
-              $17 USD / year
+              $7 USD / year
             </h1>
 
             <p className="text-sm text-center px-10 mt-5">
