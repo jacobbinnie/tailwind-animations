@@ -49,7 +49,7 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
             <p className="text-sm text-center px-10 mt-5">
               <span className="font-bold">Instant access</span> to Tailwind
               Animations. Includes 50+ hand-crafted animations, with more coming
-              soon. Will receieve all future updates automatically.
+              soon. Will receive all future updates automatically.
             </p>
           </div>
 
