@@ -1,57 +1,34 @@
-import { useState, useEffect, use } from "react";
-import { User } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebase/config";
+import { useState, useEffect } from "react";
+import { isUserPremium } from "../firebase/isUserPremium";
 
-export const useUserPremium = (user: User | null | undefined) => {
-  const [isSubscribed, setIsSubscribed] = useState<{
-    isPremium: boolean;
-    isLifetime: boolean;
-  }>({ isPremium: false, isLifetime: false });
+export const useUserPremium = (userId: string | undefined) => {
+  const [isPremium, setIsPremium] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [fetchingData, setFetchingData] = useState(false);
+  const [fetchingData, setFetchingData] = useState(false); // New state variable
 
   useEffect(() => {
     const fetchUserPremium = async () => {
+      // Simulating an asynchronous API call
+
       try {
-        if (user) {
-          setFetchingData(true);
-          await user.getIdToken(true);
-          const decodedToken = await user.getIdTokenResult();
-
-          const stripeRole = decodedToken.claims.stripeRole;
-          const isPremiumUser = stripeRole === "premium";
-
-          if (isPremiumUser) {
-            setIsSubscribed({ isPremium: true, isLifetime: false });
-            setLoading(false);
-          } else {
-            // check user for lifetime access here
-            const userRef = doc(db, "users", user.uid);
-
-            getDoc(userRef).then((docSnapshot) => {
-              if (docSnapshot.exists() && docSnapshot.data().lifetime) {
-                setIsSubscribed({ isPremium: true, isLifetime: true });
-                setLoading(false);
-              } else {
-                setIsSubscribed({ isPremium: false, isLifetime: false });
-                setLoading(false);
-              }
-            });
-          }
+        if (userId) {
+          setFetchingData(true); // Set fetchingData to true before fetching data
+          const premium = await isUserPremium(userId); // Replace with your actual function call
+          setIsPremium(premium);
+          setLoading(false);
         } else {
-          setIsSubscribed({ isPremium: false, isLifetime: false });
+          setIsPremium(false);
           setLoading(false);
         }
       } catch (error) {
         console.error("Error fetching user premium status:", error);
       } finally {
-        setFetchingData(false);
+        setFetchingData(false); // Set fetchingData to false after data is fetched
       }
     };
 
     fetchUserPremium();
-  }, [user]);
+  }, [userId]);
 
-  return { isSubscribed, loading, fetchingData };
+  return { isPremium, loading, fetchingData }; // Include fetchingData in the return value
 };

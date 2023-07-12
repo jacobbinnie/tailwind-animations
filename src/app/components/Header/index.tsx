@@ -5,16 +5,10 @@ import { Dispatch, SetStateAction } from "react";
 interface HeaderProps {
   setShowPurchase: Dispatch<SetStateAction<boolean>>;
   isPremium: boolean;
-  isLifetime: boolean;
   loading: boolean;
 }
 
-function Header({
-  setShowPurchase,
-  isPremium,
-  isLifetime,
-  loading,
-}: HeaderProps) {
+function Header({ setShowPurchase, isPremium, loading }: HeaderProps) {
   return (
     <div className="flex justify-center pb-10 items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black">
       <section className="flex flex-col w-full justify-center h-full">
@@ -94,15 +88,11 @@ function Header({
                   >
                     {isPremium ? (
                       <div className="w-full flex justify-center items-center gap-2">
-                        <p>
-                          {isLifetime
-                            ? "You have lifetime access"
-                            : "You have premium access"}
-                        </p>
+                        <p>You have lifetime access</p>
                         <CheckBadgeIcon width={20} />
                       </div>
                     ) : (
-                      "$7 USD / year"
+                      "Get Lifetime Access"
                     )}
                   </span>
                 </a>

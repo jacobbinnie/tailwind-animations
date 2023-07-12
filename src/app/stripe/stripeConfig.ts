@@ -7,8 +7,8 @@ const auth = getAuth(firebaseApp);
 export const createCheckoutSession = async () => {
   if (auth.currentUser) {
     addDoc(collection(db, "users", auth.currentUser.uid, "checkout_sessions"), {
-      mode: "subscription", // Change mode to "subscription"
-      price: "price_1NSnhvCllZndS8kowRlZcPWr", // Production
+      mode: "payment",
+      price: "price_1NStGtCllZndS8ko0s9MARpq", // Production
       success_url: window.location.origin,
       cancel_url: window.location.origin,
     })
@@ -24,6 +24,7 @@ export const createCheckoutSession = async () => {
               checkoutSessionRef.id
             ),
             (snapshot) => {
+              console.log(snapshot.data());
               if (snapshot.exists()) {
                 const checkoutSessionData = snapshot.data();
                 // Redirect the user to the checkout URL

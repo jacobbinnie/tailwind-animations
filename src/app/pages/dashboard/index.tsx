@@ -15,14 +15,11 @@ import { types } from "@/app/interfaces";
 import Feedback from "@/app/components/Feedback";
 
 interface DashboardProps {
-  isSubscribed: {
-    isPremium: boolean;
-    isLifetime: boolean;
-  };
+  isPremium: boolean;
   loading: boolean;
 }
 
-function Dashboard({ isSubscribed, loading }: DashboardProps) {
+function Dashboard({ isPremium, loading }: DashboardProps) {
   const [tab, setTab] = useState(0);
   const [revealingCode, setRevealingCode] = useState(false);
   const [selectedKey, setSelectedKey] = useState<{
@@ -32,8 +29,6 @@ function Dashboard({ isSubscribed, loading }: DashboardProps) {
   const [showPurchase, setShowPurchase] = useState(false);
 
   const { auth } = useAuth();
-
-  const { isPremium, isLifetime } = isSubscribed;
 
   useEffect(() => {
     if (auth.user && !auth.loading && !isPremium && !loading) {
@@ -76,7 +71,7 @@ function Dashboard({ isSubscribed, loading }: DashboardProps) {
   return (
     <>
       {auth.user && <Feedback />}
-      <Navbar isSubscribed={isSubscribed} />
+      <Navbar />
       {showPurchase && !loading && !isPremium && (
         <>
           <div className="min-h-screen fixed top-0 left-0 bg-black z-20 w-full opacity-70" />
@@ -104,7 +99,6 @@ function Dashboard({ isSubscribed, loading }: DashboardProps) {
         <Header
           setShowPurchase={setShowPurchase}
           isPremium={isPremium}
-          isLifetime={isLifetime}
           loading={loading}
         />
 

@@ -41,9 +41,10 @@ function Purchase({ setShowPurchase }: PurchaseProps) {
             </div>
           </div>
           <div className="my-10">
-            <h1 className="text-center font-bold text-2xl uppercase">
-              $7 USD / year
+            <h1 className="text-center font-bold text-2xl">
+              Unlock Lifetime Access
             </h1>
+            <p className="w-full text-center mt-2">$29 One Time Payment</p>
 
             <p className="text-sm text-center px-10 mt-5">
               <span className="font-bold">Instant access</span> to Tailwind

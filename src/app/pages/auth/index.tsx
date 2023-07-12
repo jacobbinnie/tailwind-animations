@@ -7,14 +7,11 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 interface AuthProps {
-  isSubscribed: {
-    isPremium: boolean;
-    isLifetime: boolean;
-  };
+  isPremium: boolean;
   tab: "signin" | "signup";
 }
 
-export const Auth: React.FC<AuthProps> = ({ isSubscribed, tab }) => {
+export const Auth: React.FC<AuthProps> = ({ isPremium, tab }) => {
   const [view, setView] = useState<"signin" | "signup">("signin");
   const [emailSent, setEmailSent] = useState(false);
   const [email, setEmail] = useState<string>("");
@@ -53,7 +50,7 @@ export const Auth: React.FC<AuthProps> = ({ isSubscribed, tab }) => {
   return (
     <>
       <div className="flex h-screen flex-col items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700 via-indigo-950 to-black">
-        <Navbar isSubscribed={isSubscribed} />
+        <Navbar />
         <div className="flex h-full w-full items-center justify-center p-5">
           <SigninSignup
             handleSendMagicLink={handleSendMagicLink}

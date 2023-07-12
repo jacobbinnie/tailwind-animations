@@ -2,20 +2,10 @@ import { useAuth } from "@/app/authprovider";
 import { useRoute } from "@/app/routeprovider";
 import Image from "next/image";
 import logo from "../../../../public/logoPng.png";
-import ManageAccessButton from "../ManageAccessButton";
 
-interface NavbarProps {
-  isSubscribed: {
-    isPremium: boolean;
-    isLifetime: boolean;
-  };
-}
-
-function Navbar({ isSubscribed }: NavbarProps) {
+function Navbar() {
   const { handleSetPage } = useRoute();
   const { auth, signOut } = useAuth();
-
-  const { isPremium, isLifetime } = isSubscribed;
 
   return (
     <div className="w-full mx-auto bg-white border-b sticky top-0 z-30">
@@ -34,10 +24,6 @@ function Navbar({ isSubscribed }: NavbarProps) {
         {auth.user ? (
           <nav className="items-center flex-grow pb-0 flex justify-end flex-row">
             <div className="inline-flex items-center gap-4 list-none lg:ml-auto">
-              {isPremium && !isLifetime && (
-                <ManageAccessButton user={auth.user} />
-              )}
-
               <a
                 onClick={() => signOut()}
                 className="relative cursor-pointer inline-flex items-center justify-center p-4 px-2 py-1 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-b-4 border-black rounded shadow-md group"
@@ -78,7 +64,7 @@ function Navbar({ isSubscribed }: NavbarProps) {
                 onClick={() => handleSetPage(1)}
                 className="iitems-center hidden sm:inline-flex justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
               >
-                $7 USD / year
+                Get Access
               </button>
             </div>
           </nav>
