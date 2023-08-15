@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![bb9f425e-a073-4d3e-89f8-cb0b9543ca86](https://github.com/jacobbinnie/tailwind-animations/assets/83803154/a3662fda-1ff5-4b7e-a52d-e3e97f9082c8)
 
-## Getting Started
+## Tailwind Animations - a library of copy + paste animations
 
-First, run the development server:
+✨ Introducing Tailwind Animations: a gorgeous library of copy + paste animated buttons, animated gradients, animated backdrop spaces and classics for your apps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Copy and paste keyframes & code
+- Stripe payments
+- User authentication and access control
+- Mobile responsiveness
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How it works
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Core stack: Typescript + Next.js + Firebase + Tailwind
 
-## Learn More
+--
 
-To learn more about Next.js, take a look at the following resources:
+In a nutshell it's essentially a json file of keyframes and animations in string format. The frontend simply displays these in a grid layout with easy access for the user to copy / paste. Once selectedd, the keyframes and parsed and copied to the user's clipboard. Clear instructions are provided on how to integrate any animation into a tailwind project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+An obvious issue here for maintaining profitability is ensuring the elements can't be browser inspected. I found a super nifty package called `disable-devtool` that solves this use case instantly. What's cool is this app made around $2k USD in it's first month and I've decided I wanna open source it as I love sharing my creations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Payments are made through stripe webhooks and taps into Firebase firestores database for allowing access to individual users.
 
-## Deploy on Vercel
+UI is designed using Tailwind. 100% custom components and design.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The entire application is typesafe and super clean as eslint / prettier have been active contributors from first init.
