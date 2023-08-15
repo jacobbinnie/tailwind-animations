@@ -19,9 +19,9 @@ Core stack: Typescript + Next.js + Firebase + Tailwind
 
 In a nutshell it's essentially a json file of keyframes and animations in string format. The frontend simply displays these in a grid layout with easy access for the user to copy / paste. Once selected, the keyframes / animation definitions are parsed and copied to the user's clipboard. Clear instructions are provided on how to integrate any animation into a tailwind project.
 
-An obvious issue here for maintaining profitability is ensuring the elements can't be browser inspected. I found a super nifty package called `disable-devtool` that solves this use case instantly. What's cool is this app made around $2k USD in it's first month and I've decided I wanna open source it as I love sharing my creations.
+An obvious issue here for maintaining profitability is ensuring the elements can't be browser inspected. I found a super nifty package called `disable-devtool` that solves this use case instantly. What's cool is this app made around $2k USD in it's first month and I've decided I wanna open source it.
 
-Payments are made through stripe webhooks and taps into Firebase firestores database for allowing access to individual users.
+Payments are made through stripe webhooks and tap into a firestore database for enabling access to individual users.
 
 UI is designed using Tailwind. 100% custom components and design.
 
