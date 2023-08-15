@@ -1,5 +1,5 @@
+![screely-1692138397538](https://github.com/jacobbinnie/tailwind-animations/assets/83803154/862fcf82-911b-4a32-85df-8c83032f8e2f)
 
-![bb9f425e-a073-4d3e-89f8-cb0b9543ca86](https://github.com/jacobbinnie/tailwind-animations/assets/83803154/bfcb4ba6-6cb2-48a5-a3fa-52b3b930c24a)
 
 ## Tailwind Animations - a library of copy + paste animations
 
