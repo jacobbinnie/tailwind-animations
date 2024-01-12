@@ -55,11 +55,7 @@ module.exports = {
     "hover:animate-pop 1s infinite",
     "hover:animate-scatter 1s infinite",
   ],
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx,json}",
-  ],
+  content: ["**/*.{html,js}"],
   theme: {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
