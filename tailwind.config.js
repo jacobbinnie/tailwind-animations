@@ -59,6 +59,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
+      cursive: ['Dancing Script', 'cursive'],
     },
     extend: {
       animation: {
