@@ -56,7 +56,7 @@ module.exports = {
     "hover:animate-pop 1s infinite",
     "hover:animate-scatter 1s infinite",
   ],
-  content: ["**/*.{html,js}"],
+  content: ["*.{html,js}"],
   theme: {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
@@ -1268,5 +1268,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [],
 };
