@@ -27,6 +27,7 @@ module.exports = {
     "hover:animate-hazy-twist 2s ease infinite",
     "hover:animate-mystic-aura 2s ease infinite",
     "hover:animate-vibrant-sun 2s ease infinite",
+    "hover:animate-pink-sun 2s ease infinite",
     "hover:animate-shifting-triangles 2s ease infinite",
 
     // MOVEMENTS
@@ -56,7 +57,7 @@ module.exports = {
     "hover:animate-pop 1s infinite",
     "hover:animate-scatter 1s infinite",
   ],
-  content: ["*.{html,js}"],
+  content: ["**/*.{html,js}"],
   theme: {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
@@ -89,6 +90,7 @@ module.exports = {
         "hazy-twist": "hazy-twist 2s ease infinite",
         "mystic-aura": "mystic-aura 2s ease infinite",
         "vibrant-sun": "vibrant-sun 2s ease infinite",
+        "pink-sun": "pink-sun 2s ease infinite",
         "shifting-triangles": "shifting-triangles 2s ease infinite",
         "wobble-shifting-triangles": "wobble-shifting-triangles 2s ease infinite",
 
@@ -643,6 +645,23 @@ module.exports = {
           "100%": {
             "background-image":
               "radial-gradient(circle at 50% 50%, #FF5252, #FFAB40)",
+            "background-size": "100% 100%",
+          },
+        },
+        "pink-sun": {
+          "0%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #ff52c5, #fff200)",
+            "background-size": "100% 100%",
+          },
+          "50%": {
+            "background-image":
+              "radial-gradient(circle at 60% 40%, #fff200, #ff52c5)",
+            "background-size": "110% 110%",
+          },
+          "100%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #ff52c5, #fff200)",
             "background-size": "100% 100%",
           },
         },
