@@ -7,6 +7,7 @@ module.exports = {
     "hover:animate-green-swoosh 2s ease infinite",
     "hover:animate-serene-sunset 2s ease infinite",
     "hover:animate-black-swoosh 2s ease infinite",
+    "hover:animate-blue-swoosh 2s ease infinite",
     "hover:animate-purple-swoosh 2s ease infinite",
     "hover:animate-tranquil-waters 5s ease infinite",
     "hover:animate-mellow-embers 2s ease infinite",
@@ -26,6 +27,7 @@ module.exports = {
     "hover:animate-hazy-twist 2s ease infinite",
     "hover:animate-mystic-aura 2s ease infinite",
     "hover:animate-vibrant-sun 2s ease infinite",
+    "hover:animate-pink-sun 2s ease infinite",
     "hover:animate-shifting-triangles 2s ease infinite",
 
     // MOVEMENTS
@@ -68,6 +70,7 @@ module.exports = {
         "green-swoosh": "green-swoosh 2s ease infinite",
         "serene-sunset": "serene-sunset 2s ease infinite",
         "black-swoosh": "black-swoosh 2s ease infinite",
+        "blue-swoosh": "blue-swoosh 2s ease infinite",
         "purple-swoosh": "purple-swoosh 2s ease infinite",
         "tranquil-waters": "tranquil-waters 5s ease infinite",
         "mellow-embers": "mellow-embers 2s ease infinite",
@@ -87,7 +90,9 @@ module.exports = {
         "hazy-twist": "hazy-twist 2s ease infinite",
         "mystic-aura": "mystic-aura 2s ease infinite",
         "vibrant-sun": "vibrant-sun 2s ease infinite",
+        "pink-sun": "pink-sun 2s ease infinite",
         "shifting-triangles": "shifting-triangles 2s ease infinite",
+        "wobble-shifting-triangles": "wobble-shifting-triangles 2s ease infinite",
 
         // MOVEMENTS
         "morphing-rectangle": "morphing-rectangle 2s ease infinite",
@@ -208,6 +213,27 @@ module.exports = {
             "background-position": "left center",
             "background-image":
               "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+        },
+
+        "blue-swoosh": {
+          "0%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+          "50%": {
+            "background-size": "600% 100%",
+            "background-position": "right center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8))",
+          },
+          "100%": {
+            "background-size": "600% 100%",
+            "background-position": "left center",
+            "background-image":
+              "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8), rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8))",
           },
         },
 
@@ -622,6 +648,23 @@ module.exports = {
             "background-size": "100% 100%",
           },
         },
+        "pink-sun": {
+          "0%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #ff52c5, #fff200)",
+            "background-size": "100% 100%",
+          },
+          "50%": {
+            "background-image":
+              "radial-gradient(circle at 60% 40%, #fff200, #ff52c5)",
+            "background-size": "110% 110%",
+          },
+          "100%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #ff52c5, #fff200)",
+            "background-size": "100% 100%",
+          },
+        },
         "shifting-triangles": {
           "0%": {
             "background-image":
@@ -640,6 +683,32 @@ module.exports = {
               "linear-gradient(60deg, rgba(255, 0, 0, 0.8) 25%, rgba(0, 255, 0, 0.8) 50%, rgba(0, 0, 255, 0.8) 75%)",
             "background-size": "200% 200%",
             "background-position": "top left",
+          },
+        },
+
+        "wobble-shifting-triangles": {
+          "0%": {
+            "background-image":
+              "linear-gradient(60deg, rgba(255, 0, 0, 0.8) 25%, rgba(0, 255, 0, 0.8) 50%, rgba(0, 0, 255, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "transform": "rotate(-5deg)",
+          },
+          "25%": { transform: "rotate(5deg)" },
+          "50%": {
+            "background-image":
+              "linear-gradient(60deg, rgba(0, 0, 255, 0.8) 25%, rgba(255, 0, 0, 0.8) 50%, rgba(0, 255, 0, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "bottom right",
+            "transform": "rotate(-5deg)"
+          },
+          "75%": { transform: "rotate(5deg)" },
+          "100%": {
+            "background-image":
+              "linear-gradient(60deg, rgba(255, 0, 0, 0.8) 25%, rgba(0, 255, 0, 0.8) 50%, rgba(0, 0, 255, 0.8) 75%)",
+            "background-size": "200% 200%",
+            "background-position": "top left",
+            "transform": "rotate(-5deg)",
           },
         },
 
@@ -1218,5 +1287,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [],
 };
