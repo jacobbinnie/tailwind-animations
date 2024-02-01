@@ -28,6 +28,7 @@ module.exports = {
     "hover:animate-mystic-aura 2s ease infinite",
     "hover:animate-vibrant-sun 2s ease infinite",
     "hover:animate-pink-sun 2s ease infinite",
+    "hover:animate-gray-sun 2s ease infinite",
     "hover:animate-shifting-triangles 2s ease infinite",
 
     // MOVEMENTS
@@ -91,6 +92,7 @@ module.exports = {
         "mystic-aura": "mystic-aura 2s ease infinite",
         "vibrant-sun": "vibrant-sun 2s ease infinite",
         "pink-sun": "pink-sun 2s ease infinite",
+        "gray-sun": "gray-sun 2s ease infinite",
         "shifting-triangles": "shifting-triangles 2s ease infinite",
         "wobble-shifting-triangles": "wobble-shifting-triangles 2s ease infinite",
 
@@ -662,6 +664,23 @@ module.exports = {
           "100%": {
             "background-image":
               "radial-gradient(circle at 50% 50%, #ff52c5, #fff200)",
+            "background-size": "100% 100%",
+          },
+        },
+        "gray-sun": {
+          "0%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #555555, #ffffff)",
+            "background-size": "100% 100%",
+          },
+          "50%": {
+            "background-image":
+              "radial-gradient(circle at 60% 40%, #ffffff, #555555)",
+            "background-size": "110% 110%",
+          },
+          "100%": {
+            "background-image":
+              "radial-gradient(circle at 50% 50%, #555555, #ffffff)",
             "background-size": "100% 100%",
           },
         },
