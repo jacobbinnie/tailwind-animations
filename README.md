@@ -5,6 +5,8 @@
 
 ✨ Introducing Tailwind Animations: a gorgeous library of copy + paste animated buttons, animated gradients, animated backdrop spaces and classics for your apps.
 
+<a href="tailwindanimations.co">View production app</a>
+
 ## Features
 
 - Copy and paste keyframes & code
